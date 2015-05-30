@@ -1,0 +1,23 @@
+body {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track-piece {
+        background: $scrollbar-track-piece-bg;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbar-thumb-bg;
+    }
+}
+
+pre {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    &::-webkit-scrollbar-track-piece {
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbar-thumb-bg;
+    }
+}

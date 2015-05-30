@@ -1,0 +1,106 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import 'colours';
+@import 'scrollbar';
+
+
+@import 'base';
+@import 'layout';
+@import 'syntax-highlighting';
+
+body {
+    //background-image: url('{{ site.baseurl }}/img/bg/pattern10.jpg');
+    background-color: $body-bg;
+}
+
+#canvas {
+    width: 100%;
+    height: 300px;
+}
+
+.wrapper {
+    background-color: rgba($wrapper-bg,1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //border-radius: 10px;
+    border:2px solid $body-bg;
+    box-shadow: inset 0px 0px 7px 5px rgba(0,0,0,0.8);
+}
+
+.site-header {
+    border-top: 0;
+    border-bottom:0;
+}
+
+.site-footer {
+    padding-top: 0;
+    border-top:0;
+}
+
+.highlight, code {
+    color: black;
+}
+
+pre {
+    overflow: auto;
+}
+
+a, a:visited {
+    //color: #2a7ae2;
+    color: $nephritis;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.post-list {
+    margin-bottom: 0;
+
+    li:last-child {
+        margin-bottom:0;
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
