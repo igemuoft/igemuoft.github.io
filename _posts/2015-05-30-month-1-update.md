@@ -49,13 +49,12 @@ up to date on the team's progress. These will be our focus groups for next
 week (June 1-5):
 
 ### Python/SQL DB querying
-
-For getting reaction data for all species involved in the metabolics of all
-bacterial species within the Athabasca river.
+Getting reaction data for all species involved in the metabolics of all
+bacterial species within the Athabasca river is a priority. We will be using KEGG, Reactome and MetaCyc to get our data. 
 
 ### Species Research
 
-Anthony can you fill this and above.
+We will be looking into literature for species of significance to researchers and curating their genomic as well as their metabolomic data.
 
 ### Express/mongoose 
 
