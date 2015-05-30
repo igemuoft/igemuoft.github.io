@@ -5,7 +5,7 @@ date:   2015-05-30 12:12:17
 categories: tutorials
 ---
 
-#### *from the ground up*<br>
+#### *from the ground up*
 
 The source code for this tutorial can be found [here](https://github.com/thejmazz/naivednageneration).
 
