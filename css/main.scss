@@ -38,6 +38,10 @@ $on-laptop:        800px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
+@import 'bower_components/fontawesome/scss/font-awesome';
+$fa-font-path:   "../fonts";
+
+@import 'fonts';
 @import 'colours';
 @import 'scrollbar';
 
@@ -54,6 +58,11 @@ body {
 #canvas {
     width: 100%;
     height: 300px;
+    display: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $oswald;
 }
 
 .wrapper {
@@ -61,8 +70,8 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     //border-radius: 10px;
-    border:2px solid $body-bg;
-    box-shadow: inset 0px 0px 7px 5px rgba(0,0,0,0.8);
+    //border:2px solid $body-bg;
+    //box-shadow: inset 0px 0px 7px 5px rgba(0,0,0,0.8);
 }
 
 .site-header {
@@ -83,24 +92,78 @@ pre {
     overflow: auto;
 }
 
+code {
+    background-color: grey;
+    border:0;
+}
+
+.highlight pre {
+    //background-color: #f7f7f7;
+
+    code {
+        background-color: #eef;        
+    }
+}
+
 a, a:visited {
-    //color: #2a7ae2;
     color: $nephritis;
 }
 
 a:hover {
-    color: grey;
+    color: $peter-river;
     text-decoration: none;
 }
 
 .post-list {
     margin-bottom: 0;
+        
+    li {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid $nephritis;
+    }
 
     li:last-child {
         margin-bottom:0;
+        padding-bottom: 0;
+        border-bottom: 0;
 
         h2 {
             margin-bottom: 0;
         }
     }
+}
+
+.post-link {
+    display: inline-block;
+}
+
+.post-meta {
+    font-style: italic;
+}
+
+.footer-list {
+    line-height: 2em;
+
+    li {
+        list-style: none;
+    }
+    
+    i {
+        font-size: 1.5em;
+        vertical-align: middle;
+        padding-right: 5px;
+        min-width: 30px;
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 1em;
+    }
+}
+
+.footer-heading {
+    padding-top: 15px;
+    border-top: 4px solid $nephritis;
 }

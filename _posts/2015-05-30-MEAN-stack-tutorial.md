@@ -5,9 +5,12 @@ date:   2015-05-30 12:12:17
 categories: tutorials
 ---
 
-#### *from the ground up*
-
-The source code for this tutorial can be found [here](https://github.com/thejmazz/naivednageneration).
+*From the ground up.* An example of Express, ChildProcess, Endpoints, 
+Middleware, Mongoose and MongoDB. AngularJS app controlling the interactions 
+between the frontend and the backend. (This allows for a single page application
+ (SPA) at the expense of search engine optimization (SEO) - though there are 
+some hacky solutions). The source code for this tutorial can be found 
+[here](https://github.com/thejmazz/naivednageneration).
 
 ## NodeJS/Express/Mongoose Tutorial
 
@@ -452,6 +455,7 @@ console.log('Serving content from ' + 'public'.blue);
 ~~~
 
 Start the server:
+
 ~~~bash
 $ node app.js 9001
 ~~~
@@ -459,6 +463,7 @@ $ node app.js 9001
 And visit the page at `http://localhost:9001`.
 
 From inside `public`, run
+
 ~~~bash
 $ bower init
 ~~~

@@ -16,6 +16,13 @@ main = function() {
 
     // Parameters
     var bgColour = '#212121';
+    var textColour = 'grey';
+
+    $('#canvas').mouseover(function(){
+        textColour = '#27ae60';
+    }).mouseout(function() {
+        textColour = 'grey';
+    })
 
     // Animation object
     window.ANIM = window.ANIM || {};
@@ -65,6 +72,7 @@ main = function() {
                 drawLine(line);
             });
             ctx.font = "20px Ubuntu";
+            ctx.fillStyle = textColour;
             ctx.fillText("iGEM UofT", cx - 280, cy + 20);
             ctx.font = "40px Ubuntu";
             ctx.fillText("computational", cx - 220, cy + 60);

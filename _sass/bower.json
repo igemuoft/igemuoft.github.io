@@ -1,0 +1,19 @@
+{
+  "name": "_sass",
+  "version": "0.0.0",
+  "homepage": "https://github.com/igemuoft/igemuoft.github.io",
+  "authors": [
+    "Julian Mazzitelli <mazzitelli.julian@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.3.0"
+  }
+}

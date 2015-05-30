@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Month 1 Update"
-date:   2015-05-30 12:12:17
+title:  "End of May Update"
+date:   2015-05-30 18:52:30
 categories: updates
 ---
 
@@ -96,3 +96,6 @@ Which can be found on our [dry lab proposal](https://github.com/igemuoftATG/dryl
 To sign up for a focus group, join [Trello](https://trello.com) and send me your account name.
 I will add you to our `Dry Lab` board, where you can add yourself to the card
 for the group you would like to work on.
+
+Cheers,<br>
+thejmazz
