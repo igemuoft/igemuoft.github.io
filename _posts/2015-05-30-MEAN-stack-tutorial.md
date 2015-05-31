@@ -407,6 +407,7 @@ app.use(function(req, res, next) {
 
 First, make sure you are on the `pre-angular` branch:
 (or keep using your own code if you have been following along until now)
+
 ~~~bash
 $ git clone https://github.com/thejmazz/naivednageneration.git
 $ cd naivednageneration
