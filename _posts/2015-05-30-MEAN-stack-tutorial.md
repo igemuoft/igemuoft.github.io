@@ -20,7 +20,7 @@ First thing to do is set up our NodeJS/Express environment:
 
 ~~~bash
 $ npm init
-$ npm install --save express body-parser child-process mongoose morgan colors
+$ npm install --save express body-parser mongoose morgan colors
 ~~~
 
 `npm init` will create a `package.json` file. `npm install` will download our
@@ -35,7 +35,7 @@ var port = process.argv[2];
 var app = express();
 
 app.get('/', function(request, response) {
-    res.send('got a GET request');
+    response.send('got a GET request');
 });
 
 app.post('/', function(req, res) {
