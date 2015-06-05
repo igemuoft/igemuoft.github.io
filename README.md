@@ -6,7 +6,7 @@ Everyone, make sure you are on the `preview` branch before doing anything!
 $ git checkout preview
 ~~~
 
-To preview the blog, install [ruby]https://www.ruby-lang.org/en/downloads/, 
+To preview the blog, install [ruby](https://www.ruby-lang.org/en/downloads/), 
 and then [jekyll](http://jekyllrb.com/):
 
 ~~~bash
