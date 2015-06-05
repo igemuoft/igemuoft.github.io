@@ -9,6 +9,16 @@ The following is a summary of our progress this week.
 
 ## Database Querying Focus
 
+The python group focused on identifying model species that are present in abundance in the Athabasca River microbiome. We identified major types taken from a 16S rRNA sequencing experiment. Specific strains are identified and its genomic data are collected from Ensembl database and NCBI. 
+
+Why do we need a parser?
+To facilitate the process of acquiring metabolic reaction data, transformation of data is necessary for the ease of both records and querys. A python parser is written to read genomic information in a fasta format and to store relevant information in json format, which will be stored in a mongo database. 
+
+Why incorporating standard in/out?
+The parser is written with one command line input that specifies the path to directory that stores the fasta files. So that when in need of updating the server or making large scale changes, the python program can be easily incorporated into a server by calling a childprocess-- the process of updating the database is much simplified.
+
+
+
 ## Species Reseach Focus
 
 ## MEAN Focus
