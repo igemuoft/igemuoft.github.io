@@ -9,19 +9,47 @@ The following is a summary of our progress this week.
 
 ## Database Querying Focus
 
-The python group focused on identifying model species that are present in abundance in the Athabasca River microbiome. We identified major types taken from a 16S rRNA sequencing experiment. Specific strains are identified and its genomic data are collected from Ensembl database and NCBI. 
+The python group focused on identifying model species that are present in
+abundance in the Athabasca River microbiome. We identified major types taken
+from a 16S rRNA sequencing experiment. Specific strains are identified and its
+genomic data are collected from Ensembl database and NCBI. 
 
 Why do we need a parser?
 
-To facilitate the process of acquiring metabolic reaction data, transformation of data is necessary for the ease of both records and querys. A python parser is written to read genomic information in a fasta format and to store relevant information in json format, which will be stored in a mongo database. 
+To facilitate the process of acquiring metabolic reaction data, transformation
+of data is necessary for the ease of both records and querys. A python parser is
+written to read genomic information in a fasta format and to store relevant
+information in json format, which will be stored in a mongo database. 
 
 Why incorporating standard in/out?
 
-The parser is written with one command line input that specifies the path to directory that stores the fasta files. So that when in need of updating the server or making large scale changes, the python program can be easily incorporated into a server by calling a childprocess-- the process of updating the database is much simplified.
-
-
+The parser is written with one command line input that specifies the path to
+directory that stores the fasta files. So that when in need of updating the
+server or making large scale changes, the python program can be easily
+incorporated into a server by calling a childprocess-- the process of updating
+the database is much simplified.
 
 ## Species Reseach Focus
+
+This week, the species richness group helped confirm and correct the Python
+group’s choices of model species on the iGEM Species Spreadsheet. Group members
+confirmed that all species chosen were freshwater microorganisms, and chose the
+best-studied naturally existing strain for each (i.e., lab/reference strains
+were excluded). If species were found to be inappropriate, team members searched
+the literature for more suitable species and strains in the same taxonomic
+class. In addition, group members updated the spreadsheet with links to FASTA
+files containing the genetic code for each strain chosen. 
+
+Why do all species chosen need to survive in freshwater? Why are lab strains
+excluded?
+
+The Athabasca River was targeted for bioremediation due to the fact that it has
+been heavily polluted by the Athabasca Oil Sands. By ensuring that all species
+chosen are capable of living in the Athabasca River, (which is a freshwater
+river), and by ensuring that the strains chosen exist naturally, outside of the
+lab environment, we will be able to use the genetic information gathered to
+model metabolic activity in the Athabasca River microbiome. Perhaps we can even
+optimize the metabolic network for specific bioremediation efforts!
 
 ## MEAN Focus
 
