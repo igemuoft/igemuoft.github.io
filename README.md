@@ -1,6 +1,7 @@
 # igemuoft.github.io
 
 Everyone, make sure you are on the `preview` branch before doing anything!
+(Note you will not be able to find posts pending publishment on the `master` branch as well)
 
 ~~~bash
 $ git checkout preview
