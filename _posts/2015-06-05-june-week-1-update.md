@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "June Week 1 Update"
-date:   2015-06-05 16:47:30
+date:   2015-06-07 17:28:30
 categories: updates
 ---
 
