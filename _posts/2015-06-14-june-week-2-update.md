@@ -8,6 +8,7 @@ categories: updates
 Week 2 Update
 
 [@alex?, @heba?, note about progress on species spreadsheet]
+This week, we completed our species spreadsheet! We narrowed down 28 species (from 16 classes) from the 41 we had gathered initially, but may choose to reincorporate some of these excluded microorganisms at a later time. All 28 species now have links to their complete protein sequences and meet the criteria discussed last week. Further, we were able to find full metabolic networks (from existing literature on flux balance analysis) for seven species, and one other partial network. Moving forward, we will begin gathering the metabolic reaction data we need for our model.
 
 [@ghazal, @sean, can you talk about the d3 forced layout app you did, link to codepen]
 
