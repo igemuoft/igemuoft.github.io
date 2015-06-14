@@ -23,7 +23,7 @@ code
 for now] 
 
 ##FBA research
-The FBA focus group researched on ways to solve flux balance analysis this week. We identified *cobrapy* as an alternative to MATlab COBRA, a constraint based reconstruction and analysis tool. Cobrapy takes in *sbml* format metabolic network model and calculates fluxes of all the reactions when biomass is set as objective function:
+The FBA focus group researched on ways to solve flux balance analysis this week. We identified **cobrapy** as an alternative to MATlab COBRA, a constraint based reconstruction and analysis tool. Cobrapy takes in **sbml** format metabolic network model and calculates fluxes of all the reactions when biomass is set as objective function:
 ```
 model.optimize()
 ```
