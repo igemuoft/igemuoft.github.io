@@ -20,13 +20,13 @@ data we need for our model.
 ### User Interface Construction
 The front-end group worked on making a **prototype of the user tool** that will eventually serve as a platform for the users to visualize **bacterial metabolic networks** and the **changes in flux** that result from adding or removing metabolites to these networks.
 The tool will include the following components:
-*1. metabolites represented by large circles or “nodes”
-2. reactions represented by small circles
-3. arrows indicating direction of reaction
-4. a search box where the user would be able to type the name of the concerned bacterial species 
-5. an “Add Node” button to add metabolites to the network
-6. the option to remove reactions and nodes by right-clicking
-7. the option to connect nodes (metabolite) through dragging*
+*1. metabolites represented by large circles or “nodes”*
+*2. reactions represented by small circles*
+*3. arrows indicating direction of reaction*
+*4. a search box where the user would be able to type the name of the concerned bacterial species* 
+*5. an “Add Node” button to add metabolites to the network*
+*6. the option to remove reactions and nodes by right-clicking*
+*7. the option to connect nodes (metabolite) through dragging*
 
 Upon selecting a bacterial species from the search results, the user would perceive an immediate appearance of a set of nodes connected with arrows, representing the metabolic network of that species. Should the user choose to simultaneously view the metabolic networks of two bacteria, the two metabolic networks will be merged in order to construct a network with no node duplicates, in other words, if metabolite X is present in both species A and species B, the metabolic network of species A and B will only have only one circle labeled “X”. 
 
