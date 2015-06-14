@@ -26,7 +26,8 @@ The tool will include the following components:
 4. a search box where the user would be able to type the name of the concerned bacterial species
 5. an “Add Node” button to add metabolites to the network
 6. the option to remove reactions and nodes by right-clicking
-7. the option to connect nodes (metabolite) through dragging
+7. the option to connect nodes (metabolite) through left-click dragging
+8. ability to pan and drag screen by ctrl-left-clicking
 
 Upon selecting a bacterial species from the search results, the user would perceive an immediate appearance of a set of nodes connected with arrows, representing the metabolic network of that species. Should the user choose to simultaneously view the metabolic networks of two bacteria, the two metabolic networks will be merged in order to construct a network with no node duplicates, in other words, if metabolite X is present in both species A and species B, the metabolic network of species A and B will only have only one circle labeled “X”. 
 
