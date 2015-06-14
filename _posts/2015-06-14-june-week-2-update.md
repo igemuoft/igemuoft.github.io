@@ -17,7 +17,7 @@ existing literature on flux balance analysis) for seven species, and one other
 partial network. Moving forward, we will begin gathering the metabolic reaction
 data we need for our model.
 
-[@ghazal, @sean, can you talk about the d3 forced layout app you did, link to codepen]
+### User Interface Construction
 
 [@joller can you talk about the FBA you solved, link to lecture pdf on tutorials repo,
 and post those lines of MATLAB code here, just use
