@@ -60,11 +60,9 @@ structure, depends on how community FBA is used.
 
 
 ### Node Backe-end
-[@albert can you talk about what you did on the backend this week.
-Doesn't even have to include a lot of bio info..talk about what data
-structures you used to solve what problem, what the runtime is,
-advantages of MongoDB that were used (i.e. ref, populate). think of 
-it like a half-assed CSC263 assignment answer.]
+As of now, the hardest part for the back end was deciding how we would strucutre our data in order to retrieve results as quickly as possible, as well as save as much space on the database at the same time.  To accomplish that, we decided that the best solution would be to have each column (domain, class, phylum etc...) have their own mongoose schema.  Each of those schemas has a parent object, which is a reference to the schema's parent.  For example, if we had x belonged to domain column, and y belonged to the phylum column, the schema under the phylum column being element y would have an element that stores the objectid of the parent's schema, being x, and x would have a refernece to it's members, being y.  The reason for this was to optimize how our data is stored efficently, and allowing us to search at incredible speeds.  Because you can have multiple members for each schema, and each schema only has one parent, that allows us to shrink the amount of data for each column by the absolute max, allowing us to never have any duplicates.
+
+With that being said, the search algorithm, if you're searching for say a specific species, would take O(lg_2n) number of steps, which is the fastest you can get for searching.  Not only that, but if you wanted to search for everything that was in domain bacteria for example, all we would need to do is look at the memebers of that bacteria model, and iterate through them to populate, and that's once again the most efficent way to retrieve the data.  The runtime for that varies as you go deeper into the columns, something like lgn for the species column, since there are no duplicates.
 
 [@anyone else, please add anything you think helps describe what
 we did this week, and it's relationship to what our next steps are]
