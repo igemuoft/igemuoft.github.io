@@ -64,7 +64,7 @@ http://wwwf.imperial.ac.uk/~nsjones/lec-fba.pdf
 Recall that all FBA problems contain three essential parts (or steps):
 1. Define the reaction coefficients in the form of a matrix, and put it in Av=0 (the "equality contraint")
 2. Define the boundaries for the fluxes (the "inequality contraint")
-3. ... And define what we want to optimize (the "objective fuction")
+3. Define what we want to optimize (the "objective fuction")
 
 This way, we have framed a problem that happens to have the same structure of what mathematicians call a "continuous optimization problem". The algorithm of this has been well studied in the mathematical literature. There are many ways to solve this problem, each optimized for a different kind of scenario, and these algorithms have been implemented in many languages too.
 
@@ -82,9 +82,9 @@ IN> x = numeric.solveLP([1,1],                   /* minimize [1,1]*x            
     numeric.trunc(x.solution,1e-12);
 OUT> [0,1.5]
 ```
-Part of the reason why we looked into numeric.js is because we hoped to be able to implement this algorithm both frontend and backend. Unfortunately, numeric.solveLP only supports one-sided contraint, but we need too.
+Part of the reason why we looked into numeric.js is because we hoped to be able to implement this algorithm both frontend and backend. Unfortunately, numeric.solveLP only supports one-sided contraint, but we need two.
 
-In conclusion, the best approach we have found for now is as described in the "FBA research" session, using the COBRApy integrated function model.optimize().
+In conclusion, the best approach we have found for now is as described in the "FBA research" session, using the COBRApy integrated function model.optimize(). The next step is to identify a way to support community FBA calculations, which COBRApy is not currently supporting (to our best knowledge).
 
 ### Node Backe-end
 [@albert can you talk about what you did on the backend this week.
