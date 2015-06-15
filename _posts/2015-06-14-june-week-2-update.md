@@ -34,6 +34,8 @@ Upon selecting a bacterial species from the search results, the user would perce
 
 D3.js (Data Driven Documents) is a Javascript library that breathes life into data via HTML, CSS, and SVG (Scalar Vector Graphics), and will be used to create the platform for the visualization of this FBA data. With D3, we will be able to bind the FBA data to the DOM (Document Object Model) of our web app, and then utilize D3's inherent ability to apply data-driven transformations to the document. D3 is extremely fast and flexible, and with efficient manipulation of documents with given data, it is the best tool we can use to build the user-interface. 
 
+To find out more about D3.js, [click here](http://d3js.org/).
+
 [@joller can you talk about the FBA you solved, link to lecture pdf on tutorials repo,
 and post those lines of MATLAB code here, just use
 
