@@ -36,6 +36,9 @@ Upon selecting a bacterial species from the search results, the user would perce
 
 To find out more about D3.js and see awesome examples, [click here](http://d3js.org/)!
 
+We will mostly be using a class of D3 called the force layout. The force layout refers to registered nodes and links so that it can be used with a single dataset. This is how we'll be tailoring the visual animations of the data to the users.
+To see an example of the force layout with D3, [click here] (http://bl.ocks.org/mbostock/4062045)!
+
 [@joller can you talk about the FBA you solved, link to lecture pdf on tutorials repo,
 and post those lines of MATLAB code here, just use
 
