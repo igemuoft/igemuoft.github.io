@@ -23,6 +23,7 @@ The tool will include the following components:
 * metabolites represented by large circles or “nodes”
 * reactions represented by small circles
 3. arrows indicating direction of reaction
+4. a self-arrow that accompanies isolated nodes
 4. a search box where the user would be able to type the name of the concerned bacterial species
 5. an “Add Node” button to add metabolites to the network
 6. the option to remove reactions and nodes by right-clicking
@@ -30,6 +31,8 @@ The tool will include the following components:
 8. ability to pan and drag screen by ctrl-left-clicking
 
 Upon selecting a bacterial species from the search results, the user would perceive an immediate appearance of a set of nodes connected with arrows, representing the metabolic network of that species. Should the user choose to simultaneously view the metabolic networks of two bacteria, the two metabolic networks will be merged in order to construct a network with no node duplicates, in other words, if metabolite X is present in both species A and species B, the metabolic network of species A and B will only have only one circle labeled “X”. 
+
+D3.js (Data Driven Documents) is a Javascript library that breathes life into data via HTML, CSS, and SVG (Scalar Vector Graphics), and will be used to create the platform for the visualization of this FBA data. With D3, we will be able to bind the FBA data to the DOM (Document Object Model) of our web app, and then utilize D3's inherent ability to apply data-driven transformations to the document. D3 is extremely fast and flexible, and with efficient manipulation of documents with given data, it is the best tool we can use to build the user-interface. 
 
 [@joller can you talk about the FBA you solved, link to lecture pdf on tutorials repo,
 and post those lines of MATLAB code here, just use
@@ -60,9 +63,11 @@ structure, depends on how community FBA is used.
 
 
 ### Node Backe-end
-As of now, the hardest part for the back end was deciding how we would strucutre our data in order to retrieve results as quickly as possible, as well as save as much space on the database at the same time.  To accomplish that, we decided that the best solution would be to have each column (domain, class, phylum etc...) have their own mongoose schema.  Each of those schemas has a parent object, which is a reference to the schema's parent.  For example, if we had x belonged to domain column, and y belonged to the phylum column, the schema under the phylum column being element y would have an element that stores the objectid of the parent's schema, being x, and x would have a refernece to it's members, being y.  The reason for this was to optimize how our data is stored efficently, and allowing us to search at incredible speeds.  Because you can have multiple members for each schema, and each schema only has one parent, that allows us to shrink the amount of data for each column by the absolute max, allowing us to never have any duplicates.
-
-With that being said, the search algorithm, if you're searching for say a specific species, would take big O(lgn)(base two) number of steps, which is the fastest you can get for searching.  Not only that, but if you wanted to search for everything that was in domain column bacteria for example, all we would need to do is look at the members of that bacteria model, and iterate through them to populate, and that's once again the most efficent way to retrieve the data.  The runtime for that varies as you go deeper into the columns, something like lgn for the species column, since there are no duplicates.
+[@albert can you talk about what you did on the backend this week.
+Doesn't even have to include a lot of bio info..talk about what data
+structures you used to solve what problem, what the runtime is,
+advantages of MongoDB that were used (i.e. ref, populate). think of 
+it like a half-assed CSC263 assignment answer.]
 
 [@anyone else, please add anything you think helps describe what
 we did this week, and it's relationship to what our next steps are]
