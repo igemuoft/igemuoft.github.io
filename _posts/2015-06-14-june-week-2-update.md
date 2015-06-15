@@ -39,15 +39,6 @@ To find out more about D3.js and see awesome examples, [click here](http://d3js.
 We will mostly be using a class of D3 called the force layout. The force layout refers to registered nodes and links so that it can be used with a single dataset. This is how we'll be tailoring the visual animations of the data to the users.
 To see an example of the force layout with D3, [click here] (http://bl.ocks.org/mbostock/4062045)!
 
-[@joller can you talk about the FBA you solved, link to lecture pdf on tutorials repo,
-and post those lines of MATLAB code here, just use
-
-```
-code
-    formatted
-```
-
-for now] 
 
 ### FBA research
 The FBA focus group researched on ways to solve flux balance analysis this week.
@@ -66,6 +57,34 @@ task to the FBA group is to settle down a preliminary model that describes a
 community. All our future endeavor, from web interface design to database schema
 structure, depends on how community FBA is used. 
 
+### How did the computer calculate the fluxes? --Progress of research on the mathematics
+This week we found an amazing document that teaches the fundamental mathematics about flux balance analysis:
+http://wwwf.imperial.ac.uk/~nsjones/lec-fba.pdf
+
+Recall that all FBA problems contain three essential parts (or steps):
+1. Define the reaction coefficients in the form of a matrix, and put it in Av=0 (the "equality contraint")
+2. Define the boundaries for the fluxes (the "inequality contraint")
+3. ... And define what we want to optimize (the "objective fuction")
+
+This way, we have framed a problem that happens to have the same structure of what mathematicians call a "continuous optimization problem". The algorithm of this has been well studied in the mathematical literature. There are many ways to solve this problem, each optimized for a different kind of scenario, and these algorithms have been implemented in many languages too.
+
+For instance, matlab does the trick with a function called linprog (http://www.mathworks.com/help/optim/ug/linprog.html):
+```
+x = linprog(f,A,b,Aeq,beq,lb,ub)
+```
+
+And, another software package we looked into is the Javascript library numeric.js. (http://www.mathworks.com/help/optim/ug/linprog.html) It does the job with the function solveLP
+```
+IN> x = numeric.solveLP([1,1],                   /* minimize [1,1]*x                */
+                        [[-1,0],[0,-1],[-1,-2]], /* matrix of inequalities          */
+                        [0,0,-3]                 /* right-hand-side of inequalities */
+                        );       
+    numeric.trunc(x.solution,1e-12);
+OUT> [0,1.5]
+```
+Part of the reason why we looked into numeric.js is because we hoped to be able to implement this algorithm both frontend and backend. Unfortunately, numeric.solveLP only supports one-sided contraint, but we need too.
+
+In conclusion, the best approach we have found for now is as described in the "FBA research" session, using the COBRApy integrated function model.optimize().
 
 ### Node Backe-end
 [@albert can you talk about what you did on the backend this week.
