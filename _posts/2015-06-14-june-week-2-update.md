@@ -23,7 +23,7 @@ The tool will include the following components:
 * metabolites represented by large circles or “nodes”
 * reactions represented by small circles
 3. arrows indicating direction of reaction
-4. a self-arrow that accompanies isolated nodes
+4. a self-arrow that accompanies an isolated node
 4. a search box where the user would be able to type the name of the concerned bacterial species
 5. an “Add Node” button to add metabolites to the network
 6. the option to remove reactions and nodes by right-clicking
