@@ -9,8 +9,8 @@ Last Thursday, I gave a presentation on our progress so far at our weekly
 meeting. A 'midterm report', if you will. Our current features at the time
 were:
 
-* a realtime graph with 10 000 nodes and 10 000 edges using [sigmajs](http://sigmajs.org/)
-* solution to FBA for one specie using [cobrapy](https://github.com/opencobra/cobrapy)
+* a realtime graph with roughly 2000 nodes and 2000 edges using [sigmajs](http://sigmajs.org/)
+* solution to FBA for one species using [cobrapy](https://github.com/opencobra/cobrapy)
 * a realtime graph displaying FBA results using [D3](http://d3js.org)
 
 Upon presenting these webpages, I was immediately met with a variety of
@@ -42,15 +42,11 @@ nodes in close proximity? All of these elements must be custom rendered by us,
 and each item must have a direct meaning tying it to the data. *Everything*
 must mean something which can be interpreted meaningfully by the user.
 
-* Reaction node size: represents the flux of that reaction. Potential issues, 
-  what if multiple reactions facilitated, how to differentiate?
-* Metabolite node size: now it is static. Can be made to represent relative 
-  concentration of metabolite in the system?
-* Edges: edge thickness will be made to represent the flux of the reaction
-  instead of reaction node size. This eliminates some ambiguity as to what
-  is being represented.
-* Colours: TBD. Can include node colours, node border colours, edge colours,
-  etc.
+* Reaction node size: Does not represent anything. 
+* Metabolite node size: Also does not represent anything.
+* Edges: Edges are scaled, in terms of width and length, to represent flux values calcuated from COBRApy.
+* Colours: Different colors for reaction nodes and metabolites. 
+* Shape: Can use shape to differentiate different types of metabolites.
 * Proximity: How can we customize proximity of nodes in order to convey useful
   information? Perhaps a 'relatedness' value can be produced by comparing which 
   enzymes/metabolites are present in interconnected pathways. Does proximity 
@@ -58,7 +54,7 @@ must mean something which can be interpreted meaningfully by the user.
 
 ## Potential Additions
 
-* Integration with [ecocyc](http://ecocyc.org/)
+* Use [ecocyc](http://ecocyc.org/) for gap filling
 * Use a hyperbolic lens for viewing the graph; need to be able to zoom in while
   keeping overall orientation
 
