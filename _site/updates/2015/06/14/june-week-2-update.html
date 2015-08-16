@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>June Week 2 Update</title>
+    <meta name="description" content="This week we completed the species spreadsheet, starting building our webapp&#39;suser interface with d3, dived deeper into the world of FBA and solving a si...">
+
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link rel="canonical" href="http://igemuoft.github.io/updates/2015/06/14/june-week-2-update.html">
+    <link rel="alternate" type="application/rss+xml" title="iGEM UofT Computational Biology" href="http://igemuoft.github.io /feed.xml " />
+
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+    <a href="/"> <canvas id="canvas"></canvas> </a>
+
+  <!--<div class="wrapper">
+
+      <a class="site-title" href="/">iGEM UofT Computational Biology</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+</div>-->
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">June Week 2 Update</h1>
+    <p class="post-meta">Jun 14, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>This week we completed the species spreadsheet, starting building our webapp&#39;s
+user interface with d3, dived deeper into the world of FBA and solving a simple
+example model, and started development of our NodeJS (Express) API which will
+be used for retrieving and manipulating data and providing the results of FBA
+at endpoints. Next week we will continue to expand upon and refine these topics. </p>
+
+<h3 id="progress-on-species-spreadsheet">Progress on Species Spreadsheet</h3>
+
+<p>This week, we completed our species spreadsheet! We narrowed down 28 species
+(from 16 classes) from the 41 we had gathered initially, but may choose to
+reincorporate some of these excluded microorganisms at a later time. All 28
+species now have links to their complete protein sequences and meet the criteria
+discussed last week. Further, we were able to find full metabolic networks (from
+existing literature on flux balance analysis) for seven species, and one other
+partial network. Moving forward, we will begin gathering the metabolic reaction
+data we need for our model.</p>
+
+<h3 id="user-interface-construction">User Interface Construction</h3>
+
+<p>The front-end group worked on making a <strong>prototype of the user tool</strong> that will
+eventually serve as a platform for the users to visualize <strong>bacterial metabolic
+networks</strong> and the <strong>changes in flux</strong> that result from adding or removing
+metabolites to these networks. The tool will include the following components:</p>
+
+<ul>
+<li>metabolites represented by large circles or “nodes”</li>
+<li>reactions represented by small circles</li>
+<li>arrows indicating direction of reaction</li>
+<li>a self-arrow that accompanies an isolated node</li>
+<li>a search box where the user would be able to type the name of the concerned bacterial species</li>
+<li>an “Add Node” button to add metabolites to the network</li>
+<li>the option to remove reactions and nodes by right-clicking</li>
+<li>the option to connect nodes (metabolite) through left-click dragging</li>
+<li>ability to pan and drag screen by ctrl-left-clicking</li>
+</ul>
+
+<p>Upon selecting a bacterial species from the search results, the user would
+perceive an immediate appearance of a set of nodes connected with arrows,
+representing the metabolic network of that species. Should the user choose to
+simultaneously view the metabolic networks of two bacteria, the two metabolic
+networks will be merged in order to construct a network with no node duplicates,
+in other words, if metabolite X is present in both species A and species B, the
+metabolic network of species A and B will only have only one circle labeled “X”. </p>
+
+<p><strong>D3.js</strong> (Data Driven Documents) is a Javascript library that breathes life
+into data via HTML, CSS, and SVG (Scalar Vector Graphics), and will be used to
+create the platform for the visualization of this FBA data. With D3, we will be
+able to bind the FBA data to the DOM (Document Object Model) of our web app, and
+then utilize D3&#39;s inherent ability to apply data-driven transformations to the
+document. D3 is extremely fast and flexible, and with <strong>efficient manipulation
+of documents with given data</strong> and its <strong>dynamic properties</strong> that will allow us
+to change an existing document in respsonse to animation over time or user
+interaction, it is the best tool we can use to build the user-interface. </p>
+
+<p>To find out more about D3.js and see awesome examples, <a href="http://d3js.org/">click
+here</a>!</p>
+
+<p>We will mostly be using a class of D3 called the force layout. The force layout
+refers to registered nodes and links so that it can be used with a single
+dataset. This is how we&#39;ll be tailoring the visual animations of the data to the
+users.
+To see an example of the force layout with D3, <a href="http://bl.ocks.org/mbostock/4062045">click here</a>!</p>
+
+<h3 id="fba-research">FBA research</h3>
+
+<p>The FBA focus group researched on ways to solve flux balance analysis this week.
+We identified <strong>cobrapy</strong> as an alternative to MATlab COBRA, a constraint based
+reconstruction and analysis tool. Cobrapy takes in <strong>sbml</strong> format metabolic
+network model and calculates fluxes of all the reactions when biomass is set as
+objective function:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">model.optimize()
+</code></pre></div>
+<p>Cobrapy is also able to take json object file as both input and output, which
+will be convenient for storing data in MongoDB later. For more information
+related to cobrapy, <a href="cobrapy.readthedocs.org/">click here</a>.  The most urgent
+task to the FBA group is to settle down a preliminary model that describes a
+community. All our future endeavor, from web interface design to database schema
+structure, depends on how community FBA is used. </p>
+
+<h3 id="how-did-the-computer-calculate-the-fluxes-progress-of-research-on-the-mathematics">How did the computer calculate the fluxes? --Progress of research on the mathematics</h3>
+
+<p>This week we found an <a href="http://wwwf.imperial.ac.uk/%7Ensjones/lec-fba.pdf">amazing
+document</a> that teaches the
+fundamental mathematics about flux balance analysis.</p>
+
+<p>Recall that all FBA problems contain three essential parts (or steps):</p>
+
+<ol>
+<li>Define the reaction coefficients in the form of a matrix, and put it in Av=0 (the &quot;equality contraint&quot;)</li>
+<li>Define the boundaries for the fluxes (the &quot;inequality contraint&quot;)</li>
+<li>Define what we want to optimize (the &quot;objective fuction&quot;)</li>
+</ol>
+
+<p>This way, we have framed a problem that happens to have the same structure of
+what mathematicians call a &quot;continuous <a href="https://en.wikipedia.org/wiki/Optimization_problem">optimization
+problem</a>&quot;. The algorithm of
+this has been well studied in the mathematical literature. There are many ways
+to solve this problem, each optimized for a different kind of scenario, and
+these algorithms have been implemented in many languages too.</p>
+
+<p>For instance, matlab does the trick with a function called <a href="http://www.mathworks.com/help/optim/ug/linprog.html">linprog</a>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">x = linprog(f,A,b,Aeq,beq,lb,ub)
+</code></pre></div>
+<p>It does the job with the function <code>solveLP</code></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">IN&gt; x = numeric.solveLP([1,1],                   % minimize [1,1]*x                
+                        [[-1,0],[0,-1],[-1,-2]], % matrix of inequalities          
+                        [0,0,-3]                 % right-hand-side of inequalities 
+                        );       
+    numeric.trunc(x.solution,1e-12);
+OUT&gt; [0,1.5]
+</code></pre></div>
+<p>Another software package we looked into is the Javascript library
+<a href="https://github.com/sloisel/numeric/">numeric.js</a>. Part of the reason why we
+looked into numeric.js is because we hoped to be able to implement this
+algorithm both frontend and backend. Unfortunately, numeric.solveLP only
+supports one-sided contraint, but we need two.</p>
+
+<p>In conclusion, the best approach we have found for now is as described in the
+&quot;FBA research&quot; session, using the COBRApy integrated function <code>model.optimize()</code>.
+The next step is to identify a way to support community FBA calculations, which
+COBRApy is not currently supporting (to our best knowledge).</p>
+
+<h3 id="nodejs-api">NodeJS API</h3>
+
+<p>As of now, the hardest part for the back end was deciding how we would strucutre
+our data in order to retrieve results as quickly as possible, as well as save as
+much space on the database at the same time. To accomplish that, we decided that
+the best solution would be to have each column (domain, class, phylum, etc...)
+have their own <a href="http://mongoosejs.com/">mongoose</a> schema. Each of those schemas
+has a parent object, which is a reference to the schema&#39;s parent. For example,
+if we had x belonged to domain column, and y belonged to the phylum column, the
+schema under the phylum column being element y would have an element that stores
+the ObjectId of the parent&#39;s schema, being x, and x would have a reference to
+it&#39;s members, being y.  The reason for this was to optimize how our data is
+stored efficently, and allowing us to search at incredible speeds. Because you
+can have multiple members for each schema, and each schema only has one parent,
+that allows us to shrink the amount of data for each column by the absolute max,
+allowing us to never have any duplicates.  With that being said, the search
+algorithm, if you&#39;re searching for say a specific species, would take big
+O(lg n) number of steps, which is the fastest you can get for
+searching. Not only that, but if you wanted to search for everything that was in
+domain column bacteria for example, all we would need to do is look at the
+members of that bacteria model, and iterate through them to populate, and that&#39;s
+once again the most efficent way to retrieve the data. The runtime for that
+varies as you go deeper into the columns, something like lg(n) for the species
+column, since there are no duplicates.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+    <div class="wrapper">
+
+        <h2 class="footer-heading">iGEM UofT Computational Biology</h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list footer-list">
+                    <li><i class="fa fa-globe"></i><a href="http://igem.skule.ca">igem.skule.ca</a></li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:igem@g.skule.ca">igem@g.skule.ca</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col  footer-col-2">
+                <ul class="social-media-list footer-list">
+                    
+                    <li>
+                        <i class="fa fa-github"></i>
+                        <a href="https://github.com/igemuoftATG"> <span class="username">igemuoftATG</span></a>
+                    </li>
+                     
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        <a href="https://twitter.com/iGEM_Toronto"><span class="username">iGEM_Toronto</span></a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-col  footer-col-3">
+                <ul class="footer-list">
+                    <li class="rss-subscribe"><i class="fa fa-rss"></i>subscribe <a href=" /feed.xml ">via RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/rAF.js"></script> 
+    <script src="/js/title.js"></script>    
+</body>
+
+</html>

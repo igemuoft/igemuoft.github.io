@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MEAN Stack Tutorial</title>
+    <meta name="description" content="From the ground up. An example of Express, ChildProcess, Endpoints, Middleware, Mongoose and MongoDB. AngularJS app controlling the interactions between the ...">
+
+    <link rel="stylesheet" href=" /css/main.css ">
+    <link rel="canonical" href="http://igemuoft.github.io/tutorials/2015/05/30/MEAN-stack-tutorial.html">
+    <link rel="alternate" type="application/rss+xml" title="iGEM UofT Computational Biology" href="http://igemuoft.github.io /feed.xml " />
+
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+    <a href="/"> <canvas id="canvas"></canvas> </a>
+
+  <!--<div class="wrapper">
+
+      <a class="site-title" href="/">iGEM UofT Computational Biology</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+</div>-->
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">MEAN Stack Tutorial</h1>
+    <p class="post-meta">May 30, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p><em>From the ground up.</em> An example of Express, ChildProcess, Endpoints, 
+Middleware, Mongoose and MongoDB. AngularJS app controlling the interactions 
+between the frontend and the backend. (This allows for a single page application
+ (SPA) at the expense of search engine optimization (SEO) - though there are 
+some hacky solutions). The source code for this tutorial can be found 
+<a href="https://github.com/thejmazz/naivednageneration">here</a>.</p>
+
+<h2 id="nodejs-express-mongoose-tutorial">NodeJS/Express/Mongoose Tutorial</h2>
+
+<p>Read the source! It is commented and filled with links to external resources.</p>
+
+<p>First thing to do is set up our NodeJS/Express environment:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>npm init
+<span class="nv">$ </span>npm install --save express body-parser mongoose morgan colors
+</code></pre></div>
+<p><code>npm init</code> will create a <code>package.json</code> file. <code>npm install</code> will download our
+dependencies into the <code>node_modules</code> folder. The <code>--save</code> option ensures
+the dependencies will be added to the <code>dependencies</code> object within the
+<code>package.json</code> file. Now let&#39;s create a basic app that responds to a <code>GET</code> and
+<code>POST</code> http request at the root route. Create <code>app.js</code> as follows:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;got a GET request&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;got a POST request&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Express server listening on port &#39;</span> <span class="o">+</span> <span class="nx">port</span><span class="p">);</span>
+</code></pre></div>
+<p>Open up the <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en">Postman - REST Client</a>
+chrome app. You <em>cannot</em> test <code>POST</code> requests easily from your browser&#39;s
+navigation bar. Instead, Postman allows you to easily send any http request to
+a url and provide headers and other useful data. Point Postman to
+<code>http://localhost:9001/</code> and choose <code>GET</code> from the dropdown. Click send. Notice
+that the response is <code>got a GET request</code>. Similarily, select <code>POST</code> and send.
+Notice how on <em>the same url</em>, you have received a different response: <code>got a
+POST request</code>. This is due to the use of http verbs - <code>GET, POST, PUT, DELETE,
+PATCH,...</code> there are a [bunch] of different methods. <code>GET</code> (asking the &#39;embassy&#39;
+for your record), <code>POST</code> (sending the embassy personal info and they send back a
+personalized passport), <code>PUT</code> (informing the embassy of a mistake in the
+passport and they fix it, may send back confirmation of fix), <code>DELETE</code> (this is
+what you do when you escape to a faraway island and remove your personal
+information from inside the embassy&#39;s database).</p>
+
+<p>Okay, so that&#39;s working, but wouldn&#39;t it be nice if the Node server logged some
+info every time a request was sent? Just for our development purposes, to see
+which routes are getting called, etc. This is an example of <em><a href="expressjs.com/guide/using-middleware.html">middleware</a></em>.
+&quot;An Express application is essentially a series of middleware calls&quot;. We can use
+middleware to <code>console.log(&#39;got a request&#39;)</code> on every route - just so we are
+aware of what our server is doing! Insert the following into your code:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;got a request!&#39;</span><span class="p">);</span>
+    <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Now send a bunch of get or post requests from Postman and you will see the 
+console light up with messages. Notice how it happens on both of our routes - 
+we did not specify a route in our <code>app.use(route, middleware)</code> call, so it will
+apply the middleware to <em>all</em> routes. The <code>next</code> parameter and <code>next()</code> call are
+required so that the next function in the middleware stack will be called,
+otherwise our application will hang at the log.There are two alternative ways to
+specify specific middleware for specific routes, but first let&#39;s rename our two
+root routes to something more specific:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/getDNAs&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;here is some DNA: ATGGGGGGGGGGTAG&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/genDNA&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;gonna generate some DNA now..&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>If we wanted to log our GET and POST routes with middleware, we could do it like
+this:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;/getDNAs&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;got a GET to /getDNAs&#39;</span><span class="p">);</span>
+    <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;/genDNA&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;got a POST to /genDNA&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>or we can define middleware functions that need to explicitly called:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">getDNALog</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;got a GET to /getDNAs&#39;</span><span class="p">);</span>
+    <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">postDNALog</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;got a POST to /genDNA&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/getDNAs&#39;</span><span class="p">,</span> <span class="nx">getDNALog</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// route stuff</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/genDNA&#39;</span><span class="p">,</span> <span class="nx">postDNALog</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// route stuff</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Now, that was just to introduce you to the topic of middleware. I highly 
+recommend reading through the Express guides for <a href="http://expressjs.com/guide/routing.html">routing</a>
+and <a href="http://expressjs.com/guide/using-middleware.html">middleware</a>. In reality,
+no one writes their own custom log messages. There is already an <a href="https://www.npmjs.org/package/grunt-bowercopy">npm</a>
+package for that. We will use <a href="https://www.npmjs.com/package/morgan">morgan</a>.
+Morgan is easy to use, and like all other well-developed community middleware,
+modules, etc, a quick read through the readme on the repo should be enough
+to get you up to speed with the basics. Essentially you are importing a module,
+and then finding out which functions from it to call. All the annoying, tedious
+stuff has been done for and tested. For example, morgan is currently on version
+1.5.3 and has 135 commits from 7 contributors. Any ways, to use morgan you just
+need to require it and then apply it as middleware:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">morgan</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;morgan&#39;</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">morgan</span><span class="p">(</span><span class="s1">&#39;tiny&#39;</span><span class="p">));</span>
+</code></pre></div>
+<p><code>tiny</code> is one of the predefined formats..something I just now figured out by
+browsing the readme file. I would like to stress here the importance of simply
+reading documentation and readmii (plural of readme) before asking someone your
+question - most often you will be able to find the answer, and learn a bunch in
+the process. If you also import <a href="https://www.npmjs.com/package/colors"><code>colors</code></a>
+you can stylize our console output a bit more, and in this way I&#39;ve made my own
+morgan logger style:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">morgan</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;morgan&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">colors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;colors&#39;</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">morgan</span><span class="p">(</span>
+    <span class="s1">&#39;:method &#39;</span><span class="p">.</span><span class="nx">magenta</span> <span class="o">+</span> 
+    <span class="s1">&#39;:url &#39;</span><span class="p">.</span><span class="nx">green</span> <span class="o">+</span> 
+    <span class="s1">&#39;:status &#39;</span><span class="p">.</span><span class="nx">blue</span> <span class="o">+</span>
+    <span class="s1">&#39;:res[content-length] &#39;</span><span class="p">.</span><span class="nx">italic</span><span class="p">.</span><span class="nx">grey</span> <span class="o">+</span> <span class="s1">&#39;bits &#39;</span><span class="p">.</span><span class="nx">italic</span><span class="p">.</span><span class="nx">grey</span> 
+    <span class="o">+</span> <span class="s1">&#39;sent in &#39;</span> <span class="o">+</span> <span class="s1">&#39;:response-time ms&#39;</span><span class="p">.</span><span class="nx">grey</span>
+<span class="p">));</span>
+</code></pre></div>
+<p>Now lets move on to developing our routes, so far we have one <code>GET</code> endpoint and
+one <code>POST</code> endpoint. We will be using <code>POST /genDNA</code> to allow the client to send
+over a single numerical argument <code>n</code> which will be used as the command-line
+argument for a Python child process that generates a random DNA sequence that
+is <code>n</code> nucleotides long. The python3 script is:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">nts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+
+<span class="c"># A *very* naive random DNA generation algorithm</span>
+<span class="c"># But can you do better?</span>
+<span class="k">for</span> <span class="n">nt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nts</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">):</span>
+        <span class="n">seq</span> <span class="o">+=</span> <span class="s">&quot;A&quot;</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">):</span>
+        <span class="n">seq</span> <span class="o">+=</span> <span class="s">&quot;T&quot;</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mf">0.25</span><span class="p">):</span>
+        <span class="n">seq</span> <span class="o">+=</span> <span class="s">&quot;C&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">seq</span> <span class="o">+=</span> <span class="s">&quot;G&quot;</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>You can store the script in <code>genDNA.py</code> and test it from your terminal like so:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python3 genDNA.py 512
+</code></pre></div>
+<p>which will print out a random arrangement of 512 nucleotides.</p>
+
+<p>Let&#39;s look at how we can get <code>n</code> from the client. We will be using a <code>POST</code>
+request since we are reguesting certain information from the client which we
+will use to perform a specific function, in this case, get an argument for our 
+Python script so we can send back a sequence of the desired length. Other
+applications for <code>POST</code> requests can range from logging in to uploading an
+image.  We will use <a href="https://www.npmjs.com/package/body-parser">body-parser</a> to
+ease this process. bodyParser fills the <code>req.body</code> object with useful data. The
+<code>req</code> object already has a ton of information, but most of it is not required
+on a regular basis. Try out <code>console.log(req)</code> on a route to see what I mean.
+To get <code>urlencoded</code> bodies we can use bodyParser as so:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bodyParser</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;body-parser&#39;</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">({</span><span class="nx">extended</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/genDNA&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Now open up Postman, set the url to <code>http://localhost:9001/genDNA</code>, choose
+<code>POST</code>, make sure Headers are empty, and add some random Key/Value pairs to
+<code>x-www-form-urlencoded</code>. Click send, you should receive a json of your key/value
+pairs. Now let&#39;s set up raw json data, add in:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">bodyParser</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+</code></pre></div>
+<p>Remove all of your key/value pairs, add the following Header/Value pair: 
+<code>Content-Type</code>/<code>application/json</code>, and add in some raw data in json format, for
+example:</p>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&quot;n&quot;</span><span class="p">:</span> <span class="mi">42</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Click send, and as before, you should get a json back with your sent data. 
+So, we are able to retrieve <code>n</code> from the client, let&#39;s get started on setting
+up the Python <a href="https://nodejs.org/api/child_process.html">child process</a>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">cp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/genDNA&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">n</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">output</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">errorlog</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nx">exitcode</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">};</span>
+
+    <span class="kd">var</span> <span class="nx">genDNAScript</span> <span class="o">=</span> <span class="nx">cp</span><span class="p">.</span><span class="nx">spawn</span><span class="p">(</span><span class="s1">&#39;python3&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;genDNA.py&#39;</span><span class="p">,</span> <span class="nx">n</span><span class="p">]);</span>
+
+    <span class="c1">// get stdout</span>
+    <span class="nx">genDNAScript</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">stdout</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">results</span><span class="p">.</span><span class="nx">output</span> <span class="o">=</span> <span class="nx">stdout</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+    <span class="p">});</span>
+
+    <span class="c1">// get stderr</span>
+    <span class="nx">genDNAScript</span><span class="p">.</span><span class="nx">stderr</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">results</span><span class="p">.</span><span class="nx">errorlog</span> <span class="o">=</span> <span class="nx">stderr</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+    <span class="p">});</span>
+
+    <span class="c1">// script finished</span>
+    <span class="nx">genDNAScript</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">results</span><span class="p">.</span><span class="nx">exitcode</span> <span class="o">=</span> <span class="nx">code</span><span class="p">;</span> 
+
+        <span class="c1">// Respond on process close</span>
+        <span class="c1">// otherwise, async problems!</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+    <span class="p">});</span>   
+<span class="p">})</span>
+</code></pre></div>
+<p>Send the same request as the last with Postman and you should get back
+a randomized DNA sequence! But what is going on here? First you need to 
+understand the three core <em>data streams</em> associated with a <em>process</em>. There is
+standard input (<code>stdin</code>), standout output (<code>stdout</code>) and standard error
+(<code>stderr</code>). Conforming to these three core idioms allows the stringing together
+of simple commands into complex processes. For example, I can send the contents
+of a file to <code>stdout</code> with <code>cat</code>, then pipe that into <code>grep</code> (in this way the
+<code>stdout</code> becomes the <code>stdin</code> for <code>grep</code>), search for all lines containg &quot;todo&quot;
+and then store that result in my clipboard using <code>xclip</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cat notes.txt <span class="p">|</span> grep todo <span class="p">|</span> xclip -i -selection clipboard
+</code></pre></div>
+<p>We won&#39;t be using <code>stdin</code> in this tutorial. ChildProcess is an <a href="https://nodejs.org/api/events.html#events_class_events_eventemitter">EventEmitter</a>.
+So essentially, <code>cp.spawn()</code> returns an object that we can &#39;catch&#39; events
+with, in our case we watch for data to come from the <code>stdout</code> and <code>stderr</code> 
+streams. Then all that is left to do is store the output in our <code>results</code> object
+with the callback function. Finally we catch the <code>close</code> event, store the exit
+code (which every process must return, 0 means success, anything else is an
+error code), and finally send the entire <code>results</code> object back to the client.</p>
+
+<p>Now we have a working <code>POST /genDNA</code> endpoint which sends back a random DNA
+sequence of length specified by the client. Now let&#39;s finish up the API by
+storing all results in a database! We will use <a href="https://www.mongodb.org">MongoDB</a>
+for our database, and interact with it from Node with <a href="mongoosejs.com">mongoose</a>.</p>
+
+<p>The first step with mongoose is to require the module and connect to our
+database (either local or online):</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">);</span>
+
+<span class="c1">// use local MongoDB</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;mongodb://localhost/dbName&#39;</span><span class="p">;</span>
+<span class="c1">// or use mongolab      </span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;mongodb://myuser:mypass@ds028017.mongolab.com:28017/mydb&#39;</span><span class="p">;</span>
+<span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</code></pre></div>
+<p>The next step is to define a <a href="http://mongoosejs.com/docs/guide.html">Schema</a>
+that our <code>documents</code> within a <code>collection</code> within a <code>database</code> will follow:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">DNASchema</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
+    <span class="s1">&#39;sequence&#39;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s1">&#39;len&#39;</span><span class="o">:</span> <span class="nb">Number</span>
+<span class="p">});</span> 
+</code></pre></div>
+<p>Essentially, we are enforcing the <code>types</code> of each of our <code>attributes</code> within an
+individual <code>document</code>. A <code>collection</code> is a list of <code>documents</code>. The <code>database</code> 
+holds a number of <code>collections</code>. Be sure to check the docs for Schema mentioned
+above to learn about all the other valid types, <code>Date</code>, <code>Buffer</code>, <code>ObjectID</code>,...
+are just a few. Once we have set up a schema, it&#39;s simple to define a mongoose
+<a href="http://mongoosejs.com/docs/models.html">model</a>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">DNASeq</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">model</span><span class="p">(</span><span class="s1">&#39;dna&#39;</span><span class="p">,</span> <span class="nx">DNASchema</span><span class="p">);</span>
+</code></pre></div>
+<p>Typically, you would capitalize your models. It does not matter which case
+we use in the first argument to <code>model(name,schema)</code> since the collection name
+will be all lowercase anyways (it will also have an &#39;s&#39; added to so don&#39;t use
+the plural form for <code>name</code>). This is enough setup for us to save sequences to
+the database! Let&#39;s add the following just before our <code>res.send(results)</code> in
+<code>POST /genDNA</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="nx">code</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// success, store sequence in DB</span>
+    <span class="kd">var</span> <span class="nx">seq</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DNASeq</span><span class="p">({</span>
+        <span class="nx">sequence</span><span class="o">:</span> <span class="nx">results</span><span class="p">.</span><span class="nx">output</span><span class="p">,</span>
+        <span class="nx">len</span><span class="o">:</span> <span class="nx">arg</span> 
+    <span class="p">});</span>
+
+    <span class="nx">seq</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">sequence</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;saved sequence&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>First we make a new instance of our model following the schema, and then we
+simply save the model. Models have a bunch of predefined methods like
+<code>save(function(err, savedItem))</code> and you can even add your own!</p>
+
+<p>Another model method is <code>find()</code>. We can use <code>Model.find(conditions,
+[projection], [options], [callback])</code> and pass in no conditions to return
+all items in the collection for that model:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/dnas&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">DNASeq</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">dnas</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+
+        <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">dnas</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Awesome! We now have built a RESTful API using NodeJS/Express and
+MongoDB/mongoose! Verify that <code>POST /genDNA</code> and <code>GET /dnas</code> work as expected.
+Now it is time to build the AngularJS webapp that will use our API. First,
+one last thing: we need to enable CORS - cross-origin resource sharing.
+Basically, if we don&#39;t do this some browsers won&#39;t let use get resources from
+an API at another origin, even different port. But it&#39;s easy to fix, just apply
+the following global middleware that sets response headers to allow CORS:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">,</span> <span class="s2">&quot;Origin, X-Requested-With, Content-Type, Accept&quot;</span><span class="p">);</span>
+    <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h2 id="angularjs-tutorial">AngularJS Tutorial</h2>
+
+<p>First, make sure you are on the <code>pre-angular</code> branch:
+(or keep using your own code if you have been following along until now)</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/thejmazz/naivednageneration.git
+<span class="nv">$ </span><span class="nb">cd </span>naivednageneration
+<span class="nv">$ </span>git checkout pre-angular
+</code></pre></div>
+<p>Now we have a RESTful API with two endpoints (<code>POST /genDNA</code> and <code>GET /dnas</code>),
+and we will build the frontend app using AngularJS.  First, we need to make a
+folder for static content. This can be served easily from Node, and essentially
+allows us to make a simple html website. So:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>mkdir public
+<span class="nv">$ </span><span class="nb">cd </span>public
+<span class="nv">$ </span>touch index.html
+</code></pre></div>
+<p>Fill your <code>index.html</code> file as so:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>naive dna gen.<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- bower:css --&gt;</span>
+
+    <span class="c">&lt;!-- endbower --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span> A Naive DNA Generation Algorithm <span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- bower:js --&gt;</span>
+
+    <span class="c">&lt;!-- endbower --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>Then to serve this from Node, add the following to the end of <code>app.js</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="s1">&#39;public&#39;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Serving content from &#39;</span> <span class="o">+</span> <span class="s1">&#39;public&#39;</span><span class="p">.</span><span class="nx">blue</span><span class="p">);</span>
+</code></pre></div>
+<p>Start the server:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>node app.js 9001
+</code></pre></div>
+<p>And visit the page at <code>http://localhost:9001</code>.</p>
+
+<p>From inside <code>public</code>, run</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower init
+</code></pre></div>
+<p>Change the name if you&#39;d like, just enter through everything else. When that is
+finished, a <code>bower.json</code> file will have been created. This file is very similar
+to <code>package.json</code> except <code>package.json</code> is used by Node and most often for
+backend dependencies (like Express, body-parser), or for command-line tools like
+Gulp or Grunt, whereas <code>bower.json</code> is used for managing frontend dependencies
+(like jQuery, bootstrap), and will install these into <code>bower_components</code>. Lets
+get started by installing AngularJS:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install --save angular
+</code></pre></div>
+<p>The <code>--save</code> option will add <code>angular</code> to our <code>dependencies</code> object within
+<code>bower.json</code>. Look at the file if you would like to see for yourself. If you
+take a peek inside <code>bower_components</code>, you will see there is now a folder
+<code>angular</code> and within there <code>angular.js</code>, the main file we are looking for. We
+<em>could</em> manually add that script to our html, but there is an easier way to do
+it. Remember those </p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- bower:js --&gt;</span>
+<span class="c">&lt;!-- endbower --&gt;</span>
+</code></pre></div>
+<p>comments? They are for a tool called <code>wiredep</code> to add in our dependencies.
+First, make sure you have <code>wiredep</code> installed globally:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>npm install -g wiredep
+</code></pre></div>
+<p>And then wire up those dependencies into your <em>source</em> file <code>index.html</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>wiredep -s index.html
+</code></pre></div>
+<p>Now the <code>&lt;script src=&quot;...angular.js&quot;&gt;&lt;/script&gt;</code> will have been added to
+<code>index.html</code> and we can really get started. Let&#39;s make a folder called <code>js</code>
+within <code>public</code> and create a file <code>main.js</code> within. Fill <code>main.js</code>with the
+following (also make sure to add <code>&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;</code> to
+<code>index.html</code>, after the bower stuff):</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;naiveDNA&#39;</span><span class="p">,</span> <span class="p">[])</span>
+
+<span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;bodyCtrl&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$scope&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">mainTitle</span> <span class="o">=</span> <span class="s1">&#39;A Naive DNA Generation Algorithm&#39;</span>
+    <span class="nx">$scope</span><span class="p">.</span><span class="nx">subTitle</span> <span class="o">=</span> <span class="s2">&quot;But what isn&#39;t?&quot;</span>
+<span class="p">}]);</span>
+</code></pre></div>
+<p>A few things just happened. First, we have defined our main app as <code>naiveDNA</code>,
+to reconcile this with our html modify the opening <code>&lt;html&gt;</code> tag like so:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span> <span class="na">ng-app=</span><span class="s">&quot;naiveDNA&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Second, we have defined our first controller. A controller is what is what it
+sounds like..used to add/remove/modify/&#39;use&#39; the elements within it&#39;s context.
+Again, let&#39;s reconcile this with our html:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">ng-controller=</span><span class="s">&quot;bodyCtrl&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Now, what is <code>$scope</code>? I like to think of <code>$scope</code> as the object containing the
+variables available to the context of that controller. In this case, any
+<code>ng-model=&quot;foo&quot;</code> (which we will see soon) will be available from the controller
+as <code>$scope.foo</code>. So let&#39;s put <code>$scope</code> to use, replace the current <code>&lt;h1&gt;</code> in
+<code>index.html</code> with the following:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;&lt;/h2&gt;</span>
+</code></pre></div>
+<p>Refresh the page, and you should see your new titles. Time to get a little more
+interesting. We have a <code>GET</code> endpoint on our api at <code>/dnas</code>. You can test this
+by pointing Postman or your browser to <code>http://localhost:9001/dnas</code>. (If you
+have not generated any sequences before, this will be empty). Let&#39;s add a button
+to our page that will retreive all of our seqeunces and display them on the
+page, below your headings add:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;hr&gt;</span> <span class="nt">&lt;center&gt;</span> <span class="nt">&lt;button</span> <span class="na">ng-click=</span><span class="s">&quot;getSeqs()&quot;</span><span class="nt">&gt;</span>All Sequences<span class="nt">&lt;/button&gt;</span> <span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">ng-repeat=</span><span class="s">&quot;seq in seqs&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>And add the corresponding function and object to <code>main.js</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$scope</span><span class="p">.</span><span class="nx">seqs</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">getSeqs</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;http://localhost:9001/dnas&#39;</span><span class="p">).</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$scope</span><span class="p">.</span><span class="nx">seqs</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>But wait, not so fast! What is <code>$http</code>? It is service provided by Angular and as
+such we need to properly define the dependencies of our controller, change the
+controller declaration to:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;bodyCtrl&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$scope&#39;</span><span class="p">,</span> <span class="s1">&#39;$http&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// our stuff</span>
+<span class="p">}]);</span>
+</code></pre></div>
+<p>Okay so what has happened? We defined a function <code>getSeqs</code> and since the
+<code>$scope</code> is shared between our controller and it&#39;s respective DOM element (in
+this case, <code>&lt;body&gt;</code>) we call that function on the button&#39;s click with
+<code>ng-click=&quot;getSeqs()&quot;</code>. Then we are using
+<a href="https://docs.angularjs.org/api/ng/service/$http"><code>$http</code></a> to perform a <code>GET</code>
+request to <code>/dnas</code>, which returns a
+<a href="https://docs.angularjs.org/api/ng/service/$q">promise</a> with two specific
+methods: <code>success</code> and <code>error</code>. You can also use the promise method <code>then</code>.
+Essentially, we have requested a resource, some async stuff goes off, we get our
+callback with the results (<code>.success(function(results){...})</code>) and store the
+results into <code>$scope.seqs</code>. The <code>ng-repeat</code> part of this loops through the
+<code>$scope.seqs</code> array and outputs some nice html.</p>
+
+<p>Now let&#39;s add the ability to add sequences to the database from our app. The
+markup for <code>index.html</code>:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;numNts&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;how many nucleotides?&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">ng-click=</span><span class="s">&quot;genDNA()&quot;</span><span class="nt">&gt;</span>Generate DNA!<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">ng-show=</span><span class="s">&quot;currentSeq&quot;</span><span class="nt">&gt;</span>
+    You just generated: <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>And the associated JavaScript in <code>main.js</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$scope</span><span class="p">.</span><span class="nx">genDNA</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">envelopeContents</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">arg</span><span class="o">:</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">numNts</span>
+    <span class="p">};</span>
+
+    <span class="kd">var</span> <span class="nx">sentEnvelope</span> <span class="o">=</span> <span class="nx">$http</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;http://localhost:9001&#39;</span><span class="p">,</span> <span class="nx">envelopeContents</span><span class="p">);</span>
+
+    <span class="c1">// could handle this like we did with .success in getSeqs, but for</span>
+    <span class="c1">// the sake of variety/learning we will use the promise method then</span>
+    <span class="c1">// see https://docs.angularjs.org/api/ng/service/$q</span>
+    <span class="c1">// promise.then(success,error,update);</span>
+    <span class="nx">sentEnvelope</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// person got our envelope, did some stuff, sent us back a reply</span>
+        <span class="nx">$scope</span><span class="p">.</span><span class="nx">currentSeq</span> <span class="o">=</span> <span class="nx">reply</span><span class="p">.</span><span class="nx">output</span><span class="p">;</span>
+    <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">reason</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Failed: &#39;</span> <span class="o">+</span> <span class="nx">reason</span><span class="p">);</span>
+    <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">update</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Got notification: &#39;</span> <span class="o">+</span> <span class="nx">update</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><a href="https://docs.angularjs.org/api/ng/directive/ngShow"><code>ngShow</code></a> will enforce css
+styles so that the div will show or not show depending on if it&#39;s associated
+expression is truthy. In our case, <code>if(currentSeq)</code> would return false until
+<code>genDNA()</code> is ran, at which point <code>if(notNullVariable)</code> will return true and the
+div will show.</p>
+
+<p>Questions? Errors? Please let me know! Next steps: work through some
+<a href="http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro">tutorials</a>
+and read the <a href="https://docs.angularjs.org/api">docs</a>!</p>
+
+<p>Cheers,<br>
+thejmazz</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+    <div class="wrapper">
+
+        <h2 class="footer-heading">iGEM UofT Computational Biology</h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list footer-list">
+                    <li><i class="fa fa-globe"></i><a href="http://igem.skule.ca">igem.skule.ca</a></li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:igem@g.skule.ca">igem@g.skule.ca</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col  footer-col-2">
+                <ul class="social-media-list footer-list">
+                    
+                    <li>
+                        <i class="fa fa-github"></i>
+                        <a href="https://github.com/igemuoftATG"> <span class="username">igemuoftATG</span></a>
+                    </li>
+                     
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                        <a href="https://twitter.com/iGEM_Toronto"><span class="username">iGEM_Toronto</span></a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="footer-col  footer-col-3">
+                <ul class="footer-list">
+                    <li class="rss-subscribe"><i class="fa fa-rss"></i>subscribe <a href=" /feed.xml ">via RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/rAF.js"></script> 
+    <script src="/js/title.js"></script>    
+</body>
+
+</html>

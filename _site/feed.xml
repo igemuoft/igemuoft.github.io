@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iGEM UofT Computational Biology</title>
+    <description>The iGEM UofT Computational Biology blog. This is where we will  document our project progress, tutorials, questions, and other items.
+</description>
+    <link>http://igemuoft.github.io/</link>
+    <atom:link href="http://igemuoft.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 16 Aug 2015 09:33:20 -0400</pubDate>
+    <lastBuildDate>Sun, 16 Aug 2015 09:33:20 -0400</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Dank Wiki Generator</title>
+        <description>&lt;p&gt;You can find our wiki generator &lt;a href=&quot;https://github.com/igemuoftATG/wiki2015&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It makes use of the following technologies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;dank&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://yeoman.io/&quot;&gt;Yeoman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt; (libsass) and &lt;a href=&quot;https://github.com/Igosuki/compass-mixins&quot;&gt;compass-mixins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bower.io/&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://coffeescript.org/&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-this-works&quot;&gt;How this works&lt;/h2&gt;
+
+&lt;p&gt;I have documented
+&lt;a href=&quot;http://45.55.193.224/wiki2015/docs/gulpfile.html&quot;&gt;gulpfile.coffee&lt;/a&gt; and
+&lt;a href=&quot;http://45.55.193.224/wiki2015/docs/helpers.html&quot;&gt;helpers.coffee&lt;/a&gt; which are the
+two core modules for all of this to work.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yo wikigenerator
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You will then be asked a few questions. Please answer them politely. What is
+your team name, what year is it, etc. This answers will be used to scaffold out
+a bare wiki.&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;The core of this generator is built around compiling one set of
+&lt;a href=&quot;http://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; templates into a &lt;code&gt;live&lt;/code&gt; and &lt;code&gt;dev&lt;/code&gt;
+version. The &lt;code&gt;dev&lt;/code&gt; version located within &lt;code&gt;./build-dev&lt;/code&gt; can be locally hosted
+with all &lt;em&gt;navigational&lt;/em&gt; URIs pointing to local files. On the other hand, the
+&lt;code&gt;live&lt;/code&gt; version located within &lt;code&gt;./build-live&lt;/code&gt; uses links that follow the iGEM
+Wiki namespacing conventions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;compile &lt;code&gt;./src/**/*.hbs&lt;/code&gt; into &lt;code&gt;./build-dev/**/*.html&lt;/code&gt; and &lt;code&gt;./build-live/**/*.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;working handlebars variables inside pages &lt;em&gt;and&lt;/em&gt; templates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;todos&quot;&gt;ToDos&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;implement markdown compiling for page content&lt;/li&gt;
+&lt;li&gt;make Yeoman generator&lt;/li&gt;
+&lt;li&gt;do live build for bower deps into one file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;guide&quot;&gt;Guide&lt;/h2&gt;
+
+&lt;h3 id=&quot;defining-page-links&quot;&gt;Defining page links&lt;/h3&gt;
+
+&lt;h3 id=&quot;creating-new-pages&quot;&gt;Creating new pages&lt;/h3&gt;
+
+&lt;h3 id=&quot;creating-new-templates&quot;&gt;Creating new templates&lt;/h3&gt;
+</description>
+        <pubDate>Tue, 21 Jul 2015 20:00:00 -0400</pubDate>
+        <link>http://igemuoft.github.io/updates/2015/07/21/wikigenerator.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/updates/2015/07/21/wikigenerator.html</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>July Midterm Report Update</title>
+        <description>&lt;p&gt;Last Thursday, I gave a presentation on our progress so far at our weekly
+meeting. A &amp;#39;midterm report&amp;#39;, if you will. Our current features at the time
+were:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a realtime graph with 10 000 nodes and 10 000 edges using &lt;a href=&quot;http://sigmajs.org/&quot;&gt;sigmajs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;solution to FBA for one specie using &lt;a href=&quot;https://github.com/opencobra/cobrapy&quot;&gt;cobrapy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a realtime graph displaying FBA results using &lt;a href=&quot;http://d3js.org&quot;&gt;D3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Upon presenting these webpages, I was immediately met with a variety of
+questions, not all of which I could immediately answer. The rest of this post
+will be a summary of those questions, the issues they address, and how we can
+work to create a tool which encompasses all of the needs addressed by our
+grad student and professor advisers, and of course, by ourselves.&lt;/p&gt;
+
+&lt;p&gt;At the time of presentation, we were mainly concerned with finding the proper
+web technology to efficiently display large datasets. After thorough comparisons
+between D3 and sigmajs, we have now decided to pursue D3 + canvas rendering with
+no DOM elements.&lt;/p&gt;
+
+&lt;h2 id=&quot;project-plan&quot;&gt;Project Plan&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Model and modify how different species interact in a community&lt;/li&gt;
+&lt;li&gt;FBA for single species modelling, cFBA for community FBA&lt;/li&gt;
+&lt;li&gt;data is coming from SMBL formatted files which provide metabolic model for a
+specie&lt;/li&gt;
+&lt;li&gt;users will be able to interact with the dataset, and view the results of their
+actions in realtime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-does-the-visualization-represent&quot;&gt;What does the visualization represent?&lt;/h2&gt;
+
+&lt;p&gt;What do the nodes represent? What do colours mean? What does the length of
+connections between nodes mean? Radius? What can be inferred from a group of
+nodes in close proximity? All of these elements must be custom rendered by us,
+and each item must have a direct meaning tying it to the data. &lt;em&gt;Everything&lt;/em&gt;
+must mean something which can be interpreted meaningfully by the user.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reaction node size: represents the flux of that reaction. Potential issues, 
+what if multiple reactions facilitated, how to differentiate?&lt;/li&gt;
+&lt;li&gt;Metabolite node size: now it is static. Can be made to represent relative 
+concentration of metabolite in the system?&lt;/li&gt;
+&lt;li&gt;Edges: edge thickness will be made to represent the flux of the reaction
+instead of reaction node size. This eliminates some ambiguity as to what
+is being represented.&lt;/li&gt;
+&lt;li&gt;Colours: TBD. Can include node colours, node border colours, edge colours,
+etc.&lt;/li&gt;
+&lt;li&gt;Proximity: How can we customize proximity of nodes in order to convey useful
+information? Perhaps a &amp;#39;relatedness&amp;#39; value can be produced by comparing which 
+enzymes/metabolites are present in interconnected pathways. Does proximity 
+effectively organize itself? This is something we need to investigate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;potential-additions&quot;&gt;Potential Additions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integration with &lt;a href=&quot;http://ecocyc.org/&quot;&gt;ecocyc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use a hyperbolic lens for viewing the graph; need to be able to zoom in while
+keeping overall orientation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;an-analysis-tool-for-our-users&quot;&gt;An Analysis Tool for our Users&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How can we provide quantitative analysis? Visualization is nice, but provides
+no simple way to accurately compare results between different experiments.&lt;/li&gt;
+&lt;li&gt;Goal: build a tool for FBA where the user does not have to learn a programming
+technology like COBRA or MATLAB, and can also submit their own models &lt;/li&gt;
+&lt;li&gt;Hypothesis generator: have an idea, insert a gene, observe the results&lt;/li&gt;
+&lt;li&gt;Need a way to store and compare numerical results for a user from a variety of
+experiments&lt;/li&gt;
+&lt;li&gt;Which genes need to be added/removed to get the community to achieve the
+desired goal?&lt;/li&gt;
+&lt;li&gt;Workflow: model produces predictions, results should have correlation to lab
+data, how to integrate results into next round of modelling? Introduce
+additional data: allow user submitted modifications to model. For example, set
+lab data as new flux bounds. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Formulate an efficient and effective visualization tool. All aspects of the
+visualization should tie back to the data and represent the data meaningfully.&lt;/li&gt;
+&lt;li&gt;The visualization should be interactive, and again, the interactions &lt;em&gt;must&lt;/em&gt;
+have a real meaning related to the data.&lt;/li&gt;
+&lt;li&gt;Develop our cFBA models, how to solve cFBA model&lt;/li&gt;
+&lt;li&gt;Integrate quantitative results into the webapp&lt;/li&gt;
+&lt;li&gt;Integrate tools for comparing quantitative results across multiple experiments&lt;/li&gt;
+&lt;li&gt;Ability to add new models, edit existing models in the experiment&lt;/li&gt;
+&lt;li&gt;For example, I have a gene, and I would like to see it&amp;#39;s effects compared when
+included in the metabolic models of a set of species, and how it can effect
+different communities&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 21 Jul 2015 20:00:00 -0400</pubDate>
+        <link>http://igemuoft.github.io/updates/2015/07/21/july-update.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/updates/2015/07/21/july-update.html</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>June Week 2 Update</title>
+        <description>&lt;p&gt;This week we completed the species spreadsheet, starting building our webapp&amp;#39;s
+user interface with d3, dived deeper into the world of FBA and solving a simple
+example model, and started development of our NodeJS (Express) API which will
+be used for retrieving and manipulating data and providing the results of FBA
+at endpoints. Next week we will continue to expand upon and refine these topics. &lt;/p&gt;
+
+&lt;h3 id=&quot;progress-on-species-spreadsheet&quot;&gt;Progress on Species Spreadsheet&lt;/h3&gt;
+
+&lt;p&gt;This week, we completed our species spreadsheet! We narrowed down 28 species
+(from 16 classes) from the 41 we had gathered initially, but may choose to
+reincorporate some of these excluded microorganisms at a later time. All 28
+species now have links to their complete protein sequences and meet the criteria
+discussed last week. Further, we were able to find full metabolic networks (from
+existing literature on flux balance analysis) for seven species, and one other
+partial network. Moving forward, we will begin gathering the metabolic reaction
+data we need for our model.&lt;/p&gt;
+
+&lt;h3 id=&quot;user-interface-construction&quot;&gt;User Interface Construction&lt;/h3&gt;
+
+&lt;p&gt;The front-end group worked on making a &lt;strong&gt;prototype of the user tool&lt;/strong&gt; that will
+eventually serve as a platform for the users to visualize &lt;strong&gt;bacterial metabolic
+networks&lt;/strong&gt; and the &lt;strong&gt;changes in flux&lt;/strong&gt; that result from adding or removing
+metabolites to these networks. The tool will include the following components:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;metabolites represented by large circles or “nodes”&lt;/li&gt;
+&lt;li&gt;reactions represented by small circles&lt;/li&gt;
+&lt;li&gt;arrows indicating direction of reaction&lt;/li&gt;
+&lt;li&gt;a self-arrow that accompanies an isolated node&lt;/li&gt;
+&lt;li&gt;a search box where the user would be able to type the name of the concerned bacterial species&lt;/li&gt;
+&lt;li&gt;an “Add Node” button to add metabolites to the network&lt;/li&gt;
+&lt;li&gt;the option to remove reactions and nodes by right-clicking&lt;/li&gt;
+&lt;li&gt;the option to connect nodes (metabolite) through left-click dragging&lt;/li&gt;
+&lt;li&gt;ability to pan and drag screen by ctrl-left-clicking&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Upon selecting a bacterial species from the search results, the user would
+perceive an immediate appearance of a set of nodes connected with arrows,
+representing the metabolic network of that species. Should the user choose to
+simultaneously view the metabolic networks of two bacteria, the two metabolic
+networks will be merged in order to construct a network with no node duplicates,
+in other words, if metabolite X is present in both species A and species B, the
+metabolic network of species A and B will only have only one circle labeled “X”. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;D3.js&lt;/strong&gt; (Data Driven Documents) is a Javascript library that breathes life
+into data via HTML, CSS, and SVG (Scalar Vector Graphics), and will be used to
+create the platform for the visualization of this FBA data. With D3, we will be
+able to bind the FBA data to the DOM (Document Object Model) of our web app, and
+then utilize D3&amp;#39;s inherent ability to apply data-driven transformations to the
+document. D3 is extremely fast and flexible, and with &lt;strong&gt;efficient manipulation
+of documents with given data&lt;/strong&gt; and its &lt;strong&gt;dynamic properties&lt;/strong&gt; that will allow us
+to change an existing document in respsonse to animation over time or user
+interaction, it is the best tool we can use to build the user-interface. &lt;/p&gt;
+
+&lt;p&gt;To find out more about D3.js and see awesome examples, &lt;a href=&quot;http://d3js.org/&quot;&gt;click
+here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;We will mostly be using a class of D3 called the force layout. The force layout
+refers to registered nodes and links so that it can be used with a single
+dataset. This is how we&amp;#39;ll be tailoring the visual animations of the data to the
+users.
+To see an example of the force layout with D3, &lt;a href=&quot;http://bl.ocks.org/mbostock/4062045&quot;&gt;click here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id=&quot;fba-research&quot;&gt;FBA research&lt;/h3&gt;
+
+&lt;p&gt;The FBA focus group researched on ways to solve flux balance analysis this week.
+We identified &lt;strong&gt;cobrapy&lt;/strong&gt; as an alternative to MATlab COBRA, a constraint based
+reconstruction and analysis tool. Cobrapy takes in &lt;strong&gt;sbml&lt;/strong&gt; format metabolic
+network model and calculates fluxes of all the reactions when biomass is set as
+objective function:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;model.optimize()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cobrapy is also able to take json object file as both input and output, which
+will be convenient for storing data in MongoDB later. For more information
+related to cobrapy, &lt;a href=&quot;cobrapy.readthedocs.org/&quot;&gt;click here&lt;/a&gt;.  The most urgent
+task to the FBA group is to settle down a preliminary model that describes a
+community. All our future endeavor, from web interface design to database schema
+structure, depends on how community FBA is used. &lt;/p&gt;
+
+&lt;h3 id=&quot;how-did-the-computer-calculate-the-fluxes-progress-of-research-on-the-mathematics&quot;&gt;How did the computer calculate the fluxes? --Progress of research on the mathematics&lt;/h3&gt;
+
+&lt;p&gt;This week we found an &lt;a href=&quot;http://wwwf.imperial.ac.uk/%7Ensjones/lec-fba.pdf&quot;&gt;amazing
+document&lt;/a&gt; that teaches the
+fundamental mathematics about flux balance analysis.&lt;/p&gt;
+
+&lt;p&gt;Recall that all FBA problems contain three essential parts (or steps):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Define the reaction coefficients in the form of a matrix, and put it in Av=0 (the &amp;quot;equality contraint&amp;quot;)&lt;/li&gt;
+&lt;li&gt;Define the boundaries for the fluxes (the &amp;quot;inequality contraint&amp;quot;)&lt;/li&gt;
+&lt;li&gt;Define what we want to optimize (the &amp;quot;objective fuction&amp;quot;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This way, we have framed a problem that happens to have the same structure of
+what mathematicians call a &amp;quot;continuous &lt;a href=&quot;https://en.wikipedia.org/wiki/Optimization_problem&quot;&gt;optimization
+problem&lt;/a&gt;&amp;quot;. The algorithm of
+this has been well studied in the mathematical literature. There are many ways
+to solve this problem, each optimized for a different kind of scenario, and
+these algorithms have been implemented in many languages too.&lt;/p&gt;
+
+&lt;p&gt;For instance, matlab does the trick with a function called &lt;a href=&quot;http://www.mathworks.com/help/optim/ug/linprog.html&quot;&gt;linprog&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;x = linprog(f,A,b,Aeq,beq,lb,ub)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It does the job with the function &lt;code&gt;solveLP&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;IN&amp;gt; x = numeric.solveLP([1,1],                   % minimize [1,1]*x                
+                        [[-1,0],[0,-1],[-1,-2]], % matrix of inequalities          
+                        [0,0,-3]                 % right-hand-side of inequalities 
+                        );       
+    numeric.trunc(x.solution,1e-12);
+OUT&amp;gt; [0,1.5]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Another software package we looked into is the Javascript library
+&lt;a href=&quot;https://github.com/sloisel/numeric/&quot;&gt;numeric.js&lt;/a&gt;. Part of the reason why we
+looked into numeric.js is because we hoped to be able to implement this
+algorithm both frontend and backend. Unfortunately, numeric.solveLP only
+supports one-sided contraint, but we need two.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, the best approach we have found for now is as described in the
+&amp;quot;FBA research&amp;quot; session, using the COBRApy integrated function &lt;code&gt;model.optimize()&lt;/code&gt;.
+The next step is to identify a way to support community FBA calculations, which
+COBRApy is not currently supporting (to our best knowledge).&lt;/p&gt;
+
+&lt;h3 id=&quot;nodejs-api&quot;&gt;NodeJS API&lt;/h3&gt;
+
+&lt;p&gt;As of now, the hardest part for the back end was deciding how we would strucutre
+our data in order to retrieve results as quickly as possible, as well as save as
+much space on the database at the same time. To accomplish that, we decided that
+the best solution would be to have each column (domain, class, phylum, etc...)
+have their own &lt;a href=&quot;http://mongoosejs.com/&quot;&gt;mongoose&lt;/a&gt; schema. Each of those schemas
+has a parent object, which is a reference to the schema&amp;#39;s parent. For example,
+if we had x belonged to domain column, and y belonged to the phylum column, the
+schema under the phylum column being element y would have an element that stores
+the ObjectId of the parent&amp;#39;s schema, being x, and x would have a reference to
+it&amp;#39;s members, being y.  The reason for this was to optimize how our data is
+stored efficently, and allowing us to search at incredible speeds. Because you
+can have multiple members for each schema, and each schema only has one parent,
+that allows us to shrink the amount of data for each column by the absolute max,
+allowing us to never have any duplicates.  With that being said, the search
+algorithm, if you&amp;#39;re searching for say a specific species, would take big
+O(lg n) number of steps, which is the fastest you can get for
+searching. Not only that, but if you wanted to search for everything that was in
+domain column bacteria for example, all we would need to do is look at the
+members of that bacteria model, and iterate through them to populate, and that&amp;#39;s
+once again the most efficent way to retrieve the data. The runtime for that
+varies as you go deeper into the columns, something like lg(n) for the species
+column, since there are no duplicates.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Jun 2015 20:00:00 -0400</pubDate>
+        <link>http://igemuoft.github.io/updates/2015/06/14/june-week-2-update.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/updates/2015/06/14/june-week-2-update.html</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>June Week 1 Update</title>
+        <description>&lt;p&gt;This week we parsed some species genomic data into json, researched species
+within the Athabasca River microbiome, completed a MEAN stack assignment,
+and were introduced to the theory behind flux balance analysis. Next week we
+will expand our database querying efforts, develop a more systematic method
+of acquiring and storing data, develop a web application for manipulating
+and browsing our data set, and dig deeper into FBA, solving a metabolic model
+for a dataset which has previously been show to work for FBA. For more details
+on each of these four focus areas, read on.&lt;/p&gt;
+
+&lt;h2 id=&quot;database-querying-focus&quot;&gt;Database Querying Focus&lt;/h2&gt;
+
+&lt;p&gt;The python group focused on identifying model species that are present in
+abundance in the Athabasca River microbiome. We identified major types taken
+from a 16S rRNA sequencing experiment. Specific strains are identified and their
+genomic data are collected from Ensembl database and NCBI. We are maintaining a
+&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1jyenJ_42TZkCLB44hlNR8-eoMiNCK1yBLmHa-LXRVsg/edit#gid=0&quot;&gt;spreadsheet&lt;/a&gt;
+documenting this process. &lt;/p&gt;
+
+&lt;h4 id=&quot;why-do-we-need-a-parser&quot;&gt;Why do we need a parser?&lt;/h4&gt;
+
+&lt;p&gt;To facilitate the process of acquiring metabolic reaction data, transformation
+of data is necessary for the ease of both records and queries. A python parser
+is written to read genomic information in a fasta format and to store relevant
+information in json format, which will be stored in a MongoDB database as
+&lt;a href=&quot;https://en.wikipedia.org/wiki/BSON&quot;&gt;BSON&lt;/a&gt;. A python script for parsing fasta
+formatted files into json format is being developed &lt;a href=&quot;https://github.com/tt6746690/Fasta-Parser-Ensembl-&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h4 id=&quot;why-incorporating-standard-in-out&quot;&gt;Why incorporating standard in/out?&lt;/h4&gt;
+
+&lt;p&gt;The parser is written with one command line input that specifies the path to
+directory that stores the fasta files. So that when in need of updating the
+server or making large scale changes, the python program can be easily
+incorporated into a server by calling a childprocess-- the process of updating
+the database is much simplified.&lt;/p&gt;
+
+&lt;h3 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;How can we design a &lt;a href=&quot;http://mongoosejs.com/docs/schematypes.html&quot;&gt;Schema&lt;/a&gt; for 
+storing the information we collect from Ensembl and other databases? Can one
+Schema encapsulate varying types of data formats? How can we rectify 
+attributes which are not common to multiple documents? The python fasta parser
+should be extended to meet these requirements.&lt;/p&gt;
+
+&lt;h2 id=&quot;species-reseach-focus&quot;&gt;Species Reseach Focus&lt;/h2&gt;
+
+&lt;p&gt;This week, the species richness group helped confirm and correct the Python
+group’s choices of model species on the &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1jyenJ_42TZkCLB44hlNR8-eoMiNCK1yBLmHa-LXRVsg/edit#gid=0&quot;&gt;iGEM Species Spreadsheet&lt;/a&gt;. 
+Group members confirmed that all species chosen were freshwater microorganisms,
+and chose the best-studied naturally existing strain for each (i.e.,
+lab/reference strains were excluded). If species were found to be inappropriate,
+team members searched the literature for more suitable species and strains in
+the same taxonomic class. In addition, group members updated the spreadsheet
+with links to FASTA files containing the genetic code for each strain chosen. 
+Furthermore, another spreadsheet for &lt;a href=&quot;https://docs.google.com/spreadsheets/d/13ZK5UbOdFALAw7ANNXNdRlsdRPpSFNBesluS6aNZUpc/edit?pli=1#gid=0&quot;&gt;microbiome species research&lt;/a&gt;
+is being maintained.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-do-all-species-chosen-need-to-survive-in-freshwater-why-are-lab-strains-excluded&quot;&gt;Why do all species chosen need to survive in freshwater? Why are lab strains excluded?&lt;/h4&gt;
+
+&lt;p&gt;The Athabasca River was targeted for bioremediation due to the fact that it has
+been heavily polluted by the Athabasca Oil Sands. By ensuring that all species
+chosen are capable of living in the Athabasca River, (which is a freshwater
+river), and by ensuring that the strains chosen exist naturally, outside of the
+lab environment, we will be able to use the genetic information gathered to
+model metabolic activity in the Athabasca River microbiome. Perhaps we can even
+optimize the metabolic network for specific bioremediation efforts!&lt;/p&gt;
+
+&lt;h3 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;Continue validating the data the database querying team is  acquiring. We will
+use this data to build our metabolic model of the community of species within
+the Athabasca River microbiome.&lt;/p&gt;
+
+&lt;h2 id=&quot;mean-focus&quot;&gt;MEAN Focus&lt;/h2&gt;
+
+&lt;p&gt;The MEAN (MongoDB, Express, Angular, NodeJS) focus group completed an &lt;a href=&quot;https://github.com/igemuoftATG/tutorials/raw/master/FBA-and-related-topics/fba-notes/fba-notes.pdf&quot;&gt;assignment&lt;/a&gt;
+to become more familiar with the MEAN stack. A &lt;a href=&quot;igemuoft.github.io/tutorials/2015/05/30/MEAN-stack-tutorial.html&quot;&gt;tutorial&lt;/a&gt;
+is available to aid the completion of this assignment, and ensure an
+understanding of the tools used. The end product of this assignment was a web
+tool for converting a DNA sequence to an amino acid sequence and storing the DNA
+sequence and resultant amino acid sequence in a database.&lt;/p&gt;
+
+&lt;p&gt;How did we use the MEAN stack to convert a DNA sequence to an amino acid
+sequence?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We used Angular to make a webpage as a user interface where we got the DNA
+sequence from a user input&lt;/li&gt;
+&lt;li&gt;We converted the DNA sequence to an amino acid sequence using a Python script
+and used Express to send the amino acid sequence to our webpage&lt;/li&gt;
+&lt;li&gt;We used MongoDB to store the protein sequence and the DNA sequence in a
+database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Why is this relevant to our project?&lt;/p&gt;
+
+&lt;p&gt;Similar to the assignment, we would use Angular to make a webpage as a user
+interface where the user would select &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the composition of the microbiome (the concerned species)&lt;/li&gt;
+&lt;li&gt;the objective function for their flux balance analysis model&lt;/li&gt;
+&lt;li&gt;the compound whose production they would like to maximize/minimize&lt;/li&gt;
+&lt;li&gt;other options..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will use NodeJS/Express to send the user data to a Python program where flux
+balance analysis will be carried out in order to calculate how the production of
+the desired compound can be maximized or minimized. The calculations will make
+use of the data stored in our MongoDB database.&lt;/p&gt;
+
+&lt;p&gt;The API we are developing will provide the calculated data to the webpage where
+a metabolic network will be constructed showing reaction pathways in the
+selected species.&lt;/p&gt;
+
+&lt;h3 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;Develop a web application and API for managing and extending the data we have 
+acquired so far within our &lt;a href=&quot;https://docs.google.com/spreadsheets/d/13ZK5UbOdFALAw7ANNXNdRlsdRPpSFNBesluS6aNZUpc/edit?pli=1#gid=0&quot;&gt;species research&lt;/a&gt;
+and &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1jyenJ_42TZkCLB44hlNR8-eoMiNCK1yBLmHa-LXRVsg/edit#gid=0&quot;&gt;species genomic data&lt;/a&gt;
+spreadsheets. This should be done by the end of the week of June 8-12, at
+latest before June 15. This will involve collaboration with the database querying
+team with regards to development of our schema(s). Extensibility and dynamic
+models are our priority. Ultimately we will move away from using spreadsheets
+and begin developing our database and a web tool for browsing/adding/editing
+information within it.&lt;/p&gt;
+
+&lt;h2 id=&quot;fba-focus&quot;&gt;FBA Focus&lt;/h2&gt;
+
+&lt;p&gt;At the beginning of this week we had an introduction to flux balance analysis by
+one of our grad student advisors. We discussed the theory behind the model and
+it&amp;#39;s solution. We learned of the use of an objective function and constraints to
+minimize the solution space. We were introduced to various tools for computing
+the solution to this model, including &lt;a href=&quot;http://opencobra.github.io/&quot;&gt;COBRA&lt;/a&gt; and 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/CPLEX&quot;&gt;CPLEX&lt;/a&gt;. We have been reading &lt;a href=&quot;https://github.com/igemuoftATG/drylabproposal2015/tree/master/articles&quot;&gt;articles&lt;/a&gt; 
+and taking &lt;a href=&quot;https://github.com/igemuoftATG/tutorials/tree/master/FBA-and-related-topics&quot;&gt;notes&lt;/a&gt;.
+Some of our recommended readings so far are:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Henson, Michael A., Hanly, Timothy J. Dynamic flux balance analysis for
+synthetic microbial communities. The Institution of Engineering and 
+Technology. 2014 (8): 214-229.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Zhuang, Kai., Izallalen, Mounir., Mouser, Paula., Richter, Hanno., Risso,
+Carla., Mahedevan, Radhakrishnan., Lovley, Derek R. Genome-scale dynamic
+modeling of the competition between Rhodoferax and Geobacter in anoxic
+subsurface environments. The ISME Journal. 2011 (5): 305-316.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Harcombe, William R., Riehl, William J., Dukovski, Llija., Granger, Brian R.,
+Betts, Alex., Lang, Alex H., Bonilla, Gracia., kar, Amrita., Leiby, Nicholas.,
+Mehta, Pankaj., Marx, Christopher J., Segrè, Daniel. Metabolic resource
+allocation in individual microbes determines ecosystem interactions and spatial
+dynamics. NIH: Cell Rep. 2014 7(4): 1104-1115.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Khandelwal, Ruchir A., Olivier, Brett G., Rölling, Wilfred F.M., Teusink, Bas.
+, Bruggeman, Frank J. Community Flux Balance Analysis for Microbial Consortia
+at Balanced Growth. PLOS ONE. 2013 (8): 1-10.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here is a YouTube video documenting a talk on metabolic flux analysis of 
+biodiesel producing E. Coli: &lt;a href=&quot;https://www.youtube.com/watch?v=a3OE0mkDJcE&quot;&gt;EBI Seminar - Hector Garcia Martin&lt;/a&gt;.
+This video is highly recommended as well as the articles above.&lt;/p&gt;
+
+&lt;p&gt;Here is a list of Wikipedia pages I stumbled upon while looking up FBA and it&amp;#39;s
+related topics:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_programming&quot;&gt;Linear programming&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/LP-type_problem&quot;&gt;LP-type problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Metabolic_network&quot;&gt;Metabolic network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Optimization_problem&quot;&gt;Optimization problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_optimization&quot;&gt;Mathematical optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Algorithm&quot;&gt;Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cardinality&quot;&gt;Cardinality&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Simplex_algorithm&quot;&gt;Simplex algorithm&lt;/a&gt; (some
+good pseudo code here)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Randomized_algorithm&quot;&gt;Randomized algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some FBA questions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is FBA? dFBA? cFBA?&lt;/li&gt;
+&lt;li&gt;What pieces of information are required for building your metabolic model for
+FBA?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;Develop a metabolic model to be used in FBA from a dataset previously shown to 
+work. Compute the solution to this model. &lt;a href=&quot;https://kbase.us/&quot;&gt;KBase&lt;/a&gt; has an
+online narrative for learning FBA. &lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Jun 2015 13:28:30 -0400</pubDate>
+        <link>http://igemuoft.github.io/updates/2015/06/07/june-week-1-update.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/updates/2015/06/07/june-week-1-update.html</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>End of May Update</title>
+        <description>&lt;p&gt;Hi everyone, it has been a great month working with all of you! I am very 
+pleased with the level of learning which has occured these past few weeks. Some
+of you joined with zero programming experience and have since learned the
+basics of Python and just this last week, SQL. You have completed a variety
+of Python assignments, among them the translation of DNA into RNA and
+transcription into a polypeptide sequence! Others have learned a new language,
+JavaScript, and have had a basic introduction to full-stack web development with
+a form of the HAT stack (HTML5, Angular, Thin servers) with the MEAN stack. You
+understand that Express is a framework for NodeJS, that mongoose is an API
+for interacting with MongoDB, and that AngularJS is a JavaScript framework
+for building modular and testable single page applications. These are the core
+tools we will use over the &lt;strong&gt;next three months&lt;/strong&gt; to develop our &lt;strong&gt;community flux
+balance analysis (CFBA) web application&lt;/strong&gt;. At this point, I will take a quick
+note of the resources available for getting up to speed with these tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Our main tutorials repo: &lt;a href=&quot;https://github.com/igemuoftATG/tutorials&quot;&gt;https://github.com/igemuoftATG/tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.codecademy.com/tracks/python&quot;&gt;Python Codecademy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=KgiCxe-ZW8o&amp;amp;list=PL32BC9C878BA72085&quot;&gt;MySQL tutorials (1-12)&lt;/a&gt;, &lt;a href=&quot;http://www.w3schools.com/sql/&quot;&gt;SQL on w3schools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sethvincent/javascripting&quot;&gt;javascripting&lt;/a&gt; and &lt;a href=&quot;https://github.com/workshopper/learnyounode&quot;&gt;learnyounode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A MEAN stack tutorial I wrote: &lt;a href=&quot;https://github.com/thejmazz/naivednageneration&quot;&gt;https://github.com/thejmazz/naivednageneration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS homepage&lt;/a&gt; and &lt;a href=&quot;http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro&quot;&gt;codeschool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, a reminder that my &lt;a href=&quot;https://github.com/igemuoftATG/tutorials/raw/master/MEANCentralDogma/a1.pdf&quot;&gt;MEAN Central Dogma assignment&lt;/a&gt; is due Monday, through upload to your own GitHub account. (Note the assignment pdf has been updated dramatically since it was first released).&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;So, what now? In order to tackle this project, we will be spending each week
+splitting the team into &lt;em&gt;focus groups&lt;/em&gt;. These groups will be self-sign up, you
+can join as many as you like, and within them you will develop a stronger
+understanding of your specific topic while also relaying what you have learned
+and are working on to the rest of the team. It is imperative each member of the
+team has a basic understanding of all aspects of the project, yet it is also 
+important that we have knowledgeable experts in niche topics. In order to enforce
+this dogma, at the end of each week we will have a roundtable (literally,
+circular shaped raised flat surface device) meeting at WB242 where each group
+can discuss that week&amp;#39;s progress, challenges, next steps. Additionally, each 
+group will be responsible for putting together two simple questions each week,
+and a collective assignment for all the groups will be posted each weekend. This
+assignment is meant to be short and simple, just to make sure you are staying
+up to date on the team&amp;#39;s progress. These will be our focus groups for next
+week (June 1-5):&lt;/p&gt;
+
+&lt;h3 id=&quot;python-sql-db-querying&quot;&gt;Python/SQL DB querying&lt;/h3&gt;
+
+&lt;p&gt;Getting reaction data for all species involved in the metabolics of all
+bacterial species within the Athabasca river is a priority. We will be using KEGG, Reactome and MetaCyc to get our data. &lt;/p&gt;
+
+&lt;h3 id=&quot;species-research&quot;&gt;Species Research&lt;/h3&gt;
+
+&lt;p&gt;We will be looking into literature for species of significance to researchers and curating their genomic as well as their metabolomic data.&lt;/p&gt;
+
+&lt;h3 id=&quot;express-mongoose&quot;&gt;Express/mongoose&lt;/h3&gt;
+
+&lt;p&gt;For porting pulled data with Python to MongoDB. If you enjoyed the ChildProcess
+aspect of the MEAN stack tutorial, this group is for you. Once we have Python
+scripts capable of pulling data off of SQl bio-databases, we will call and 
+organize those scripts through NodeJS/Express. Alternatively, we may use 
+&lt;a href=&quot;http://api.mongodb.org/python/current/&quot;&gt;PyMongo&lt;/a&gt; instead of &lt;a href=&quot;http://mongoosejs.com&quot;&gt;mongoose&lt;/a&gt; if there are performance issues.&lt;/p&gt;
+
+&lt;h3 id=&quot;angularjs&quot;&gt;AngularJS&lt;/h3&gt;
+
+&lt;p&gt;For making webapp to view our MongoDB database online. This will be important
+as it will provide a means of visually interacting with our collecting data
+as we collect it. If you enjoyed the AngularJS portion of the MEAN stack 
+tutorial, or want to learn more Angular rather than NodeJS/Express, this group 
+is for you. First required readings will be the docs for 
+&lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$http&quot;&gt;$http&lt;/a&gt; and &lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$q&quot;&gt;$q&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;fba&quot;&gt;FBA&lt;/h3&gt;
+
+&lt;p&gt;FBA, then DFBA is an extension of that, then CFBA, and how to solve linear
+programs, what is an objective function, what is an optimization algorithm, etc.
+This will involve a bunch of linear algebra, and the solving of a LP-type
+problem with a &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_programming&quot;&gt;linear program&lt;/a&gt;. If you took CSC165
+and are looking to get a sneak peek at the sorts of problems which may be
+tackled in CSC263 or CSC373, then this group is for you. If you took linear
+algebra, then this group is for you. First required reading will be:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Henson, Michael A., Hanly, Timothy J. Dynamic flux balance analysis for
+synthetic microbial communities. The Institution of Engineering and 
+Technology. 2014 (8): 214-229.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which can be found on our &lt;a href=&quot;https://github.com/igemuoftATG/drylabproposal2015&quot;&gt;dry lab proposal&lt;/a&gt; repository.&lt;/p&gt;
+
+&lt;h4 id=&quot;trello&quot;&gt;Trello&lt;/h4&gt;
+
+&lt;p&gt;To sign up for a focus group, join &lt;a href=&quot;https://trello.com&quot;&gt;Trello&lt;/a&gt; and send me your account name.
+I will add you to our &lt;code&gt;Dry Lab&lt;/code&gt; board, where you can add yourself to the card
+for the group you would like to work on.&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;br&gt;
+thejmazz&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 May 2015 14:52:30 -0400</pubDate>
+        <link>http://igemuoft.github.io/updates/2015/05/30/end-of-may-update.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/updates/2015/05/30/end-of-may-update.html</guid>
+        
+        
+        <category>updates</category>
+        
+      </item>
+    
+      <item>
+        <title>MEAN Stack Tutorial</title>
+        <description>&lt;p&gt;&lt;em&gt;From the ground up.&lt;/em&gt; An example of Express, ChildProcess, Endpoints, 
+Middleware, Mongoose and MongoDB. AngularJS app controlling the interactions 
+between the frontend and the backend. (This allows for a single page application
+ (SPA) at the expense of search engine optimization (SEO) - though there are 
+some hacky solutions). The source code for this tutorial can be found 
+&lt;a href=&quot;https://github.com/thejmazz/naivednageneration&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;nodejs-express-mongoose-tutorial&quot;&gt;NodeJS/Express/Mongoose Tutorial&lt;/h2&gt;
+
+&lt;p&gt;Read the source! It is commented and filled with links to external resources.&lt;/p&gt;
+
+&lt;p&gt;First thing to do is set up our NodeJS/Express environment:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm init
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install --save express body-parser mongoose morgan colors
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt; will create a &lt;code&gt;package.json&lt;/code&gt; file. &lt;code&gt;npm install&lt;/code&gt; will download our
+dependencies into the &lt;code&gt;node_modules&lt;/code&gt; folder. The &lt;code&gt;--save&lt;/code&gt; option ensures
+the dependencies will be added to the &lt;code&gt;dependencies&lt;/code&gt; object within the
+&lt;code&gt;package.json&lt;/code&gt; file. Now let&amp;#39;s create a basic app that responds to a &lt;code&gt;GET&lt;/code&gt; and
+&lt;code&gt;POST&lt;/code&gt; http request at the root route. Create &lt;code&gt;app.js&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;express&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a GET request&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a POST request&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Express server listening on port &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open up the &lt;a href=&quot;https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en&quot;&gt;Postman - REST Client&lt;/a&gt;
+chrome app. You &lt;em&gt;cannot&lt;/em&gt; test &lt;code&gt;POST&lt;/code&gt; requests easily from your browser&amp;#39;s
+navigation bar. Instead, Postman allows you to easily send any http request to
+a url and provide headers and other useful data. Point Postman to
+&lt;code&gt;http://localhost:9001/&lt;/code&gt; and choose &lt;code&gt;GET&lt;/code&gt; from the dropdown. Click send. Notice
+that the response is &lt;code&gt;got a GET request&lt;/code&gt;. Similarily, select &lt;code&gt;POST&lt;/code&gt; and send.
+Notice how on &lt;em&gt;the same url&lt;/em&gt;, you have received a different response: &lt;code&gt;got a
+POST request&lt;/code&gt;. This is due to the use of http verbs - &lt;code&gt;GET, POST, PUT, DELETE,
+PATCH,...&lt;/code&gt; there are a [bunch] of different methods. &lt;code&gt;GET&lt;/code&gt; (asking the &amp;#39;embassy&amp;#39;
+for your record), &lt;code&gt;POST&lt;/code&gt; (sending the embassy personal info and they send back a
+personalized passport), &lt;code&gt;PUT&lt;/code&gt; (informing the embassy of a mistake in the
+passport and they fix it, may send back confirmation of fix), &lt;code&gt;DELETE&lt;/code&gt; (this is
+what you do when you escape to a faraway island and remove your personal
+information from inside the embassy&amp;#39;s database).&lt;/p&gt;
+
+&lt;p&gt;Okay, so that&amp;#39;s working, but wouldn&amp;#39;t it be nice if the Node server logged some
+info every time a request was sent? Just for our development purposes, to see
+which routes are getting called, etc. This is an example of &lt;em&gt;&lt;a href=&quot;expressjs.com/guide/using-middleware.html&quot;&gt;middleware&lt;/a&gt;&lt;/em&gt;.
+&amp;quot;An Express application is essentially a series of middleware calls&amp;quot;. We can use
+middleware to &lt;code&gt;console.log(&amp;#39;got a request&amp;#39;)&lt;/code&gt; on every route - just so we are
+aware of what our server is doing! Insert the following into your code:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a request!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now send a bunch of get or post requests from Postman and you will see the 
+console light up with messages. Notice how it happens on both of our routes - 
+we did not specify a route in our &lt;code&gt;app.use(route, middleware)&lt;/code&gt; call, so it will
+apply the middleware to &lt;em&gt;all&lt;/em&gt; routes. The &lt;code&gt;next&lt;/code&gt; parameter and &lt;code&gt;next()&lt;/code&gt; call are
+required so that the next function in the middleware stack will be called,
+otherwise our application will hang at the log.There are two alternative ways to
+specify specific middleware for specific routes, but first let&amp;#39;s rename our two
+root routes to something more specific:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/getDNAs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;here is some DNA: ATGGGGGGGGGGTAG&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gonna generate some DNA now..&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If we wanted to log our GET and POST routes with middleware, we could do it like
+this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/getDNAs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a GET to /getDNAs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a POST to /genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or we can define middleware functions that need to explicitly called:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDNALog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a GET to /getDNAs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;postDNALog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;got a POST to /genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/getDNAs&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getDNALog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// route stuff&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;postDNALog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// route stuff&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, that was just to introduce you to the topic of middleware. I highly 
+recommend reading through the Express guides for &lt;a href=&quot;http://expressjs.com/guide/routing.html&quot;&gt;routing&lt;/a&gt;
+and &lt;a href=&quot;http://expressjs.com/guide/using-middleware.html&quot;&gt;middleware&lt;/a&gt;. In reality,
+no one writes their own custom log messages. There is already an &lt;a href=&quot;https://www.npmjs.org/package/grunt-bowercopy&quot;&gt;npm&lt;/a&gt;
+package for that. We will use &lt;a href=&quot;https://www.npmjs.com/package/morgan&quot;&gt;morgan&lt;/a&gt;.
+Morgan is easy to use, and like all other well-developed community middleware,
+modules, etc, a quick read through the readme on the repo should be enough
+to get you up to speed with the basics. Essentially you are importing a module,
+and then finding out which functions from it to call. All the annoying, tedious
+stuff has been done for and tested. For example, morgan is currently on version
+1.5.3 and has 135 commits from 7 contributors. Any ways, to use morgan you just
+need to require it and then apply it as middleware:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;morgan&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;tiny&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;tiny&lt;/code&gt; is one of the predefined formats..something I just now figured out by
+browsing the readme file. I would like to stress here the importance of simply
+reading documentation and readmii (plural of readme) before asking someone your
+question - most often you will be able to find the answer, and learn a bunch in
+the process. If you also import &lt;a href=&quot;https://www.npmjs.com/package/colors&quot;&gt;&lt;code&gt;colors&lt;/code&gt;&lt;/a&gt;
+you can stylize our console output a bit more, and in this way I&amp;#39;ve made my own
+morgan logger style:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;morgan&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;colors&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;morgan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;:method &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;magenta&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;:url &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;green&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;:status &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;:res[content-length] &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;bits &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grey&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sent in &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;:response-time ms&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grey&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now lets move on to developing our routes, so far we have one &lt;code&gt;GET&lt;/code&gt; endpoint and
+one &lt;code&gt;POST&lt;/code&gt; endpoint. We will be using &lt;code&gt;POST /genDNA&lt;/code&gt; to allow the client to send
+over a single numerical argument &lt;code&gt;n&lt;/code&gt; which will be used as the command-line
+argument for a Python child process that generates a random DNA sequence that
+is &lt;code&gt;n&lt;/code&gt; nucleotides long. The python3 script is:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;nts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# A *very* naive random DNA generation algorithm&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# But can you do better?&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nt&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.75&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;T&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;G&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can store the script in &lt;code&gt;genDNA.py&lt;/code&gt; and test it from your terminal like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3 genDNA.py 512
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;which will print out a random arrangement of 512 nucleotides.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s look at how we can get &lt;code&gt;n&lt;/code&gt; from the client. We will be using a &lt;code&gt;POST&lt;/code&gt;
+request since we are reguesting certain information from the client which we
+will use to perform a specific function, in this case, get an argument for our 
+Python script so we can send back a sequence of the desired length. Other
+applications for &lt;code&gt;POST&lt;/code&gt; requests can range from logging in to uploading an
+image.  We will use &lt;a href=&quot;https://www.npmjs.com/package/body-parser&quot;&gt;body-parser&lt;/a&gt; to
+ease this process. bodyParser fills the &lt;code&gt;req.body&lt;/code&gt; object with useful data. The
+&lt;code&gt;req&lt;/code&gt; object already has a ton of information, but most of it is not required
+on a regular basis. Try out &lt;code&gt;console.log(req)&lt;/code&gt; on a route to see what I mean.
+To get &lt;code&gt;urlencoded&lt;/code&gt; bodies we can use bodyParser as so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;body-parser&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;urlencoded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extended&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now open up Postman, set the url to &lt;code&gt;http://localhost:9001/genDNA&lt;/code&gt;, choose
+&lt;code&gt;POST&lt;/code&gt;, make sure Headers are empty, and add some random Key/Value pairs to
+&lt;code&gt;x-www-form-urlencoded&lt;/code&gt;. Click send, you should receive a json of your key/value
+pairs. Now let&amp;#39;s set up raw json data, add in:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bodyParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remove all of your key/value pairs, add the following Header/Value pair: 
+&lt;code&gt;Content-Type&lt;/code&gt;/&lt;code&gt;application/json&lt;/code&gt;, and add in some raw data in json format, for
+example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;quot;n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Click send, and as before, you should get a json back with your sent data. 
+So, we are able to retrieve &lt;code&gt;n&lt;/code&gt; from the client, let&amp;#39;s get started on setting
+up the Python &lt;a href=&quot;https://nodejs.org/api/child_process.html&quot;&gt;child process&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;child_process&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/genDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;errorlog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;exitcode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;genDNAScript&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;python3&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;genDNA.py&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// get stdout&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;genDNAScript&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// get stderr&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;genDNAScript&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stderr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stderr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorlog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stderr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// script finished&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;genDNAScript&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;close&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exitcode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+
+        &lt;span class=&quot;c1&quot;&gt;// Respond on process close&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// otherwise, async problems!&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;   
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Send the same request as the last with Postman and you should get back
+a randomized DNA sequence! But what is going on here? First you need to 
+understand the three core &lt;em&gt;data streams&lt;/em&gt; associated with a &lt;em&gt;process&lt;/em&gt;. There is
+standard input (&lt;code&gt;stdin&lt;/code&gt;), standout output (&lt;code&gt;stdout&lt;/code&gt;) and standard error
+(&lt;code&gt;stderr&lt;/code&gt;). Conforming to these three core idioms allows the stringing together
+of simple commands into complex processes. For example, I can send the contents
+of a file to &lt;code&gt;stdout&lt;/code&gt; with &lt;code&gt;cat&lt;/code&gt;, then pipe that into &lt;code&gt;grep&lt;/code&gt; (in this way the
+&lt;code&gt;stdout&lt;/code&gt; becomes the &lt;code&gt;stdin&lt;/code&gt; for &lt;code&gt;grep&lt;/code&gt;), search for all lines containg &amp;quot;todo&amp;quot;
+and then store that result in my clipboard using &lt;code&gt;xclip&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat notes.txt &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep todo &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; xclip -i -selection clipboard
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We won&amp;#39;t be using &lt;code&gt;stdin&lt;/code&gt; in this tutorial. ChildProcess is an &lt;a href=&quot;https://nodejs.org/api/events.html#events_class_events_eventemitter&quot;&gt;EventEmitter&lt;/a&gt;.
+So essentially, &lt;code&gt;cp.spawn()&lt;/code&gt; returns an object that we can &amp;#39;catch&amp;#39; events
+with, in our case we watch for data to come from the &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; 
+streams. Then all that is left to do is store the output in our &lt;code&gt;results&lt;/code&gt; object
+with the callback function. Finally we catch the &lt;code&gt;close&lt;/code&gt; event, store the exit
+code (which every process must return, 0 means success, anything else is an
+error code), and finally send the entire &lt;code&gt;results&lt;/code&gt; object back to the client.&lt;/p&gt;
+
+&lt;p&gt;Now we have a working &lt;code&gt;POST /genDNA&lt;/code&gt; endpoint which sends back a random DNA
+sequence of length specified by the client. Now let&amp;#39;s finish up the API by
+storing all results in a database! We will use &lt;a href=&quot;https://www.mongodb.org&quot;&gt;MongoDB&lt;/a&gt;
+for our database, and interact with it from Node with &lt;a href=&quot;mongoosejs.com&quot;&gt;mongoose&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first step with mongoose is to require the module and connect to our
+database (either local or online):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mongoose&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;mongoose&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// use local MongoDB&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mongodb://localhost/dbName&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// or use mongolab      &lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mongodb://myuser:mypass@ds028017.mongolab.com:28017/mydb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;mongoose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The next step is to define a &lt;a href=&quot;http://mongoosejs.com/docs/guide.html&quot;&gt;Schema&lt;/a&gt;
+that our &lt;code&gt;documents&lt;/code&gt; within a &lt;code&gt;collection&lt;/code&gt; within a &lt;code&gt;database&lt;/code&gt; will follow:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DNASchema&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mongoose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;sequence&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&amp;#39;len&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Essentially, we are enforcing the &lt;code&gt;types&lt;/code&gt; of each of our &lt;code&gt;attributes&lt;/code&gt; within an
+individual &lt;code&gt;document&lt;/code&gt;. A &lt;code&gt;collection&lt;/code&gt; is a list of &lt;code&gt;documents&lt;/code&gt;. The &lt;code&gt;database&lt;/code&gt; 
+holds a number of &lt;code&gt;collections&lt;/code&gt;. Be sure to check the docs for Schema mentioned
+above to learn about all the other valid types, &lt;code&gt;Date&lt;/code&gt;, &lt;code&gt;Buffer&lt;/code&gt;, &lt;code&gt;ObjectID&lt;/code&gt;,...
+are just a few. Once we have set up a schema, it&amp;#39;s simple to define a mongoose
+&lt;a href=&quot;http://mongoosejs.com/docs/models.html&quot;&gt;model&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DNASeq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mongoose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dna&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DNASchema&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Typically, you would capitalize your models. It does not matter which case
+we use in the first argument to &lt;code&gt;model(name,schema)&lt;/code&gt; since the collection name
+will be all lowercase anyways (it will also have an &amp;#39;s&amp;#39; added to so don&amp;#39;t use
+the plural form for &lt;code&gt;name&lt;/code&gt;). This is enough setup for us to save sequences to
+the database! Let&amp;#39;s add the following just before our &lt;code&gt;res.send(results)&lt;/code&gt; in
+&lt;code&gt;POST /genDNA&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// success, store sequence in DB&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;seq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DNASeq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arg&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;saved sequence&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;First we make a new instance of our model following the schema, and then we
+simply save the model. Models have a bunch of predefined methods like
+&lt;code&gt;save(function(err, savedItem))&lt;/code&gt; and you can even add your own!&lt;/p&gt;
+
+&lt;p&gt;Another model method is &lt;code&gt;find()&lt;/code&gt;. We can use &lt;code&gt;Model.find(conditions,
+[projection], [options], [callback])&lt;/code&gt; and pass in no conditions to return
+all items in the collection for that model:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/dnas&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;DNASeq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dnas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dnas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Awesome! We now have built a RESTful API using NodeJS/Express and
+MongoDB/mongoose! Verify that &lt;code&gt;POST /genDNA&lt;/code&gt; and &lt;code&gt;GET /dnas&lt;/code&gt; work as expected.
+Now it is time to build the AngularJS webapp that will use our API. First,
+one last thing: we need to enable CORS - cross-origin resource sharing.
+Basically, if we don&amp;#39;t do this some browsers won&amp;#39;t let use get resources from
+an API at another origin, even different port. But it&amp;#39;s easy to fix, just apply
+the following global middleware that sets response headers to allow CORS:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Access-Control-Allow-Origin&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Access-Control-Allow-Headers&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Origin, X-Requested-With, Content-Type, Accept&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;angularjs-tutorial&quot;&gt;AngularJS Tutorial&lt;/h2&gt;
+
+&lt;p&gt;First, make sure you are on the &lt;code&gt;pre-angular&lt;/code&gt; branch:
+(or keep using your own code if you have been following along until now)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/thejmazz/naivednageneration.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;naivednageneration
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout pre-angular
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we have a RESTful API with two endpoints (&lt;code&gt;POST /genDNA&lt;/code&gt; and &lt;code&gt;GET /dnas&lt;/code&gt;),
+and we will build the frontend app using AngularJS.  First, we need to make a
+folder for static content. This can be served easily from Node, and essentially
+allows us to make a simple html website. So:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir public
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;public
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Fill your &lt;code&gt;index.html&lt;/code&gt; file as so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;naive dna gen.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- bower:css --&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- endbower --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; A Naive DNA Generation Algorithm &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- bower:js --&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- endbower --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then to serve this from Node, add the following to the end of &lt;code&gt;app.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;public&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Serving content from &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;public&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Start the server:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;node app.js 9001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And visit the page at &lt;code&gt;http://localhost:9001&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;From inside &lt;code&gt;public&lt;/code&gt;, run&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Change the name if you&amp;#39;d like, just enter through everything else. When that is
+finished, a &lt;code&gt;bower.json&lt;/code&gt; file will have been created. This file is very similar
+to &lt;code&gt;package.json&lt;/code&gt; except &lt;code&gt;package.json&lt;/code&gt; is used by Node and most often for
+backend dependencies (like Express, body-parser), or for command-line tools like
+Gulp or Grunt, whereas &lt;code&gt;bower.json&lt;/code&gt; is used for managing frontend dependencies
+(like jQuery, bootstrap), and will install these into &lt;code&gt;bower_components&lt;/code&gt;. Lets
+get started by installing AngularJS:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install --save angular
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;--save&lt;/code&gt; option will add &lt;code&gt;angular&lt;/code&gt; to our &lt;code&gt;dependencies&lt;/code&gt; object within
+&lt;code&gt;bower.json&lt;/code&gt;. Look at the file if you would like to see for yourself. If you
+take a peek inside &lt;code&gt;bower_components&lt;/code&gt;, you will see there is now a folder
+&lt;code&gt;angular&lt;/code&gt; and within there &lt;code&gt;angular.js&lt;/code&gt;, the main file we are looking for. We
+&lt;em&gt;could&lt;/em&gt; manually add that script to our html, but there is an easier way to do
+it. Remember those &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- bower:js --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- endbower --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;comments? They are for a tool called &lt;code&gt;wiredep&lt;/code&gt; to add in our dependencies.
+First, make sure you have &lt;code&gt;wiredep&lt;/code&gt; installed globally:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install -g wiredep
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And then wire up those dependencies into your &lt;em&gt;source&lt;/em&gt; file &lt;code&gt;index.html&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wiredep -s index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now the &lt;code&gt;&amp;lt;script src=&amp;quot;...angular.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt; will have been added to
+&lt;code&gt;index.html&lt;/code&gt; and we can really get started. Let&amp;#39;s make a folder called &lt;code&gt;js&lt;/code&gt;
+within &lt;code&gt;public&lt;/code&gt; and create a file &lt;code&gt;main.js&lt;/code&gt; within. Fill &lt;code&gt;main.js&lt;/code&gt;with the
+following (also make sure to add &lt;code&gt;&amp;lt;script src=&amp;quot;js/main.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt; to
+&lt;code&gt;index.html&lt;/code&gt;, after the bower stuff):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;naiveDNA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bodyCtrl&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$scope&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mainTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;A Naive DNA Generation Algorithm&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;But what isn&amp;#39;t?&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A few things just happened. First, we have defined our main app as &lt;code&gt;naiveDNA&lt;/code&gt;,
+to reconcile this with our html modify the opening &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; tag like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;en&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;naiveDNA&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Second, we have defined our first controller. A controller is what is what it
+sounds like..used to add/remove/modify/&amp;#39;use&amp;#39; the elements within it&amp;#39;s context.
+Again, let&amp;#39;s reconcile this with our html:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bodyCtrl&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, what is &lt;code&gt;$scope&lt;/code&gt;? I like to think of &lt;code&gt;$scope&lt;/code&gt; as the object containing the
+variables available to the context of that controller. In this case, any
+&lt;code&gt;ng-model=&amp;quot;foo&amp;quot;&lt;/code&gt; (which we will see soon) will be available from the controller
+as &lt;code&gt;$scope.foo&lt;/code&gt;. So let&amp;#39;s put &lt;code&gt;$scope&lt;/code&gt; to use, replace the current &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; in
+&lt;code&gt;index.html&lt;/code&gt; with the following:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Refresh the page, and you should see your new titles. Time to get a little more
+interesting. We have a &lt;code&gt;GET&lt;/code&gt; endpoint on our api at &lt;code&gt;/dnas&lt;/code&gt;. You can test this
+by pointing Postman or your browser to &lt;code&gt;http://localhost:9001/dnas&lt;/code&gt;. (If you
+have not generated any sequences before, this will be empty). Let&amp;#39;s add a button
+to our page that will retreive all of our seqeunces and display them on the
+page, below your headings add:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;getSeqs()&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;All Sequences&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-repeat=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;seq in seqs&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And add the corresponding function and object to &lt;code&gt;main.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;seqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getSeqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:9001/dnas&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;seqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But wait, not so fast! What is &lt;code&gt;$http&lt;/code&gt;? It is service provided by Angular and as
+such we need to properly define the dependencies of our controller, change the
+controller declaration to:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bodyCtrl&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;$scope&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$http&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// our stuff&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Okay so what has happened? We defined a function &lt;code&gt;getSeqs&lt;/code&gt; and since the
+&lt;code&gt;$scope&lt;/code&gt; is shared between our controller and it&amp;#39;s respective DOM element (in
+this case, &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;) we call that function on the button&amp;#39;s click with
+&lt;code&gt;ng-click=&amp;quot;getSeqs()&amp;quot;&lt;/code&gt;. Then we are using
+&lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$http&quot;&gt;&lt;code&gt;$http&lt;/code&gt;&lt;/a&gt; to perform a &lt;code&gt;GET&lt;/code&gt;
+request to &lt;code&gt;/dnas&lt;/code&gt;, which returns a
+&lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$q&quot;&gt;promise&lt;/a&gt; with two specific
+methods: &lt;code&gt;success&lt;/code&gt; and &lt;code&gt;error&lt;/code&gt;. You can also use the promise method &lt;code&gt;then&lt;/code&gt;.
+Essentially, we have requested a resource, some async stuff goes off, we get our
+callback with the results (&lt;code&gt;.success(function(results){...})&lt;/code&gt;) and store the
+results into &lt;code&gt;$scope.seqs&lt;/code&gt;. The &lt;code&gt;ng-repeat&lt;/code&gt; part of this loops through the
+&lt;code&gt;$scope.seqs&lt;/code&gt; array and outputs some nice html.&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;#39;s add the ability to add sequences to the database from our app. The
+markup for &lt;code&gt;index.html&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;number&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;numNts&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;how many nucleotides?&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/input&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;genDNA()&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Generate DNA!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-show=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;currentSeq&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    You just generated: &lt;span class=&quot;nt&quot;&gt;&amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the associated JavaScript in &lt;code&gt;main.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;genDNA&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;envelopeContents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;arg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;numNts&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sentEnvelope&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:9001&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;envelopeContents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// could handle this like we did with .success in getSeqs, but for&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// the sake of variety/learning we will use the promise method then&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// see https://docs.angularjs.org/api/ng/service/$q&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// promise.then(success,error,update);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;sentEnvelope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// person got our envelope, did some stuff, sent us back a reply&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentSeq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reason&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Failed: &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reason&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Got notification: &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.angularjs.org/api/ng/directive/ngShow&quot;&gt;&lt;code&gt;ngShow&lt;/code&gt;&lt;/a&gt; will enforce css
+styles so that the div will show or not show depending on if it&amp;#39;s associated
+expression is truthy. In our case, &lt;code&gt;if(currentSeq)&lt;/code&gt; would return false until
+&lt;code&gt;genDNA()&lt;/code&gt; is ran, at which point &lt;code&gt;if(notNullVariable)&lt;/code&gt; will return true and the
+div will show.&lt;/p&gt;
+
+&lt;p&gt;Questions? Errors? Please let me know! Next steps: work through some
+&lt;a href=&quot;http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro&quot;&gt;tutorials&lt;/a&gt;
+and read the &lt;a href=&quot;https://docs.angularjs.org/api&quot;&gt;docs&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Cheers,&lt;br&gt;
+thejmazz&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 May 2015 08:12:17 -0400</pubDate>
+        <link>http://igemuoft.github.io/tutorials/2015/05/30/MEAN-stack-tutorial.html</link>
+        <guid isPermaLink="true">http://igemuoft.github.io/tutorials/2015/05/30/MEAN-stack-tutorial.html</guid>
+        
+        
+        <category>tutorials</category>
+        
+      </item>
+    
+  </channel>
+</rss>
