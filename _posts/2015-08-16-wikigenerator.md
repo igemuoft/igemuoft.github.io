@@ -26,6 +26,21 @@ I have documented
 [helpers.coffee](http://45.55.193.224/wiki2015/docs/helpers.html) which are the
 two core modules for all of this to work.
 
+## Install
+
+Once you have [Node](http://nodejs.org) and `npm` updated to the latest stable,
+install Yeoman (globally):
+
+```
+$ npm install -g yo
+```
+
+and the generator:
+
+```
+$ npm install -g generator-igemwikigenerator
+```
+
 ## Usage
 
 ```bash
