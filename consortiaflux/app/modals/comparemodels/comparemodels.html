@@ -1,0 +1,87 @@
+<div ng-show="display" class="mymodal">
+    <div ng-show="selectedScreen">
+    <div ng-show="choosing">
+        <label class="radio">
+            <input type="radio" ng-model="choosables.community" name="optionsRadios" value="true" data-toggle="radio" class="custom-radio">
+            <span class="icons">
+                <span class="icon-unchecked"></span>
+                <span class="icon-checked"></span>
+            </span>
+            Compare communities
+        </label>
+        <label class="radio">
+            <input type="radio" ng-model="choosables.specie" name="optionsRadios" value="true" data-toggle="radio" class="custom-radio">
+            <span class="icons">
+                <span class="icon-unchecked"></span>
+                <span class="icon-checked"></span>
+            </span>
+            Compare species
+        </label>
+        <button ng-click="go()" type="button" class="btn btn-primary left">Go</button>
+    </div>
+    <div ng-show="loading">
+        <div ng-show="loading">
+            Retrieving models...
+            <i ng-show="loading" class="fa fa-5x fa-spin fa-spinner"></i>
+        </div>
+    </div>
+    <div ng-show="ready">
+        <ul>
+            <label class="checkbox" ng-repeat="model in models">
+                <input type="checkbox" ng-disabled="disabled(model)" ng-click="checkBoxHandler(model)" value="true" data-toggle="checkbox" class="custom-checkbox">
+                <span class="icons">
+                    <span class="icon-unchecked"></span>
+                    <span class="icon-checked"></span>
+                </span>
+                {{model}}
+            </label>
+        </ul>
+        <button ng-click="send()" type="button" class="btn btn-primary left">Compare</button>
+    </div>
+</div>
+<style>
+th, td {
+    padding: 15px;
+}
+.left{
+    text-align: left;
+    max-width: 300px;
+}
+.right{
+    text-align: right;
+    max-width: 300px;
+
+}
+</style>
+<div ng-show="!selectedScreen" style="with:80%" class="flux-compare">
+    <div class="row">
+        <div class="col-xs-4">
+            Filter by:
+        </div>
+        <div class="col-xs-8">
+            <input ng-model="filterer"></input>
+        </div>
+    </div>
+    <div class="row" ng-repeat="datum in data | filter:filterer ">
+        <div class="col-xs-8">
+            {{datum.name}}
+        </div>
+        <div class="col-xs-4" style="text-overflow: ellipsis; overflow-x: hidden">
+            {{datum.flux}}
+        </div>
+    </div>
+<!--
+
+    <table ng-repeat="datum in data">
+  <td>
+    <th class="left">{{datum.name}}</th>
+    <th class="right">{{datum.flux}}</th>
+</td>
+</table>
+</table> -->
+</div>
+    <!-- <a class="closeButton right" href ng-click="close()">Close</a> -->
+    <button ng-click="close()" type="button" class="btn btn-danger right">Close</button>
+
+</div>
+<!-- <div class="fade" ng-show="display"></div> -->
