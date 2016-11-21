@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dignitas Youth Group at University of Toronto" />
+    	<meta name="keywords" content="Dignitas, Youth Group, Dignitas Youth Group, University of Toronto Club, AIDS awareness, AIDS Toronto, UofT AIDS" />
+        <meta name="Fahim Shahreer" content="dignitas.utoronto.ca" />
+
+        <title>Dignitas Youth | University of Toronto</title>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/animate.css">
+    </head>
+
+    <body>
+        <div class="hero-container">
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                    <h1 class=font-red>Our Blog Posts</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-3">
+                    <img class="th" src="#" alt="">
+                </div>
+                <div class="col-md-offset-3">
+                    <h5>July 23, 2015</h5>
+                    <h2>This is a sample post</h2>
+                    <button class="btn-read-more"><a href="#">Read More</a></button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script src="bower_components/animate.css"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            var ypos, image;
+            function parallex () {
+                ypos = window.pageYOffset;
+                image = document.getElementById('hero-image');
+                image.style.top = ypos * 0.6 + 'px';
+            };
+            window.addEventListener('scroll',parallex)
+        </script>
+        <script>
+            new WOW().init();
+        </script>
+
+        <script>
+
+  $('.tile')
+    // tile mouse actions
+    .on('mouseover', function(){
+      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+    })
+    .on('mouseout', function(){
+      $(this).children('.photo').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        // add a photo container
+        .append('<div class="photo"></div>')
+        // some text just to show zoom level on current item in this example
+        .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+        // set up a background image for each tile based on data-image attribute
+        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+    })
+
+</script>
+    </body>
+</html>

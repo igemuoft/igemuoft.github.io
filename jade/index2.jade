@@ -1,0 +1,109 @@
+//output:../$1.html, pretty: false
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Dignitas Youth
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='Dignitas Youth Group at University of Toronto')
+        meta(name='keywords', content='Dignitas, Youth Group, Dignitas Youth Group, University of Toronto Club, AIDS awareness, AIDS Toronto, UofT AIDS')
+        meta(name='Fahim Shahreer', content='dignitas.utoronto.ca')
+        
+        link(rel='stylesheet', href='css/styles.min.css')
+        
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+        script(type='text/javascript', src='js/jquery.fullPage.min.js')
+        script(type="text/javascript", src="js/wow.min.js")
+        script(type='text/javascript').
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    scrollBar: true,
+                    afterRender: function(){
+                        new WOW().init();
+                    }
+                });
+            });
+        //- script(type="text/javascript").
+        //-     $(document).ready(function(){
+        //-         setTimeout(function(){
+        //-             $('.splash').slideUp("slow");
+        //-         }, 6000);
+        //-     });
+
+    body
+        .navbar
+            .nav-icon.cross
+                .span
+    
+        .bar
+        .arrow arrow-1
+        .arrow arrow-2
+        
+        #fullpage
+            .section
+                .row.container.no-padding.image
+                    img#logo(src="./logo/logo.png", alt="Logo").wow.fadeInUp
+            
+            .section.secondary
+                .row.container.no-padding.black
+                    #hero1.col-md-6.no-padding.full-height
+                        .box-half
+                            h3.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.2s") Who Are We?
+                            h1.top40p.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.5s") Dignitas Youth is a network of young leaders united for change.
+                    .col-md-6.no-padding.full-height
+                        .box-half
+                            p.top40p.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="1s") Youth groups meet at high schools and universities across Canada to raise awareness and funds for our global health programs. These students coordinate advocacy campaigns and events to engage the student community in the global response to HIV and other diseases.
+
+            .section
+                .row.container.no-padding.turquois.full-height
+                    .box-full#goals
+                        h3.wow.fadeInDown(data-wow-duration="1s" data-wow-delay="0.2s") Our Goals
+                        h2.top40p.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s") 1. To provide quality of life for the world's most vulnerable populations affected by HIV/AIDS
+                        h2.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.7s") 2. To educate intervention initiatives, current scientific research, socioeconomic issues, and preventative strategies
+                        h2.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.8s") 3. To engage you and the local, national, and international community.
+                    
+            .section
+                .row.container.no-padding.full-height.black
+                    .col-md-6.no-padding.full-height
+                        .box-half
+                            h3.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.2s") Follow our events
+                            p.top40p.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.5s") We plan and execute a number of campus events such as seminars, coffeehouses, and fundraisers to promote HIV/AIDS-related issues among the university community.
+                            p.top40p.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.5s") Follow our most recent activities through our blog or check out our upcoming events.
+                            p.top40p
+                            button.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="0.9s") Our Blog
+                            button.wow.fadeInLeft(data-wow-duration="1s" data-wow-delay="1s") Our Events
+                    #hero2.col-md-6.no-padding.full-height
+                        .box-half.center#events
+                            h3.top40p.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="1.2s") Dignitas Coffeehouse
+                            p.top40p.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="1.5s") Take a well-deserved break and come out to our annual coffeehouse! Sink into a couch, release the inner foodie in you, and enjoy a cup of tea with delicious desserts and light snacks!
+                            h4.top40p.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="2s") Date: October 27, 2016
+                            h4.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="2s") time: 4:00pm - 5:00pm
+                            h4.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="2s") Location: Arbour Room, Hart House
+                            p.top40p
+                            a(href="./blog/post1.html")
+                                button.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="2.3s") Read More    
+            .section
+                .row.container.no-padding.full-height
+                    .box-full#team
+                        h3 Our Team
+            
+            .section
+                .row.container.no-padding.full-height#follow
+                    .col-md-6.no-padding.full-height
+                        .box-half.center.dark-blue
+                            p.top40p
+                            h1.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.2s") Support Us
+                            h4.top40p.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s") Follow us on our Facebook page to show your support. Meanwhile get the latest updates on our activities.
+                            button.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.7s") Facebook
+                    .col-md-6.no-padding.full-height
+                        .box-half.center.orange
+                            p.top40p
+                            h1.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.2s") Stay Updated
+                            h4.top40p.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")  We are bound to host more cool events in the near future. Join our newsletter to stay updated!
+                            form()
+                                input(type="text", placeholder="Enter your email here").wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.7s")
+        
+        //- JAVSCRIPT STUFF
+
+        script(type="text/javascript", src="js/menu.js")

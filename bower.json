@@ -1,0 +1,17 @@
+{
+  "name": "example",
+  "homepage": "none",
+  "authors": [
+    "protoxpire0 <fahim.shahreer95@gmail.com>"
+  ],
+  "description": "example",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

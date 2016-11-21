@@ -1,0 +1,45 @@
+
+// NAVBAR
+.navbar
+	position: fixed
+	left: 95vw
+	top: 0
+	background-color: white
+	width: 5vw
+	height: 5vw
+	border-radius: 0
+    z-index: 10
+.nav-icon
+	height: 120px
+	width: 120px
+	position: relative
+	background-color: white
+    z-index: 10
+	.span
+		height: 6px
+		width: 55px
+		position: absolute
+
+		margin: auto
+		background: black
+		transition: all 0.3s
+		&::before,&::after
+			content: ''
+			height: 6px
+			width: 100%
+			background: black
+			position: absolute
+			transition: all 0.3s
+		&:after
+			top: 20px
+		&:before
+			top: -20px
+
+	&.active .span::after
+		top: 0
+		transform: rotate(45deg)
+	&.active .span::before
+		top: 0
+		transform: rotate(-45deg)
+	&.active .span
+		background: none

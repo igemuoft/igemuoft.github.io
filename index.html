@@ -1,1 +1,102 @@
-dsafdsaf
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dignitas Youth Group at University of Toronto" />
+    	<meta name="keywords" content="Dignitas, Youth Group, Dignitas Youth Group, University of Toronto Club, AIDS awareness, AIDS Toronto, UofT AIDS" />
+        <meta name="Fahim Shahreer" content="dignitas.utoronto.ca" />
+
+        <title>Dignitas Youth | University of Toronto</title>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/animate.css">
+    </head>
+
+    <body>
+        <div class="hero-container">
+            <div class="row box">
+                <div class="col-md-6 red">
+                    <img id="hero-image" src="images/cover.jpg"/>
+                </div>
+                <div class="col-md-6">
+                    <div class="tile" data-scale="1.1" data-image="http://ultraimg.com/images/0yS4A9e.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row box red wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.2s">
+                <div class="col-md-6 col-md-offset-2 wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.5s">
+                    <h1>Dignitas Youth is a network of young leaders united for change.</h1>
+                </div>
+            </div>
+            <div class="row box grey wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="1.2s">
+                <div class="col-md-5 col-md-offset-1 wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="1.5s">
+                    <h1 class="font-red">Who are we?</h1>
+                    <h3>Youth groups meet at high schools and universities across Canada to raise awareness and funds for our global health programs. These students coordinate advocacy campaigns and events to engage the student community in the global response to HIV and other diseases.</h3>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <img src="images/event.jpg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="row box grey wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.2s">
+                <div class="col-md-8 col-md-offset-2 center wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.2s">
+                    <h1 class="font-red">Our Goal</h1>
+                    <h3>We plan and execute a number of campus events such as seminars, coffeehouses, and fundraisers to promote HIV/AIDS-related issues among the university community.</h3>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-6 col-md-offset-3 center">
+                    <h3>1. To provide quality of life for the world's most vulnerable populations affected by HIV/AIDS</h3>
+                    <h3>2. To educate intervention initiatives, current scientific research, socioeconomic issues, and preventative strategies</h3>
+                    <h3>3. To engage YOU and the local, national, and international community.</h3>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+        <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script src="bower_components/animate.css"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            var ypos, image;
+            function parallex () {
+                ypos = window.pageYOffset;
+                image = document.getElementById('hero-image');
+                image.style.top = ypos * 0.6 + 'px';
+            };
+            window.addEventListener('scroll',parallex)
+        </script>
+        <script>
+            new WOW().init();
+        </script>
+
+        <script>
+
+  $('.tile')
+    // tile mouse actions
+    .on('mouseover', function(){
+      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+    })
+    .on('mouseout', function(){
+      $(this).children('.photo').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        // add a photo container
+        .append('<div class="photo"></div>')
+        // some text just to show zoom level on current item in this example
+        .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+        // set up a background image for each tile based on data-image attribute
+        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+    })
+
+</script>
+    </body>
+</html>
