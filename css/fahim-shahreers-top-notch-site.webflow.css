@@ -1,0 +1,315 @@
+p {
+  margin-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: Montserrat, sans-serif;
+  color: #2c2c2c;
+}
+
+a {
+  padding-left: 30px;
+  float: none;
+  font-family: Montserrat, sans-serif;
+  color: #2c2c2c;
+  text-decoration: underline;
+}
+
+.navbar {
+  position: static;
+  margin-top: 15px;
+  padding: 25px 20%;
+  border-style: none none solid;
+  border-color: #e6e6e6 #fff;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  background-color: #fff;
+}
+
+.navbar-logo {
+  position: static;
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: left;
+  clear: both;
+  background-image: url('../images/logo2.png');
+  background-position: 50% 70%;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  text-align: left;
+  text-decoration: none;
+}
+
+.navbar-link {
+  display: inline-block;
+  margin-top: 16px;
+  margin-right: 1px;
+  margin-bottom: auto;
+  float: left;
+  -webkit-transition: color 350ms cubic-bezier(.55, .085, .68, .53);
+  transition: color 350ms cubic-bezier(.55, .085, .68, .53);
+  font-family: Montserrat, sans-serif;
+  color: #313131;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.navbar-link:hover {
+  color: #0a338a;
+  text-decoration: none;
+}
+
+.container {
+  display: block;
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-lg {
+  width: 40%;
+  height: 80%;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.text-lg.header {
+  margin-top: 0px;
+  margin-left: 32px;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  font-family: Merriweather, serif;
+  color: #0a338a;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.header-image {
+  height: 600px;
+  margin-bottom: 30px;
+  background-image: url('../images/portraits-of-children-from-africa.jpg');
+  background-position: 0px 0px;
+  background-size: 1080px;
+}
+
+.divider {
+  height: 0px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  border-color: #e6e6e6;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.sub-header {
+  color: #2c2c2c;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sub-header.footer {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.banner {
+  border: 5px solid #fff;
+  color: #fff;
+}
+
+.banner.blue {
+  background-color: #2b5fd6;
+}
+
+.banner.yellow {
+  height: 450px;
+  background-color: #fdeb30;
+  color: #000;
+}
+
+.banner.yellow.column {
+  border: 5px solid #fff;
+}
+
+.banner.column {
+  height: 450px;
+  background-image: url('../images/12794367_1096056663751180_2980017530713923962_n.png');
+  background-position: 0px 0px;
+  background-size: contain;
+}
+
+.banner.grey {
+  height: 450px;
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+.banner.white {
+  height: 450px;
+  color: #000;
+}
+
+.banner-text {
+  padding: 20px 30px 60px;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.banner-text.serif-header {
+  font-size: 40px;
+}
+
+.banner-text.serif-header.small {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.main-banner {
+  width: 45%;
+  height: auto;
+  margin-left: 35px;
+  padding: 15px 35px 35px;
+  background-color: #fff;
+  color: #0a338a;
+}
+
+.serif-header {
+  font-family: Merriweather, serif;
+}
+
+.btn-white {
+  display: block;
+  width: 90%;
+  margin: 60px auto 20px;
+  background-color: #fff;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  color: #2b5fd6;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-white:hover {
+  text-decoration: underline;
+}
+
+.row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  margin-bottom: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #2b5fd6;
+}
+
+.btn-blue {
+  margin-top: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border: 3px solid #0a338a;
+  background-color: transparent;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  color: #0a338a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  border-color: #0a338a;
+  background-color: #0a338a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-image2.banner {
+  height: 450px;
+  background-image: url('../images/coffee.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.p-white {
+  color: #fff;
+}
+
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.narbar2 {
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  margin-top: -15px;
+  float: none;
+  background-color: #2b5fd6;
+  color: #fff;
+  text-align: center;
+}
+
+.nav2-items {
+  position: static;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  float: left;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+  color: hsla(0, 0%, 100%, .68);
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav2-items:hover {
+  color: #fff;
+}
+
+.nar2-items {
+  color: #fff;
+}
+
+.navbar2-container {
+  display: inline-block;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+.footer-header {
+  margin-bottom: 0px;
+  padding-left: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-p {
+  color: hsla(0, 0%, 100%, .7);
+  font-size: 12px;
+  text-align: center;
+}
+
+html.w-mod-js *[data-ix="fixed-navbar"] {
+  -webkit-transform: translate(0px, -100%);
+  -ms-transform: translate(0px, -100%);
+  transform: translate(0px, -100%);
+}
