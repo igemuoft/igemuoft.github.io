@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Josefin+Slab|Sanchez|Vidaloka')
+
+$font-primary: 'Josefin Slab', serif
+$font-secondary: 'Inconsolata', sans-serif
+$font-tertiary: 'Vidaloka', serif
+
+.middle
+    text-align: center
+h1,
+h2,
+h3,
+    font-family: $font-primary
+    font-weight: 800
+h4,
+h5
+    font-family: $font-secondary
+
+h1
+    font-size: 50px
+h5
+    font-size: 25px
+
+.u
+    display: inline-block
+    padding-bottom: 20px
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        width: 40%
+        height: 1px
+        bottom: 0
+        left: 0
+        border-bottom: 2.5px solid $black
+
+.u-white
+    display: inline-block
+    padding-bottom: 20px
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        width: 40%
+        height: 1px
+        bottom: 0
+        left: 30%
+        border-bottom: 2.5px solid white
+.u-green
+    display: inline-block
+    padding-bottom: 20px
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        width: 40%
+        height: 1px
+        bottom: 0
+        left: 0
+        border-bottom: 2.5px solid $light-green
+
+.header
+    color: white
+    h1
+        padding-top: 30%
+    h4
+        padding-top: 0
+
+// .wetlab
+//     &:after
+//         content: attr(data-wet-lab)
+//         font-family: $font-tertiary
+//         font-weight: 800
+//         color: $light-green
+//         position: absolute
+//         display: block
+//         font-size: 200px
+//         top: 10%
+//         left: 10%
+//         z-index: 0
+
+.about
+    &:after
+        content: attr(data-about)
+        font-family: $font-tertiary
+        font-weight: 800
+        color: red
+        position: absolute
+        display: block
+        font-size: 200px
+        top: 150%
+        left: 40%
+        background-color: none
+        z-index: -1
