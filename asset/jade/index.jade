@@ -1,4 +1,4 @@
-//output:../../index.html, pretty:false
+//output:../../index.html, pretty:true
 
 doctype html
 html
@@ -16,7 +16,8 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='#') iGEM Toronto
+                    a.navbar-brand(href='#')
+                        img(src="asset/img/logo/logo6.png", alt="", style="height:40px; margin: 0")
                 #navbar.navbar-collapse.collapse
                     ul.nav.navbar-nav.navbar-right
                         li
@@ -33,33 +34,43 @@ html
 
         .row.tq-height.bc-black.particle
             #particles-js
-            
-        .row.container-fluid.bc-black
-            .four.columns
-                h1.u-green.light-green What is iGEM Toronto?
-            .eight.columns
+        
+        //- .row.tq-height.bc-banner
+        //-     p <br>
+        .row.container-fluid.bc-green-pattern
+            .four.columns.fadeInDown
+                h1.u.black What is iGEM Toronto?
+            .eight.columns.fadeInDown
                 //- h1.u So... what is iGEM Toronto?
-                h5.white University of Toronto iGEM (International Genetically Engineered Machine) is a student association dedicated to the practice of <font color='#EAEA51'> synthetic biology </font> and dissemination of its scientific foundations. Every year our team designs and executes a synthetic biology research project, and joins teams from across the world to compete at the iGEM Grand Jamboree conference in Boston, Massachusetts, USA in November.
-        .row.container-fluid.bc-green
-            .eight.columns
+                h5.black University of Toronto iGEM (International Genetically Engineered Machine) is a student association dedicated to the practice of synthetic biology and dissemination of its scientific foundations. Every year our team designs and executes a synthetic biology research project, and joins teams from across the world to compete at the iGEM Grand Jamboree conference in Boston, Massachusetts, USA in November.
+        .row.container-fluid.bc-white-pattern
+            .eight.columns.fadeInDown
                 h1.u What do we do?
+                p <br>
+                p <br>
                 h5 Outside of the competition, the iGEM Toronto club is an interdisciplinary space for those interested in synthetic biology to learn more about the field by participating in engaging seminars and design sessions.
-                h5 <font color='#EAEA51'> We are currently in the process of developing our 2017 project </font>, and expect to begin recruitment in mid-march.  Stay tuned on our facebook page for more updates regarding our events and recruitment sessions or contact us at <font color='#EAEA51'> igem@g.skule.ca </font> for more info.
-            .four.columns
-                img(src="asset/img/icons/pipette.png", alt="").pipette
+                h5 We are currently in the process of developing our 2017 project, and expect to begin recruitment in mid-march.  Stay tuned on our facebook page for more updates regarding our events and recruitment sessions or contact us at igem@g.skule.ca for more info.
+            .one.column
+                <br>
+            .three.columns.fadeInRight
+                img(src="asset/img/icons/pipette.png", alt="", style="padding-top:100px")
                 
-        .row.container-fluid.bc-black
+        .row.container-fluid.bc-black-pattern
             .twelve.columns.white.middle
-                h1.light-green Our Past Projects
-                section#cd-timeline.cd-container
+                h1.light-green.u.u-green.u-center.fadeInDown Our Past Projects
+                p <br>
+                p <br>
+                section#cd-timeline.cd-container.off-white.fadeInDown
                     .cd-timeline-block
                         .cd-timeline-img.silver
                             img(src='asset/img/icons/silver.svg', alt='silver')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 Silver Medal, “E.coli Neural Network” (Toronto BlueGenes)
+                            h5.yellow 2007 “E.coli Neural Network” 
+                            h5 (Toronto BlueGenes) 
                             p
                                 | iGEM BlueGenes developed a simple two-input-one-output light directed feedforward neural network using E. coli cells, with the ultimate goal of being trained to function as different types of digital logic gates.
+                            h4 [Silver Medal]
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2007
                         // cd-timeline-content
@@ -69,9 +80,11 @@ html
                             img(src='asset/img/icons/bronze.svg', alt='bronze')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 Bronze Medal, “Encapsulator” (TorontoMaRSDiscovery)
+                            h5.yellow 2009 “Encapsulator”
+                            h5 (TorontoMaRSDiscovery)
                             p
                                 | iGEM TorontoMaRSDiscovery has taken an interdisciplinary approach to systematically investigate how nature implements metabolic channeling and how this knowledge may be exploited for biotechnological applications, such as the production therapeutic molecules and biofuels and the degradation of toxic wastes
+                            h4 [Bronze Medal]
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2009
                         // cd-timeline-content
@@ -81,9 +94,11 @@ html
                             img(src='asset/img/icons/gold.svg', alt='gold')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 Gold Medal, “Modulating Biofilm Response”
+                            h5.yellow 2013 “Modulating Biofilm Response”
+                            h5 (iGEM Toronto)
                             p
                                 | iGEM Toronto characterized in detail the decision-making machinery in E. coli that decides between a stationary, low growth state and a mobile, high growth state. We developed a semi-high throughput procedure to measure several biochemical parameters in parallel in a microtiter plate format and characterized wild type and knockout strains, as well as strains that overproduced relevant factors through expression plasmids we had constructed, in a multitude of stimuli conditions.
+                            h4  [Gold Medal]
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2013
                         // cd-timeline-content
@@ -93,10 +108,11 @@ html
                             img(src='asset/img/icons/bronze.svg', alt='bronze')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5
-                                | Bronze Medal, “Plasmid Loss Genetic Safeguard for the Biocontainment of Synthetic Organisms”
+                            h5.yellow 2014 “Plasmid Loss Genetic Safeguard for the Biocontainment of Synthetic Organisms”
+                            h5 (iGEM Toronto)
                             p
                                 | iGEM Toronto proposed to use a “self-deleting” CRISPR/Cas9 plasmid as an alternative approach for genetic safeguard system.
+                            h4 [Bronze Medal] 
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2014
                         // cd-timeline-content
@@ -106,9 +122,11 @@ html
                             img(src='asset/img/icons/silver.svg', alt='silver')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 Silver Medal, “Consortia Flux”
+                            h5.yellow 2015 “Consortia Flux”
+                            h5 (iGEM Toronto)
                             p
                                 | iGEM Toronto proposed to develop a new cost-effective bioremediation technology to reduce the accumulation of toxins from oil sands tailings and increase the rate of tailings ponds’ reclamation activities. We created a genetically modified Escherichia coli bacterium that will metabolize toluene toxins, develop a pro-gram simulator to show the potential of its use in tailing ponds, and formulate a policy framework for the industrial use of this technology
+                            h4 [Silver Medal]
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2015
                         // cd-timeline-content
@@ -118,9 +136,11 @@ html
                             img(src='asset/img/icons/bronze.svg', alt='bronze')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 Bronze Medal, “Gold Biosensing”
+                            h5.yellow 2016 “Gold Biosensing”
+                            h5 (iGEM Toronto)
                             p
                                 | iGEM Toronto proposed to use synthetic biology to improve another aspect of gold mining -gold prospecting and detection. Implementing an existing method of biosensing, we created biological reactive paper-sensors that would allow cheap, easy, and environmentally friendly detection of gold deposits in geographically large regions.
+                            h4 [Bronze Medal]
                             //- span.cd-date 2016
                         // cd-timeline-content
                     // cd-timeline-block
@@ -129,18 +149,30 @@ html
                             img(src='asset/img/icons/gold.svg', alt='gold')
                         // cd-timeline-img
                         .cd-timeline-content
-                            h5 In Progress
-                            p There is still time to join us to create this year's project. Apple now!
+                            h5.yellow 2017
+                            h5 In Progress!
+                            p                             
+                                | Our current project is still in progress. If you would like to be a part of the project, or want to learn more about it, get in touch with us.
                             // <a href="#0" class="cd-read-more">Read more</a>
                             //- span.cd-date 2017!!!
                         // cd-timeline-content
                     // cd-timeline-block
                 // cd-timeline
-
+                p <br>
+                p <br>
+                h1 Get in Touch!
+        
         // scripts
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
         script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
         script(src='asset/js/lib/modernizr.js')
         script(src='asset/js/timeline.js')
         script(src='asset/js/particles.js')
+        script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
+        script.
+            window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
+            sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 200, reset: true});
+            sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 200, reset: true});
+            sr.reveal('.fadeInDownND', { duration: 500, origin: 'bottom'});
+        
                 

@@ -16,36 +16,53 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='#') iGEM Toronto
+                    a.navbar-brand(href='#')
+                        img(src="asset/img/logo/logo6.png", alt="", style="height:40px; margin: 0")
                 #navbar.navbar-collapse.collapse
                     ul.nav.navbar-nav.navbar-right
                         li
-                            a(href='navbar-static.html') Home
+                            a(href='./index.html') Home
                         li
-                            a(href='navbar-static.html') Teams
+                            a(href='./teams.html') Teams
                         li
-                            a(href='navbar-fixed.html') Contact
-        .row.container-fluid.bc-black.white
-            .four.columns.down
-                <br>
-            .eight.columns.down.wetlab(data-wet-lab='WetLab')
-                h1.u-green.light-green.up Wet Lab
-                h5 The theory has been learned, the project prepared, and protocols planned, but bringing it all to fruition will present many unexpected challenges. These expert amateur scientists work collaboratively with the dry lab team to successfully construct a plasmid, characterize biobricks, troubleshoot, and produce a viable proof of concept. 
-                h5 <font color='#EAEA51'> Warning: Members experience strange compulsions to include fluorescing proteins in their work! </font>
+                            a(href='./contact.html') Contact
+        .row.container-fluid.half-height.bc-lab.middle
+            h1.white.u.u-white.u-center.fadeInDown Our Teams
 
-        .row.container-fluid.bc-green
-            .eight.columns
+        .row.container-fluid.bc-black-pattern.white
+            .five.columns.fadeInRight
+                img(src="asset/img/icons/cells.png", alt="", width="350px", style="padding-top:30px")
+            .seven.columns.fadeInDown.wetlab(data-wet-lab='WetLab')
+                h1.u.u-green.light-green Wet Lab
+                p <br>
+                p <br>
+                h5 The theory has been learned, the project prepared, and protocols planned, but bringing it all to fruition will present many unexpected challenges. These expert amateur scientists work collaboratively with the dry lab team to successfully construct a plasmid, characterize biobricks, troubleshoot, and produce a viable proof of concept. 
+                h5 <font color='#EAEA51'>Warning: Members experience strange compulsions to include fluorescing proteins in their work! </font>
+        .row.container-fluid.bc-green-pattern
+            .eight.columns.fadeInDown
                 h1.u Dry Lab
+                p <br>
+                p <br>
                 h5 This team of Python loving bioinformatics and computer science enthusiasts aims to create software solutions that work conjointly with the wet lab project. Additionally, through advanced computational modelling, they simulate what can and can’t be done, in order to keep the crazies from the lab bench in check.
-            .four.columns
-                <br>
-        .row.container-fluid.bc-yellow
-            .four.columns
-                <br>
-            .eight.columns
+            .four.columns.fadeInRight
+                img(src="asset/img/icons/drylab.png", alt="", width="350px", style="padding-top:30px;padding-left:100px")
+        .row.container-fluid.bc-white-pattern.black
+            .five.columns.fadeInRight
+                img(src="asset/img/icons/pnp.png", alt="", width="350px", style="padding-top:30px;padding-left:50px")    
+            .seven.columns.fadeInDown
                 h1.u Policy and Practices
+                p <br>
+                p <br>
                 h5 Genetically engineered organisms can present exciting but controversial solutions. Understanding where the science goes beyond the laboratory doors, in terms of ethical, environmental, and social outcomes, is this subteam’s main goal. 
                 h5 Anti-GMO protest near you? Have no fear… Have a well-reasoned and justifiable level of fear.
-                
+        .row.container-fluid.bc-black-pattern
+            button bufasdfs          
+
+    script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
+    script.
+        window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
+        sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 200, reset: true});
+        sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 200, reset: true});
+        sr.reveal('.fadeInDownND', { duration: 500, origin: 'bottom'});
                 
                 

@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Josefin+Slab|Sanchez|Vidaloka')
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Josefin+Slab|Sanchez|PT+Sans:400,400i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,600,700')
 
+// $font-primary: 'Josefin Slab', serif
 $font-primary: 'Josefin Slab', serif
-$font-secondary: 'Inconsolata', sans-serif
-$font-tertiary: 'Vidaloka', serif
+$font-secondary: 'Open Sans', sans-serif
 
 .middle
     text-align: center
@@ -18,7 +19,9 @@ h5
 h1
     font-size: 50px
 h5
-    font-size: 25px
+    font-size: 22px
+    font-weight: 400
+    line-height: 30px
 
 .u
     display: inline-block
@@ -33,30 +36,15 @@ h5
         left: 0
         border-bottom: 2.5px solid $black
 
-.u-white
-    display: inline-block
-    padding-bottom: 20px
-    position: relative
+.u.u-white
     &:before
-        content: ""
-        position: absolute
-        width: 40%
-        height: 1px
-        bottom: 0
-        left: 30%
         border-bottom: 2.5px solid white
-.u-green
-    display: inline-block
-    padding-bottom: 20px
-    position: relative
+.u.u-green
     &:before
-        content: ""
-        position: absolute
-        width: 40%
-        height: 1px
-        bottom: 0
-        left: 0
         border-bottom: 2.5px solid $light-green
+.u.u-center
+    &:before
+        left: 30%
 
 .header
     color: white
@@ -77,17 +65,17 @@ h5
 //         top: 10%
 //         left: 10%
 //         z-index: 0
-
-.about
-    &:after
-        content: attr(data-about)
-        font-family: $font-tertiary
-        font-weight: 800
-        color: red
-        position: absolute
-        display: block
-        font-size: 200px
-        top: 150%
-        left: 40%
-        background-color: none
-        z-index: -1
+//
+// .about
+//     &:after
+//         content: attr(data-about)
+//         font-family: $font-tertiary
+//         font-weight: 800
+//         color: red
+//         position: absolute
+//         display: block
+//         font-size: 200px
+//         top: 150%
+//         left: 40%
+//         background-color: none
+//         z-index: -1
