@@ -55,10 +55,10 @@ particlesJS("particles-js", {
         "move": {
             "enable": true,
             "speed": 0.8,
-            "direction": "top-left",
+            "direction": "none",
             "random": true,
             "straight": false,
-            "out_mode": "out",
+            "out_mode": "bounce",
             "bounce": true,
             "attract": {
                 "enable": false,
