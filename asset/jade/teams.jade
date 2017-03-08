@@ -27,9 +27,9 @@ html
                         li
                             a(href='./contact.html') Contact
         .row.container-fluid.half-height.bc-lab.middle
-            h1.white.u.u-white.u-center.fadeInDown Our Teams
+            h1.white.u.u-white.u-center.fadeInDown.header-text Our Teams
 
-        .row.container-fluid.bc-black-pattern.white
+        .row.margin.container-fluid.bc-black-pattern.white.fadeInDownP
             .five.columns.fadeInRight
                 img(src="asset/img/icons/cells.png", alt="", width="350px", style="padding-top:30px")
             .seven.columns.fadeInDown.wetlab(data-wet-lab='WetLab')
@@ -38,7 +38,7 @@ html
                 p <br>
                 h5 The theory has been learned, the project prepared, and protocols planned, but bringing it all to fruition will present many unexpected challenges. These expert amateur scientists work collaboratively with the dry lab team to successfully construct a plasmid, characterize biobricks, troubleshoot, and produce a viable proof of concept. 
                 h5 <font color='#EAEA51'>Warning: Members experience strange compulsions to include fluorescing proteins in their work! </font>
-        .row.container-fluid.bc-green-pattern
+        .row.margin.container-fluid.bc-green-pattern.fadeInDownP
             .eight.columns.fadeInDown
                 h1.u Dry Lab
                 p <br>
@@ -46,7 +46,7 @@ html
                 h5 This team of Python loving bioinformatics and computer science enthusiasts aims to create software solutions that work conjointly with the wet lab project. Additionally, through advanced computational modelling, they simulate what can and can’t be done, in order to keep the crazies from the lab bench in check.
             .four.columns.fadeInRight
                 img(src="asset/img/icons/drylab.png", alt="", width="350px", style="padding-top:30px;padding-left:100px")
-        .row.container-fluid.bc-white-pattern.black
+        .row.margin.container-fluid.bc-white-pattern.black.fadeInDownP
             .five.columns.fadeInRight
                 img(src="asset/img/icons/pnp.png", alt="", width="350px", style="padding-top:30px;padding-left:50px")    
             .seven.columns.fadeInDown
@@ -58,11 +58,12 @@ html
         .row.tiny.container-fluid.bc-black.off-white.middle
             p © 2017 iGEM U of T 
 
-    script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
-    script.
-        window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
-        sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 200, reset: true});
-        sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 200, reset: true});
-        sr.reveal('.fadeInDownND', { duration: 500, origin: 'bottom'});
+        script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
+        script.
+            window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
+            sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 400, reset: true});
+            sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: true});
+            sr.reveal('.fadeInDownND', { duration: 800, origin: 'bottom'});
+            sr.reveal('.fadeInDownP', { duration: 800, origin: 'bottom'});
                 
                 
