@@ -31,7 +31,7 @@ html
 
         .row.margin.container-fluid.bc-black-pattern.white.fadeInDownP
             .five.columns.fadeInRight
-                img(src="asset/img/icons/cells.png", alt="", width="350px", style="padding-top:30px")
+                img(src="asset/img/icons/cells.png", alt="", width="350px", style="padding-top:30px;padding-bottom:30px")
             .seven.columns.fadeInDown.wetlab(data-wet-lab='WetLab')
                 h1.u.u-green.light-green Wet Lab
                 p <br>
@@ -58,6 +58,14 @@ html
         .row.tiny.container-fluid.bc-black.off-white.middle
             p © 2017 iGEM U of T 
 
+            
+        // scripts
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+        script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+        script(src='asset/js/lib/bootstrap.min.js')
+        script(src='asset/js/lib/modernizr.js')
+        script(src='asset/js/timeline.js')
+        script(src='asset/js/particles.js')
         script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
         script.
             window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');

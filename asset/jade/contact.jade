@@ -30,20 +30,29 @@ html
         .row.container-fluid.qt-height.bc-black-pattern.white.middle.contact
             h1.u.u-white.u-center.fadeInDown Contact
         .row.margin.bc-white-pattern.container-fluid.contact.middle.fadeInDown
-            h5 We are currently in the process of developing our project of 2017. If you want to join us or get more information about our process, feel free to get in touch.
+            h5 We are currently in the process of developing our project for 2017. If you want to join us or get more information about our process, feel free to get in touch.
             p <br>
             h5 We will soon be recruiting members for our summer project. All of our updates and events are going to be announced through our facebook page.
             p <br>
             p <br>
-            a(href="#")
-                h5 Follow Us On Facebook
+            a(href="")
+                h5 Follow Us On Facebook (link needs to updated)
             
         .row.tiny.container-fluid.bc-black.off-white.middle
             p © 2017 iGEM U of T 
     
-    script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
-    script.
-        window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
-        sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 200, reset: true});
-        sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 200, reset: true});
-        sr.reveal('.fadeInDownND', { duration: 500, origin: 'bottom'});
+            
+        // scripts
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+        script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+        script(src='asset/js/lib/bootstrap.min.js')
+        script(src='asset/js/lib/modernizr.js')
+        script(src='asset/js/timeline.js')
+        script(src='asset/js/particles.js')
+        script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
+        script.
+            window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
+            sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 400, reset: true});
+            sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: true});
+            sr.reveal('.fadeInDownND', { duration: 800, origin: 'bottom'});
+            sr.reveal('.fadeInDownP', { duration: 800, origin: 'bottom'});

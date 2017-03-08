@@ -34,12 +34,20 @@
     <div class="row tiny container-fluid bc-black off-white middle">
       <p>© 2017 iGEM U of T </p>
     </div>
+    <!-- scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="asset/js/lib/bootstrap.min.js"></script>
+    <script src="asset/js/lib/modernizr.js"></script>
+    <script src="asset/js/timeline.js"></script>
+    <script src="asset/js/particles.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
+      sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 400, reset: true});
+      sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: true});
+      sr.reveal('.fadeInDownND', { duration: 800, origin: 'bottom'});
+      sr.reveal('.fadeInDownP', { duration: 800, origin: 'bottom'});
+    </script>
   </body>
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script>
-    window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
-    sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 200, reset: true});
-    sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 200, reset: true});
-    sr.reveal('.fadeInDownND', { duration: 500, origin: 'bottom'});
-  </script>
 </html>

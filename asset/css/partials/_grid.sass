@@ -14,6 +14,9 @@ body
     margin: 0
 .row.margin
     margin: 30px
+@media only screen and (max-width: 600px)
+    .row.margin
+        margin: 10px
 .row.full-height
     height: 95%
 .row.tq-height
@@ -87,7 +90,11 @@ nav
     text-align: center
     h1
         background-color: none
-
+@media only screen and (max-width: 600px)
+    .row.half-height.bc-black.particle
+        display: none
+    #about
+        margin-top: 65px
 // .particle
 //     border-bottom: solid 3px $light-green
 .thankyou
