@@ -1,9 +1,3 @@
-/* --------------------------------
- *
- *Primary style
- *
- *--------------------------------
-
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -16,28 +10,14 @@
 img
   max-width: 100%
 
-/* --------------------------------
- *
- *Modules - reusable parts of our design
- *
- *--------------------------------
-
 .cd-container
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width
   width: 90%
   max-width: 1170px
   margin: 0 auto
   &::after
-    /* clearfix
     content: ''
     display: table
     clear: both
-
-/* --------------------------------
- *
- *Main components
- *
- *--------------------------------
 
 #cd-timeline
   position: relative
@@ -49,7 +29,7 @@ img
     content: ''
     position: absolute
     top: 0
-    left: 18px
+    left: 24px
     height: 100%
     width: 4px
     background: $green
@@ -191,16 +171,6 @@ img
     content: ""
     display: table
     clear: both
-  // h2
-  //   color: #303e49
-  // p, .cd-read-more, .cd-date
-  //   font-size: 13px
-  //   font-size: 0.8125rem
-  // .cd-read-more, .cd-date
-  //   display: inline-block
-  // p
-  //   margin: 1em 0
-  //   line-height: 1.6
   .cd-read-more
     float: right
     padding: .8em 1em
@@ -253,8 +223,6 @@ img
       width: 100%
       left: 122%
       top: 6px
-    //   font-size: 16px
-    //   font-size: 1rem
   .cd-timeline-block:nth-child(even) .cd-timeline-content
     float: right
     &::before
