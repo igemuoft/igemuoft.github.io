@@ -30,18 +30,29 @@ html
         .row.container-fluid.qt-height.bc-black-pattern.white.middle.contact
             h1.u.u-white.u-center.fadeInDown Contact
         .row.margin.bc-white-pattern.container-fluid.contact.middle.fadeInDown
-            h5 We are currently in the process of developing our project for 2017. If you want to join us or get more information about our process, feel free to get in touch.
+            h5 We are currently in the process of developing our project for 2017. If you want to become a sponsor or join us, feel free to get in touch via the following contacts. We will be more than glad to talk to you.
             p <br>
-            h5 We will soon be recruiting members for our summer project. All of our updates and events are going to be announced through our facebook page.
+            h5 If you want immediate updates on our activities, dont forget to subscribe to our newsletter and follow our facebook group!
             p <br>
             p <br>
-            a(href="")
-                h5 Follow Us On Facebook (link needs to updated)
+            a(href="https://www.facebook.com/iGEMToronto/")
+                i.fa.fa-facebook-square.fa-3x
+            a(href="http://eepurl.com/bbxrEn")
+                i.fa.fa-newspaper-o.fa-3x
+            a(href="mailto:fahim.shahreer95@gmail.com")
+                i.fa.fa-envelope-square.fa-3x
             
-        .row.tiny.container-fluid.bc-black.off-white.middle
-            p © 2017 iGEM U of T 
-    
-            
+        .row.tiny.container-fluid.bc-black.off-white
+            .three.columns.white
+                p © 2017 iGEM U of T
+            .six.columns.middle
+                a.white(href="http://eepurl.com/bbxrEn") Subscribe To Our Newsletter (need padding fixing)
+            .three.columns.right
+                a.white(href="https://www.facebook.com/iGEMToronto/")
+                    i.fa.fa-facebook-square.fa-2x
+                a.white(href="mailto:fahim.shahreer95@gmail.com")
+                    i.fa.fa-envelope-square.fa-2x
+
         // scripts
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
         script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
@@ -52,7 +63,7 @@ html
         script(src='https://unpkg.com/scrollreveal/dist/scrollreveal.min.js')
         script.
             window.sr = ScrollReveal().reveal('.fadeInDown, .fadeInRight, .fadeInUp');
-            sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 400, reset: true});
-            sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: true});
+            sr.reveal('.fadeInDown', { duration: 1000, origin: 'bottom', delay: 400, reset: false});
+            sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: false});
             sr.reveal('.fadeInDownND', { duration: 800, origin: 'bottom'});
             sr.reveal('.fadeInDownP', { duration: 800, origin: 'bottom'});
