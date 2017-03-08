@@ -61,12 +61,12 @@ html
             .three.columns.fadeInRight
                 img(src="asset/img/icons/pipette.png", alt="", style="padding-top:100px")
                 
-        .row.margin.container-fluid.bc-black-pattern.fadeInDownP
+        .row.margin.container-fluid.bc-black-pattern.fadeInDownEarly
             .twelve.columns.white.middle
                 h1.light-green.u.u-green.u-center.fadeInDown Our Past Projects
                 p <br>
                 p <br>
-                section#cd-timeline.cd-container.off-white.fadeInDownND
+                section#cd-timeline.cd-container.off-white.fadeInDownEarly
                     .cd-timeline-block
                         .cd-timeline-img.bronze
                             img(src='asset/img/icons/bronze.svg', alt='bronze')
@@ -147,4 +147,4 @@ html
             sr.reveal('.fadeInRight', { duration: 1000, origin: 'right', delay: 400, reset: false});
             sr.reveal('.fadeInDownND', { duration: 800, origin: 'bottom'});
             sr.reveal('.fadeInDownP', { duration: 800, origin: 'bottom'});
-                
+            sr.reveal('.fadeInDownEarly', { duration: 800, origin: 'bottom', viewFactor: 0.001});
