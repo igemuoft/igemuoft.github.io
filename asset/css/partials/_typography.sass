@@ -1,59 +1,72 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:400,600,700')
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:400,600,700")
 
 // $font-primary: 'Josefin Slab', serif
-$font-primary: 'Josefin Slab', serif
-$font-secondary: 'Open Sans', sans-serif
+$font-primary: "Josefin Slab", serif
+$font-secondary: "Open Sans", sans-serif
 
 .middle
-    text-align: center
+  text-align: center
+
 .right
-    text-align: right
+  text-align: right
+
+p
+  -webkit-font-smoothing: antialiased
 
 h1,
 h2,
-h3,
-    font-family: $font-primary
-    font-weight: 800
+h3
+  font-family: $font-primary
+  font-weight: 800
+  -webkit-font-smoothing: antialiased
+
 h4,
 h5
-    font-family: $font-secondary
+  font-family: $font-secondary
+  -webkit-font-smoothing: antialiased
 
 h1
-    font-size: 50px
+  font-size: 50px
+
 h5
-    font-size: 22px
-    font-weight: 400
-    line-height: 30px
+  font-size: 22px
+  font-weight: 400
+  line-height: 30px
 
 .u
-    display: inline-block
-    padding-bottom: 20px
-    position: relative
-    &:before
-        content: ""
-        position: absolute
-        width: 40%
-        height: 1px
-        bottom: 0
-        left: 0
-        border-bottom: 2.5px solid $black
+  display: inline-block
+  padding-bottom: 20px
+  position: relative
+
+  &:before
+    content: ""
+    position: absolute
+    width: 40%
+    height: 1px
+    bottom: 0
+    left: 0
+    border-bottom: 2.5px solid $black
 
 .u.u-white
-    &:before
-        border-bottom: 2.5px solid white
+  &:before
+    border-bottom: 2.5px solid white
+
 .u.u-green
-    &:before
-        border-bottom: 2.5px solid $light-green
+  &:before
+    border-bottom: 2.5px solid $light-green
+
 .u.u-center
-    &:before
-        left: 30%
+  &:before
+    left: 30%
 
 .header
-    color: white
-    h1
-        padding-top: 30%
-    h4
-        padding-top: 0
+  color: white
+
+  h1
+    padding-top: 30%
+
+  h4
+    padding-top: 0
 
 // .wetlab
 //     &:after
@@ -82,20 +95,26 @@ h5
 //         background-color: none
 //         z-index: -1
 .header-text
-    padding-top: 70px
+  padding-top: 70px
+
 .contact
-    a
-        padding: 0 20px
-        color: $black
-        &:hover
-            color: $green
+  a
+    padding: 0 20px
+    color: $black
+
+    &:hover
+      color: $green
+
 a.light-green
-    color: $white
-    font-weight: 400
-    &:hover
-        color: $green
+  color: $white
+  font-weight: 400
+
+  &:hover
+    color: $green
+
 a.white
-    padding-left: 10px
-    &:hover
-        color: $green
-        text-decoration: none
+  padding-left: 10px
+
+  &:hover
+    color: $green
+    text-decoration: none

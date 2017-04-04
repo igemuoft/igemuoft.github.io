@@ -98,7 +98,8 @@ body
 //     background-size: 20px 20px
 .bc-green-pattern
   background: radial-gradient(circle at 0% 50%, #1df2a0 9px, #14e596 11px, rgba(96, 16, 48, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, #1df2a0 9px, #14e596 11px, #1df2a0 11px), #8a3
-  background: webkit-radial-gradient(circle at 0% 50%, #1df2a0 9px, #14e596 11px, rgba(96, 16, 48, 0) 11px) 0px 10px, webkit-radial-gradient(at 100% 100%, #1df2a0 9px, #14e596 11px, #1df2a0 11px), #8a3
+
+  // background-image: url("../img/pics/geometry2.png")
   background-size: 20px 20px
 
 .bc-lab
@@ -147,3 +148,83 @@ nav
 //     border-bottom: solid 3px $light-green
 .thankyou
   background-image: url("asset/img/photos/thankyou.jpg")
+
+#register-container
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: transparentize($black, 0.1)
+  top: 0
+  left: 0
+
+#register
+  padding: 40px 15%
+  text-align: center
+  width: 80%
+  height: 60%
+  background-image: url("../img/pics/geometry2.png")
+  position: fixed
+  top: 20%
+  left: 10%
+  border-radius: 25px
+
+  i#exit
+    position: absolute
+    top: 20px
+    right: 20px
+    cursor: hand
+    cursor: pointer
+
+  h1
+    margin-bottom: 20px
+
+  h5
+    font-size: 17px
+
+  .teams-list
+    margin-top: 30px
+    display: flex
+
+  .teams-list-item
+    width: 100%
+    margin: auto 10px
+
+    a
+      @extend h2
+
+      line-height: 1.2em
+
+      &:hover
+        text-decoration: none
+        border-bottom: solid 2px transparentize($black, 0.2)
+
+      &:focus
+        text-decoration: none
+
+#register-container.hidden
+  display: none
+
+@media only screen and (max-width: 500px)
+  #register
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 0
+    padding-top: 100px
+
+    i#exit
+      top: 100px
+      right: 20px
+
+    .teams-list
+      flex-direction: column
+
+      .teams-list-item
+        margin: 5px 0
+
+        a
+          font-size: 22px
+
+    h1
+      font-size: 3em
