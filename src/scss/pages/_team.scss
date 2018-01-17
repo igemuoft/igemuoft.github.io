@@ -1,0 +1,51 @@
+/* Sections */
+section#wetlab {
+	background-color: $dark-cyan;
+}
+
+section#drylab {
+	background-color: $red;
+}
+
+section#pnp {
+	background-color: $yellow;
+}
+
+section#wiki {
+	background-color: $cyan;
+}
+
+
+/* team wrap */
+.team-wrap {
+	@include display(flex);
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 70px 0;
+	.team-svg {
+		flex: 1;
+	}
+	.team-text {
+		flex: 1;
+		position: relative;
+		background: $white;
+		border-radius: 35px;
+		padding: 15px;
+		margin: 50px 0;
+		&.left:after {
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			content: '';
+			border: 1em solid transparent;
+			border-right-color: $white;
+			margin-left: -1em;
+			width: 0;
+			height: 0;
+		}
+	}
+
+	& > :nth-child(n){
+		margin: 0 5px;
+	}
+}

@@ -1,0 +1,16 @@
+button{
+	margin: 20px 0;
+	border: none;
+	cursor: pointer;
+}
+
+.button-1{
+	background-color: $cyan;
+	color: white;
+	padding: 15px 35px;
+	border-radius: 25px;
+	transition: all 0.25s $animation-1;
+	&:hover{
+		background-color: darken($cyan, 10);
+	}
+}

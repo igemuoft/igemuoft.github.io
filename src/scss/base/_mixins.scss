@@ -1,0 +1,24 @@
+/* font-size and line-height */
+@mixin font-size-line-height($font-size, $line-height-ratio) {
+	font-size: $font-size;
+	line-height: $font-size * $line-height-ratio;
+	@media(max-width: 700px) {
+		line-height: $font-size * 1.2;
+	}
+}
+
+@mixin antialiasing($type:antialiased) {
+  /* antialiased, none, subpixel-antialiased*/
+	-webkit-font-smoothing: $type;
+	font-smoothing: $type;
+	font-smooth: always;
+}
+
+@mixin display($type:flex){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+}

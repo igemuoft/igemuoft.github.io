@@ -1,0 +1,32 @@
+nav {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	background: $dark-cyan;
+	display: grid;
+	grid-template-columns: 1fr 10% 80% 1fr;
+
+	.navbar-left {
+		grid-column: 2/3;
+	}
+	.navbar-right {
+		grid-column: 3/4;
+		text-align: right;
+	}
+	ul {
+		margin: 0;
+		li {
+			display: inline-block;
+			margin-left: 5px;
+			margin-right: 5px;
+			a {
+				color: $white;
+				text-decoration: none;
+				transition: all 0.15s $animation-1;
+				&:hover {
+					color: lighten($cyan, 20);
+				}
+			}
+		}
+	}
+}

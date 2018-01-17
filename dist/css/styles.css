@@ -1,0 +1,214 @@
+/* COLORS */
+/* Animations */
+/* font variable: line-height-ratio */
+/* font-size and line-height */
+@import url("https://fonts.googleapis.com/css?family=Lato:400|Roboto+Slab:400,700");
+html, body {
+  font-family: "Lato", sans-serif;
+  /* antialiased, none, subpixel-antialiased*/
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  font-size: 10px;
+  color: #17425a;
+  text-align: center; }
+
+p, a, li {
+  font-size: 1.6rem;
+  line-height: 2.56rem;
+  font-weight: 400;
+  margin: 1.6rem; }
+  @media (max-width: 700px) {
+    p, a, li {
+      line-height: 1.92rem; } }
+
+h1, h2, h3 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin: 1rem; }
+
+h1 {
+  font-size: 5rem;
+  line-height: 8rem; }
+  @media (max-width: 700px) {
+    h1 {
+      line-height: 6rem; } }
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 5.6rem; }
+  @media (max-width: 700px) {
+    h2 {
+      line-height: 4.2rem; } }
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.84rem; }
+  @media (max-width: 700px) {
+    h3 {
+      line-height: 2.88rem; } }
+
+button {
+  font-size: 1.6rem; }
+
+/* Special texts */
+#logo {
+  font-family: "Lato", sans-serif; }
+
+/* Font colors */
+.text-white {
+  color: white; }
+
+.text-red {
+  color: #ed365e; }
+
+.text-cyan {
+  color: #47b3be; }
+
+/* Decorations */
+.underline {
+  display: inline-block;
+  padding-bottom: 25px;
+  position: relative; }
+  .underline:before {
+    content: '';
+    display: block;
+    height: 10px;
+    position: absolute;
+    bottom: 15px;
+    border-radius: 10px; }
+  .underline.small:before {
+    width: 30%;
+    left: 35%; }
+  .underline.large:before {
+    width: 50%;
+    left: 25%; }
+  .underline.red:before {
+    background: #ed365e; }
+  .underline.yellow:before {
+    background: #f6cd40; }
+  .underline.cyan:before {
+    background: #47b3be; }
+  .underline.grey:before {
+    background: #c0caca; }
+
+body {
+  margin: 0; }
+
+/* grid for section content */
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 10em 1fr 1fr 10em; }
+
+.content-wrap {
+  padding: 50px 0;
+  grid-column: 2/4; }
+
+button {
+  margin: 20px 0;
+  border: none;
+  cursor: pointer; }
+
+.button-1 {
+  background-color: #47b3be;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 25px;
+  transition: all 0.25s ease-in-out; }
+  .button-1:hover {
+    background-color: #37929b; }
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background: #17425a;
+  display: grid;
+  grid-template-columns: 1fr 10% 80% 1fr; }
+  nav .navbar-left {
+    grid-column: 2/3; }
+  nav .navbar-right {
+    grid-column: 3/4;
+    text-align: right; }
+  nav ul {
+    margin: 0; }
+    nav ul li {
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px; }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.15s ease-in-out; }
+        nav ul li a:hover {
+          color: #92d2d9; }
+
+/* Headers */
+/* Sections */
+section#intro {
+  background-color: #47b3be; }
+
+section#what-we-do {
+  background-color: #f6cd40; }
+
+section#timeline {
+  background-color: #17425a; }
+
+section#current-project {
+  background-color: white; }
+
+section#past-projects {
+  background-color: #ed365e; }
+
+section#sponsors {
+  background-color: white; }
+
+/* Sections */
+section#wetlab {
+  background-color: #17425a; }
+
+section#drylab {
+  background-color: #ed365e; }
+
+section#pnp {
+  background-color: #f6cd40; }
+
+section#wiki {
+  background-color: #47b3be; }
+
+/* team wrap */
+.team-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 70px 0; }
+  .team-wrap .team-svg {
+    flex: 1; }
+  .team-wrap .team-text {
+    flex: 1;
+    position: relative;
+    background: white;
+    border-radius: 35px;
+    padding: 15px;
+    margin: 50px 0; }
+    .team-wrap .team-text.left:after {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      content: '';
+      border: 1em solid transparent;
+      border-right-color: white;
+      margin-left: -1em;
+      width: 0;
+      height: 0; }
+  .team-wrap > :nth-child(n) {
+    margin: 0 5px; }

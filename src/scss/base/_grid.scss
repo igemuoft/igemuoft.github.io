@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+}
+
+/* grid for section content */
+.grid-1 {
+	display: grid;
+	grid-template-columns: 1fr repeat(2, minmax(auto, 40em)) 1fr;
+}
+.grid-2 {
+	display: grid;
+	grid-template-columns: 10em 1fr 1fr 10em;
+}
+
+.content-wrap {
+	padding: 50px 0;
+	grid-column: 2/4;
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400|Roboto+Slab:400,700');
+
+$font-primary: 'Lato', sans-serif;
+$font-secondary: 'Roboto Slab', serif;
+
+html, body {
+	font-family: $font-primary;
+	@include antialiasing();
+	font-size: 10px;
+	color: $dark-cyan;
+	text-align: center;
+}
+
+p, a, li {
+	@include font-size-line-height(1.6rem, $line-height-ratio);
+	font-weight: 400;
+	margin: 1.6rem;
+}
+
+h1, h2, h3 {
+	font-family: $font-secondary;
+	font-weight: 700;
+	margin: 1rem;
+}
+h1 {
+	@include font-size-line-height(5rem, $line-height-ratio);
+}
+h2 {
+	@include font-size-line-height(3.5rem, $line-height-ratio);
+}
+h3 {
+	@include font-size-line-height(2.4rem, $line-height-ratio);
+}
+
+button {
+	font-size: 1.6rem;
+}
+
+/* Special texts */
+#logo {
+	font-family: $font-primary;
+}
+
+/* Font colors */
+.text-white {
+	color: $white;
+}
+.text-red {
+	color: $red;
+}
+.text-cyan {
+	color: $cyan;
+}
+
+/* Decorations */
+.underline{
+	display: inline-block;
+	padding-bottom: 25px;
+	position: relative;
+	&:before {
+	    content: '';
+	    display:block;
+	    height: 10px;
+	    position: absolute;
+	    bottom: 15px;
+			border-radius: 10px;
+		}
+
+	&.small:before {
+		width: 30%;
+		left: 35%;
+	}
+
+	&.large:before {
+		width: 50%;
+		left: 25%;
+	}
+
+	&.red:before {
+		background: $red;
+	}
+
+	&.yellow:before {
+		background: $yellow;
+	}
+
+	&.cyan:before {
+		background: $cyan;
+	}
+
+	&.grey:before {
+		background: $grey;
+	}
+
+}
