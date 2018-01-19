@@ -34,8 +34,8 @@ gulp.task('handlebars', function () {
 // compile sass to src/css
 gulp.task('sass', function() {
 	gulp.src('src/scss/*.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('src/css'))
+		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(gulp.dest('src'))
 		.pipe(browserSync.stream());
 })
 
@@ -76,8 +76,8 @@ gulp.task('copyImages', function() {
 });
 
 gulp.task('copyCSS', function() {
-	gulp.src('src/css/*.css')
-		.pipe(gulp.dest('dist/css'));
+	gulp.src('src/*.css')
+		.pipe(gulp.dest('dist'));
 })
 
 gulp.task('build', ['copyHTML', 'copyImages', 'copyCSS']);
