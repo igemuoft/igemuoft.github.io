@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>iGEM Toronto</title>
-		<link rel="stylesheet" href="/css/styles.css">
-	</head>
-
-	<body>
+{{> header}}
 		
-
-<!-- navbar -->
-<nav>
-	<div class="navbar-left">
-		<h3 id="logo" class="text-white">iGEM<span class="text-cyan">TO</span></h3>
-	</div>
-	<div class="navbar-right">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/team.html">Team</a></li>
-			<li><a href="/podcast.html">Podcast</a></li>
-			<li><a href="/contacts.html">Contacts</a></li>
-		</ul>
-	</div>
-</nav>
-<!-- navbar end -->
+{{> navbar}}
 
 <!-- Header section -->
 <header class="home">
@@ -60,15 +36,16 @@
 	</section>
 	<!-- section: intro end -->
 
-	<!-- section: project-timeline -->
+	<!-- section: intro -->
 	<section id="timeline" class="grid-1">
 		<div class="content-wrap">
 			<div class="underline small middle cyan">
-				<h1 class="text-white">project timeline</h1>
+				<h1 class="text-white">Project Timeline</h1>
 			</div>
 		</div>
 	</section>
-	<!-- section: project-timeline end -->
+	<!-- section: intro end -->
+
 	<!-- section: intro -->
 	<section id="current-project" class="grid-1">
 		<div class="content-wrap">
@@ -107,17 +84,4 @@
 </main>
 <!-- main end -->
 
-
-		<!-- footer -->
-		<footer>
-			<footer>
-				<div class="content-wrap">
-
-				</div>
-			</footer>
-		</footer>
-		<!-- footer end -->
-
-		<script src="/main.js"></script>	
-	</body>
-</html>
+{{> footer}}
