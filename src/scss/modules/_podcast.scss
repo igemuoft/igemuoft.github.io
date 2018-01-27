@@ -1,1 +1,27 @@
+.podcast-container {
+  padding: 0 12rem;
+}
 
+.podcast {
+  border-radius: 10px;
+  border: 5px solid #eee;
+  text-align: left;
+  padding: 2rem;
+
+  h2 {
+
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 0;
+    margin-bottom: 3em;
+  }
+}
+
+.audio {
+  height: 2rem;
+  width: 100%;
+  background: $red;
+  border-radius: 10px;
+}
