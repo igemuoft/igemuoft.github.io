@@ -1,15 +1,27 @@
+@mixin border {
+  border: 1px solid red;
+}
+
+@mixin border-radius {
+  border-radius: 50px;
+}
+
 .podcast-container {
   padding: 0 12rem;
 }
 
 .podcast {
-  border-radius: 10px;
-  border: 5px solid #eee;
+  @include border-radius;
+  border: 1em solid #eee;
   text-align: left;
-  padding: 2rem;
+  padding: 5rem;
 
   h2 {
-
+    margin-bottom: 0;
+    & + p {
+      margin-top: 0;
+      margin-bottom: 3.2rem;
+    }
   }
   h3 {
     font-size: 1.6rem;
@@ -19,9 +31,43 @@
   }
 }
 
-.audio {
-  height: 2rem;
-  width: 100%;
+.infobox {
+  margin-bottom: 3.2rem;
+}
+
+.epiNumber {
+  // @include border;
+  @include border-radius;
+  // border-radius: 30px;
+  grid-column: 1;
+  height: 200px;
+  width: 200px;
+  padding: 2em;
   background: $red;
-  border-radius: 10px;
+  color: $white;
+  h1 {
+    font-size: 100px;
+    line-height: 105px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.description {
+  // @include border;
+  padding-left: 2em;
+  grid-column: 2/4;
+}
+
+.download {
+
+}
+
+.audio {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.mejs-time-rail {
+  color: green;
 }
