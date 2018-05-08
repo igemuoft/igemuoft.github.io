@@ -18,40 +18,74 @@ section#wiki {
 
 /* team rows */
 .team-row .container {
-	background: black;
-	@include mobile {
-		background: yellow;
-	}
-	@include tablet {
-		background: blue;
-	}
-}
-
-.team-wrap {
-	.team-svg {
-		flex: 1;
+	.content {
+		& > :nth-child(n){
+			margin: 50px;
+			@include mobile {
+				margin: 10px 0;
+			}
+			@include tablet {
+				margin: 10px 0;
+			}
+		}
 	}
 	.team-text {
-		flex: 1;
-		position: relative;
+		flex: 6;
 		background: $white;
 		border-radius: 35px;
 		padding: 15px;
 		margin: 50px 0;
-		&.left:after {
+		position: relative;
+		box-sizing: border-box;
+		@include mobile {
+			order: 2;
+			min-width: 100%;
+		}
+		@include tablet {
+			order: 2;
+			min-width: 100%;
+		}
+		&:after {
 			position: absolute;
-			top: 50%;
-			right: 100%;
+			top: 42%;
 			content: '';
-			border: 1em solid transparent;
-			border-right-color: $white;
+			border: 2.5rem solid transparent;
 			margin-left: -1em;
 			width: 0;
 			height: 0;
+			@include mobile {
+				display: none;
+			}
+			@include tablet {
+				display: none;
+			}
+		}
+		&.right-arrow:after {
+			left: 101%;
+			border-left-color: $white;
+		}
+		&.left-arrow:after {
+			right: 100%;
+			border-right-color: $white;
 		}
 	}
-
-	& > :nth-child(n){
-		margin: 0 5px;
+	.team-image {
+		flex: 5;
+		display: flex;
+		justify-content: center;
+		@include mobile {
+			order: 1;
+			margin-bottom: 40px;
+			min-width: 100%;
+		}
+		@include tablet {
+			order: 1;
+			margin-bottom: 40px;
+			min-width: 100%;
+		}
+		img {
+			width: 100%;
+			min-height: 250px;
+		}
 	}
 }
