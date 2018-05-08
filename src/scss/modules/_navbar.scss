@@ -3,15 +3,16 @@ nav {
 	z-index: 1000;
 	width: 100%;
 	background: $dark-cyan;
-	display: grid;
-	grid-template-columns: 1fr 10% 80% 1fr;
+	display: flex;
+	align-items: center;
 
 	.navbar-left {
-		grid-column: 2/3;
+		flex: 1;
 	}
 	.navbar-right {
-		grid-column: 3/4;
+		flex: 2;
 		text-align: right;
+		position:relative;
 	}
 	ul {
 		margin: 0;
@@ -25,6 +26,35 @@ nav {
 				transition: all 0.15s $animation-1;
 				&:hover {
 					color: lighten($cyan, 20);
+				}
+			}
+		}
+	}
+}
+
+#menusign {
+	display: none;
+	color: white;
+}
+
+@include mobile {
+	#menusign {
+		display: block;
+	}
+	.navbar-left {
+		flex:3;
+	}
+	.navbar-right {
+		flex: 1;
+		.menu {
+			// display: none;
+			position: absolute;
+			background: $dark-cyan;
+			width: 100%;
+			text-align: center;
+			ul {
+				li {
+					display: block;
 				}
 			}
 		}
