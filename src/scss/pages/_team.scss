@@ -16,12 +16,12 @@ section#wiki {
 }
 
 
-/* team wrap */
+/* team rows */
+.team-row .container {
+
+}
+
 .team-wrap {
-	@include display(flex);
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 70px 0;
 	.team-svg {
 		flex: 1;
 	}

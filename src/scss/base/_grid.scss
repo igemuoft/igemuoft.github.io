@@ -16,3 +16,25 @@ body {
 	padding: 50px 0;
 	grid-column: 2/4;
 }
+
+/* new stuff from may 8 */
+.container {
+	padding: 50px 5%;
+	max-width: 700px;
+	.row {
+		padding: 20px;
+	}
+}
+
+%flex {
+	display: flex;
+}
+
+.flex-row {
+	@extend %flex;
+	flex-flow: row wrap;
+}
+.flex-col {
+	@extend %flex;
+	flex-flow: column;
+}
