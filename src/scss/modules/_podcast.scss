@@ -14,7 +14,7 @@
   @include border-radius;
   border: 1em solid #eee;
   text-align: left;
-  padding: 5rem;
+  padding: 4rem;
 
   h2 {
     margin-bottom: 0;
@@ -33,18 +33,20 @@
 
 .infobox {
   margin-bottom: 3.2rem;
+  // align-items: center;
 }
 
 .epiNumber {
   // @include border;
   @include border-radius;
   // border-radius: 30px;
-  grid-column: 1;
+  // grid-column: 1;
   height: 200px;
   width: 200px;
   padding: 2em;
   background: $red;
   color: $white;
+  margin-right: 4em;
   h1 {
     font-size: 100px;
     line-height: 105px;
@@ -54,9 +56,8 @@
 }
 
 .description {
-  // @include border;
-  padding-left: 2em;
-  grid-column: 2/4;
+  // margin-bottom: 3.2rem;
+  text-align: left;
 }
 
 .download {
@@ -70,4 +71,58 @@
 
 .mejs-time-rail {
   color: green;
+}
+
+@include mobile {
+
+  .podcast-container {
+    padding: 0 3rem;
+  }
+  .infobox {
+    align-items: center;
+    text-align: center;
+    flex-flow: column wrap;
+  }
+  .epiNumber {
+    border-radius: 25px;
+    margin-right: 0;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+    padding: 2em;
+    h1 {
+      font-size: 50px;
+      line-height: 52.5px;
+    }
+  }
+  .description {
+    text-align: center;
+  }
+}
+
+@include tablet {
+
+  .podcast-container {
+    padding: 0 3rem;
+  }
+  .infobox {
+    align-items: center;
+    text-align: center;
+    flex-flow: column wrap;
+  }
+  .epiNumber {
+    border-radius: 25px;
+    margin-right: 0;
+    text-align: left;
+    height: 100px;
+    width: 100px;
+    padding: 2em;
+    h1 {
+      font-size: 50px;
+      line-height: 52.5px;
+    }
+  }
+  .description {
+    text-align: center;
+  }
 }
