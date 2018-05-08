@@ -18,7 +18,13 @@ section#wiki {
 
 /* team rows */
 .team-row .container {
-
+	background: black;
+	@include mobile {
+		background: yellow;
+	}
+	@include tablet {
+		background: blue;
+	}
 }
 
 .team-wrap {
