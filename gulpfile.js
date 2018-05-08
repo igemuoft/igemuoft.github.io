@@ -6,22 +6,22 @@ var sass = require('gulp-sass')
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
-var ugilfy = require('gulp-uglify'); 
+var ugilfy = require('gulp-uglify');
 // BROWSERSYNC TASKS
 
-// handlebars 
+// handlebars
 gulp.task('handlebars', function () {
   var templateData = {
   },
   options = {
-  	ignorePartials: true, 
+  	ignorePartials: true,
     partials : {
     },
     batch : ['./src/handlebars/partials'],
     helpers : {
     }
   }
- 
+
   return gulp.src('src/handlebars/*.handlebars')
     .pipe(handlebars(templateData, options))
 		.pipe(rename(function(path) {
@@ -49,7 +49,7 @@ gulp.task('scripts', function() {
 })
 
 // serving with browserSync
-gulp.task('serve', ['handlebars', 'sass', 'scripts'], function() {
+gulp.task('default', ['handlebars', 'sass', 'scripts'], function() {
 	browserSync.init({
 		server: 'src',
 	});
