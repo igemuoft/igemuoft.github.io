@@ -1,3 +1,18 @@
+/* Header */
+header#team {
+	a.team-box {
+		flex: 1;
+		.team-headshot {
+			height: 300px;
+			background: blue;
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+
 /* Sections */
 section#wetlab {
 	background-color: $dark-cyan;
