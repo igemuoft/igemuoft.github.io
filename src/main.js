@@ -1,0 +1,1 @@
+function togglemenu(){var e=document.getElementsByClassName("mobile-menu")[0],l=document.getElementsByClassName("fa-bars")[0],s=document.getElementsByClassName("fa-times")[0];"block"==e.style.display?(e.style.display="none",s.style.display="none",l.style.display="block"):(e.style.display="block",s.style.display="block",l.style.display="none")}

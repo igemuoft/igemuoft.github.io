@@ -4,7 +4,10 @@ nav {
 	width: 100%;
 	background: $dark-cyan;
 	display: flex;
+	flex-flow: row wrap;
 	align-items: center;
+	// box-shadow: 0px 2px 30px black;
+	border-bottom: 0.25px solid black;
 
 	.navbar-left {
 		flex: 1;
@@ -13,6 +16,9 @@ nav {
 		flex: 2;
 		text-align: right;
 		position:relative;
+		.menusign {
+			display: none;
+		}
 	}
 	ul {
 		margin: 0;
@@ -32,29 +38,49 @@ nav {
 	}
 }
 
-#menusign {
+.mobile-menu {
 	display: none;
-	color: white;
 }
 
 @include mobile {
-	#menusign {
-		display: block;
+	nav {
+		.navbar-left {
+			flex: 3;
+			text-align: left;
+		}
+		.navbar-right {
+			flex: 1;
+			.menusign {
+				display: block;
+				color: white;
+				padding-right: 2rem;
+				.fa-times {display: none;}
+				.fa-bars {display: block;}
+			}
+			.desktop-menu {
+				display: none;
+			}
+		}
 	}
-	.navbar-left {
-		flex:3;
-	}
-	.navbar-right {
-		flex: 1;
-		.menu {
-			// display: none;
-			position: absolute;
-			background: $dark-cyan;
-			width: 100%;
-			text-align: center;
-			ul {
-				li {
+
+	.mobile-menu {
+		display: none;
+		width: 100%;
+		box-shadow: 0px 10px 20px black;
+		ul {
+			padding: 0;
+			li {
+				display: block;
+				border-bottom: 0.25px solid black;
+				margin: 0;
+				padding: 0;
+				&:first-child {
+					border-top: 0.25px solid black;
+				}
+				a {
 					display: block;
+					margin: 0;
+					padding: 1.5rem;
 				}
 			}
 		}
