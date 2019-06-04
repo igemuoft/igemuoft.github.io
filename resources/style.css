@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
+  color: #8F9092;
+}
+
+/* TEXT STYLES */
+
+p{
+	font-size: 18px;
+	line-height: 200%;
+	text-align: justify;
+	letter-spacing: 0.5px;
+}
+
+.heading-hr{
+	border: 2px solid #28365B;
+	width: 80px;
+	margin: 25px 0;
+}
+
+h1{
+	font-size: 30px;
+	color: #28365B;
+	letter-spacing: 1.5px;
+}
+
+/* NAVBAR */
+
+a {
+	letter-spacing: 1.5px;
+}
+
+.navbar-brand{
+	letter-spacing: 1.5px;
+}
+
+.navbar-default { margin : 0 !important; }
+
+/* HERO BOX */
+
+.hero-container{
+	background-color: #28365B;
+	height: 90vh;
+	width: 100vw;
+}
+
+.hero-title{
+	font-size: 120px;
+	position: relative;
+	margin-top: -86.1px;
+	top: 45vh;
+	text-align: center;
+}
+
+.hide-overflow{
+	overflow-x: hidden;
+}
+
+/* CONTAINER-1*/
+
+.container-1{
+	margin-top: 120px;
+}
+
+.container-1-title{
+	
+}
+
+.container-1-left{
+
+}
+
+.container-1-right{
+	text-align: right;
+	padding: 0px 0px;
+	margin: 0;
+	height: 100%;
+}
+
+.container-1-right-img{
+	height: 520px;
+	position: absolute;
+	top: 40px;
+	right: 0;
+	
+}
+
+.container-1-coming-soon{
+	text-align: center; 
+	font-size: 150px; 
+	color: #209ABF;
+	margin-top: 50px;
+}
+
+/* PROJECT CONTAINER 1 */
+
+.container-team-1{
+	margin: 50px 0;
+}
+
+.team-title{
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	font-size: 120px;
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.team-subtitle{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 50px 200px;
+	color: #209ABF;
+	font-size: 25px;
+}
+
+.container-team-boxes{
+	text-align: center;
+	height: 450px;
+}
+
+.container-team-left{
+	background-image: url(img/Team/wet-lab.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.container-team-center{
+	background-image: url(img/Team/dry-lab.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.container-team-right{
+	background-image: url(img/Team/pnp.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.center-text{
+	margin: 0;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	position: relative;
+	top: 50%;
+	margin-top: -16.4px;
+}
+
+.past-project-cards{
+	text-align-last: center;
+	height: 50px;
+	width: 50px;
+	background-color: black;
+}
+
+.team-section-margins{
+	margin: 50px auto;
+}
+
+.team-titles{
+	letter-spacing: 5px;
+}
+
+.pic-cards{
+	text-align: center;
+}
+
+.wet-lab-overlay{
+	background-color: rgba(40, 54, 91, 0.65);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	color: black;
+}
+
+.wet-lab-overlay:hover{
+	background-color: rgba(40, 54, 91, 0.8);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	color: black;
+}
+
+.dry-lab-overlay{
+	background-color: rgba(143, 144, 146, 0.65);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	color: black;
+}
+
+.dry-lab-overlay:hover{
+	background-color: rgba(143, 144, 146, 0.8);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	color: black;
+}
+
+.pnp-overlay{
+	background-color: rgba(32, 154, 191, 0.65);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+}
+
+.pnp-overlay:hover{
+	background-color: rgba(32, 154, 191, 0.8);
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+}
+
+.wet-lab-hidden-text{
+	letter-spacing: 2px;
+	position: absolute;
+	padding: 180px 60px 0px 60px;
+	top: 0;
+	text-align: center;
+	font-size: 16px;
+	transition-delay:1s;
+}
+
+.dry-lab-hidden-text{
+	letter-spacing: 2px;
+	position: absolute;
+	padding: 180px 60px 0px 60px;
+	top: 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.pnp-lab-hidden-text{
+	letter-spacing: 2px;
+	position: absolute;
+	padding: 145px 60px 0px 60px;
+	top: 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.some-content .hovered { display: none; transition-delay: 1s;}
+.some-content:hover .hovered { display: block; transition-delay: 1s;}
+.some-content:hover .initial { display: none;  transition-delay: 1s;}
+
+.team-names-1{
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #28365B;
+	line-height: 125%;
+}
+
+.team-names-2{
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #209ABF;
+}
+
+/* CONTAINER PROJECTS 1 */
+
+.container-project-1{
+	margin-top: 50px;
+}
+
+.project-title{
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	font-size: 120px;
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.project-subtitle{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 50px 200px;
+	color: #209ABF;
+	font-size: 25px;
+}
+
+.container-project-boxes{
+	text-align: center;
+	height: 400px;
+	margin-bottom: -10px;;
+}
+
+.project-titles{
+	letter-spacing: 5px;
+}
+
+.center-content{
+	text-align: center;
+}
+
+.square-1 {
+  height: 350px;
+  width: 350px;
+  background-color: #28365B;
+  display: inline-block;
+  margin: 0;
+  padding: 30px;
+}
+
+.square-2 {
+  height: 350px;
+  width: 350px;
+  background-color: #209ABF;
+  display: inline-block;
+  margin: 0;
+  padding: 30px;
+}
+
+
+.square-3 {
+  height: 350px;
+  width: 350px;
+  background-color: #E4E4E6;
+  display: inline-block;
+  margin: 0;
+  padding: 30px;
+}
+
+.project-row{
+	margin: 0;
+	padding: 0;
+}
+
+.project-desc-container-1{
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 200%;
+	font-size: 18px;
+	margin: 0;
+}
+
+.project-desc-container-2{
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 200%;
+	font-size: 18px;
+	margin: 0;
+}
+
+.project-desc-container-3{
+	color: #28365B;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 200%;
+	font-size: 18px;
+	margin: 0;
+}
+
+.format-year{
+	margin:0;
+	padding: 0;
+	font-size: 80px;
+	letter-spacing: 3px;
+}
+
+.project-box-hidden-text{
+	letter-spacing: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-size: 12px;
+	padding: 50px 60px;
+}
+
+/* FOOTER */
+
+.container-footer{
+	text-align: center;
+	padding: 50px 100px;
+	background-color: #28365B;
+}
+
+.fa {
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* CONTACT US */
