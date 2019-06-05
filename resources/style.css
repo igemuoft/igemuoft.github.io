@@ -5,6 +5,59 @@
   color: #8F9092;
 }
 
+/* ACCENTS */
+
+.accent{
+	transform: rotate(10deg);
+	height: 10px;
+	width: 200vw;
+  	color: red;
+  	background-color: #209ABF;
+  	border: none;
+	position:absolute;
+	top: 1150px;
+	left: -100px;
+	z-index: -102;
+}
+
+.accent-2{
+	transform: rotate(-20deg);
+	height: 20px;
+	width: 200vw;
+  	color: red;
+  	background-color: #28365B;
+  	border: none;
+	position: absolute;
+	top: 900px;
+	left: -100px;
+	z-index: -102;
+}
+
+.accent-3{
+	transform: rotate(35deg);
+	height: 30px;
+	width: 200vw;
+  	color: red;
+  	background-color: lightgray;
+  	border: none;
+	position: absolute;
+	top: 1300px;
+	left: -180px;
+	z-index: -100;
+}
+
+.accent-4{
+	transform: rotate(10deg);
+	height: 10px;
+	width: 200vw;
+  	color: red;
+  	background-color: #209ABF;
+  	border: none;
+	position: absolute;
+	top: 1200px;
+	left: -100px;
+}
+
 /* TEXT STYLES */
 
 p{
@@ -69,7 +122,7 @@ a {
 }
 
 .container-1-left{
-
+	
 }
 
 .container-1-right{
@@ -95,6 +148,10 @@ a {
 }
 
 /* PROJECT CONTAINER 1 */
+.card{
+	background-color: white;
+	z-index: -101
+}
 
 .container-team-1{
 	margin: 50px 0;
