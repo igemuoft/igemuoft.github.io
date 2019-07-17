@@ -361,6 +361,39 @@ a {
   padding: 30px;
 }
 
+.medal-gold{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	background-color: darkgoldenrod;
+	border-radius: 100%;
+	border: 4px solid white;
+}
+
+.medal-silver{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	background-color: gray;
+	border-radius: 100%;
+	border: 4px solid white;
+}
+
+.medal-bronze{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	background-color: sandybrown;
+	border-radius: 100%;
+	border: 4px solid white;
+}
+
 .project-row{
 	margin: 0;
 	padding: 0;
