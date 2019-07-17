@@ -124,6 +124,20 @@ a {
 	font-size: 25px;
 }
 
+.contact-us-text{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #28365B;
+	font-size: 18px;
+}
+
+.contact-us-text-alternate{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #209ABF;
+	font-size: 18px;
+}
+
 .container-team-boxes{
 	text-align: center;
 	height: 450px;
