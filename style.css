@@ -576,7 +576,7 @@ a {
 .footer {
 	list-style: none;
 	display: flex;
-	position: relative;
+	position: absolute;
 	cursor: pointer;
 	margin: 2rem;
 	bottom: 2rem;
