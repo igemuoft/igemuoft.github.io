@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<!-- NAVBAR-->
+	<nav class="navbar navbar-expand-lg fixed-top" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand py-1"><img class="logo" src="resources/logo.png"></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link py-1" href="#about">About iGEM</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="team.html">Our Projects</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="#projects">Our Teams</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div> 	
+    </nav>
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<script src="jsmol/jsmol/JSmol.min.js"></script>
+	<script src="jsmol/jsmol/js/Jmol2.js"></script>
+	<script> jmolInitialize("/jsmol/jsmol");</script>
+	</script> 
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<title>iGEM</title>
+</head>
+
+<body>
+<div class="row">
+		<div class="col-md-1 col-md-5 offset-xl-0 col-xl-6">
+			<div class="container">
+				<div>iGEM <br> TORONTO <br>
+				  <span class="txt-type" data-wait="2000" data-words='["Synthetic Biology","Ethics","Industrial Applications","Social Responsibilities","Engineering"]'></span>
+					<span class="cursor"></span>
+				</div>
+			  <script defer>         	
+					class TypeWriter {
+						constructor(txtElement, words, wait = 2000) {
+						this.txtElement = txtElement;
+						this.words = words;
+						this.txt = '';
+						this.wordIndex = 0;
+						this.wait = parseInt(wait, 10); 
+						this.type(); 
+						this.isDeleting = false; 
+					}
+					type() {
+						const current = this.wordIndex % this.words.length;
+						const fullTxt = this.words[current];
+						if (this.isDeleting) {
+							this.txt = fullTxt.substring(0, this.txt.length - 1);
+						}
+						else {
+							this.txt = fullTxt.substring(0, this.txt.length + 1);
+						}
+						this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+						let typeSpeed = 200;
+						if(this.isDeleting) {
+							typeSpeed /= 2;
+						}
+						if(!this.isDeleting && this.txt === fullTxt) {
+						typeSpeed = this.wait;
+						this.isDeleting = true;
+						} else if(this.isDeleting && this.txt === '') {
+						this.isDeleting = false;
+						this.wordIndex++;
+						typeSpeed = 400;
+						}
+						setTimeout(() => this.type(), typeSpeed);
+					}
+					}           
+					document.addEventListener('DOMContentLoaded', init); 
+					function init() {
+						const txtElement = document.querySelector('.txt-type');
+						const words = JSON.parse(txtElement.getAttribute('data-words'));
+						const wait = txtElement.getAttribute('data-wait');
+						new TypeWriter(txtElement, words, wait);
+					}
+				</script>
+		  </div>
+		</div>
+	  <div class="offset-md-0 col-md-5 offset-xl-0 col-xl-6">
+		<script>
+			jmolApplet(400,"load protein.pdb","0")
+			Jmol.script(jmolApplet0,'select *;cartoons on;spacefill off;wireframe off;strands off')
+	  	</script>
+</div>
+	<div class="col-xl-7" >
+	  International Genetically Engineered Machine competition is a worldwide synthetic biology competition for undergraduate university students. Synthetic biology is a field of science where engineering techniques are used to redesign organism to have new, useful abilities. This allows students to develop critical thinking skills while gaining a wide range of technical abilities, be it in the wet lab or dry lab, or amongst a team setting. We have another team dedicated to human practices, which assesses ethical and societal implications of the technology produced from the wet lab and dry lab.
+	  </div>
+	<div class="col-xl-5">&nbsp;<img src="resources/img/IMG_4606.JPG" width="704" height="406" alt=""/></div>
+	<div class="containerdiv">
+		<a href='http://www.igemtoronto.ca/'>
+			<img src="resources/img/wet.png" width="143" height="415" class='cornerimage2' />
+		</a>
+		<a href='http://www.igemtoronto.ca/'>
+			<img src="resources/img/hp.png" width="97" height="375" class='cornerimage' />
+		</a>
+		<a href='http://ww.igemtoronto.ca/'>
+			<img src="resources/img/dry.png" width="248" height="345" class='cornerimage3'/>
+		</a>
+		<img src="resources/img/dna.png" width="1388" height="504" class="cornerimage" border='0'/>
+	</div>
+
+	<footer id="connect" class="container-fluid text-center">
+    <div class="row">
+      <div class="col">
+
+        <br>
+
+        <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+	
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	
+</body>
+
+</html>
