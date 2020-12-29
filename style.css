@@ -29,58 +29,161 @@ a:hover {
     color: #19415A;
 }
 
+.background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    top: 100vh;
+}
+
 /* Section a */
 
 .section-a {
-    z-index: 1; 
-    top: 2em;
+    height: 90vh;
     position: relative;
     padding: 2em;
+}
+
+.section-a #igem {
+    position: relative;
+    top: 10vh;
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 1.2em;
+    display: inline;
+    z-index: 2;
+}
+
+.section-a #igem #text {
+    font-size: 0.5em;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.cursor {
+    border-right: .05em solid;
+	animation: caret 1s steps(1) infinite;
+}
+@keyframes caret {
+	50% {
+	  border-color: transparent;
+	}
+}
+
+.petase {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 60%;
+}
+
+.section-a #btn {
+    position: absolute;
+    left: 80%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    display: inline;
+    z-index: 2;
+    line-height: 1em;
+    font-size: 1.5em;
+    font-weight: 200;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.section-a #intro {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translateX(-50%);
+    display: inline;
+    z-index: 2;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.4m;
+    font-weight: 100;
+    font-style: italic;
 }
 
 /* Section b */
 
 .section-b {
     z-index: 1; 
-    top: 2em;
-    position: relative;
+    top: 120vh;
+    position: absolute;
     padding: 2em;
 }
 
 .section-b .img {
     filter: grayscale(1);
+    position: absolute;
+    display: inline;
+    top:8em;
+    right: 4em;
 }
 
 /* Section c */
 
 .section-c {
     z-index: 1; 
-    top: 2em;
-    position: relative;
+    top: 230vh;
+    position: absolute;
     padding: 2em;
 }
 
 .section-c .svg {
+    position: relative;
+    top: 2em;
     width: 65vw;
 }
 
-.section-c .placeholder {
-    font-size: 1em;
-    color: #333;
+.section-c .svg #P1, .section-c .svg #P2, .section-c .svg #P3 {
+    cursor: pointer;
+}
+
+.section-c .svg #P1:hover, .section-c .svg #P2:hover, .section-c .svg #P3:hover ~ .placeholder{
+    color: #333
+}
+
+.credit {
     position: relative;
+    top: 4em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+.placeholder {
+    display: inline;
+    position: relative;
+    bottom: 40vh;
+    left: 70vw;
+    color: #DAEEF2;
+}
+
+/* Section d */
+
+.section-d {
+    z-index: 1; 
+    top: 350vh;
+    position: absolute;
+    padding: 2em;
 }
 
 /* FOOTER */
 .fa {
-    padding: 1em;
-    font-size: 0.7em;
+    padding: 0.5em;
+    font-size: 1em;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    position: absolute;
+    top:400vh;
 }
   
 .fa:hover {
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .fa-facebook {
