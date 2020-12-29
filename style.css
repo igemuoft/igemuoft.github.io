@@ -18,6 +18,11 @@ body {
     box-shadow: #F0F5F9 0.1em 0.1em 0.3em;
 }
 
+.logo {
+    height: 1.8em;
+    margin: 2em;
+}
+
 a {
     letter-spacing: 0.05em;
     font-size: 0.7em;
@@ -37,6 +42,19 @@ a:hover {
     top: 100vh;
 }
 
+.btn {
+    position: relative;
+    top: 2em;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    border-radius: 2em;
+    padding: 0.8em 1.5em;
+    border: 3px solid #333;
+    margin: 1em;
+    cursor: pointer;
+}
+
 /* Section a */
 
 .section-a {
@@ -47,17 +65,20 @@ a:hover {
 
 .section-a #igem {
     position: relative;
-    top: 10vh;
-    font-size: 2em;
-    font-weight: 200;
-    line-height: 1.2em;
-    display: inline;
+    top: 9vh;
+    width: 75vh;
     z-index: 2;
 }
 
-.section-a #igem #text {
-    font-size: 0.5em;
+.section-a #type {
+    position: relative;
+    top: 10vh;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.2em;
     font-family: 'IBM Plex Mono', monospace;
+    display: inline;
+    z-index: 2;
 }
 
 .cursor {
@@ -79,7 +100,7 @@ a:hover {
     width: 60%;
 }
 
-.section-a #btn {
+.section-a #ro {
     position: absolute;
     left: 80%;
     top: 80%;
@@ -92,13 +113,13 @@ a:hover {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.section-a #intro {
+.section-a #curve {
     position: absolute;
-    left: 50%;
-    top: 95%;
+    left: 50vw;
+    top: 90vh;
     transform: translateX(-50%);
     display: inline;
-    z-index: 2;
+    z-index: 3;
     font-family: 'Lato', sans-serif;
     font-size: 0.4m;
     font-weight: 100;
@@ -109,9 +130,16 @@ a:hover {
 
 .section-b {
     z-index: 1; 
-    top: 120vh;
+    top: 105vh;
     position: absolute;
     padding: 2em;
+}
+
+.section-b #intro {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9em;
+    color: #333;
+    width: 80vw;
 }
 
 .section-b .img {
@@ -120,13 +148,14 @@ a:hover {
     display: inline;
     top:8em;
     right: 4em;
+    z-index: 1;
 }
 
 /* Section c */
 
 .section-c {
     z-index: 1; 
-    top: 230vh;
+    top: 200vh;
     position: absolute;
     padding: 2em;
 }
@@ -165,7 +194,7 @@ a:hover {
 
 .section-d {
     z-index: 1; 
-    top: 350vh;
+    top: 290vh;
     position: absolute;
     padding: 2em;
 }
@@ -178,7 +207,7 @@ a:hover {
     text-decoration: none;
     border-radius: 50%;
     position: absolute;
-    top:400vh;
+    top:350vh;
 }
   
 .fa:hover {
