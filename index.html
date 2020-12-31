@@ -57,11 +57,11 @@
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               // create a `stage` object
-            var stage = new NGL.Stage("viewport");
+            var stage = new NGL.Stage("viewport", { backgroundColor: "white" });
             // load a PDB structure and consume the returned `Promise`
-            stage.loadFile("assets/Others/protein.pdb").then(function (component) {
+            stage.loadFile("assets/Others/protein.pdb", { defaultRepresentation: true }).then(function (component) {
               // add a "cartoon" representation to the structure component
-              component.addRepresentation("cartoon");
+              // component.addRepresentation("cartoon");
               // provide a "good" view of the structure
               component.autoView();
             });
