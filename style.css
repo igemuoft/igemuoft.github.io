@@ -20,39 +20,52 @@ body {
 
 .logo {
     height: 1.8em;
-    margin: 2em;
+    margin: 1em;
 }
 
 a {
     letter-spacing: 0.05em;
     font-size: 0.7em;
-    color: #999999;
+    color: #808080;
     margin-left: 0.8em;
 }
 
 a:hover {
     color: #19415A;
-}
-
-.background {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
-    top: 100vh;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    transition: 0.5s;
 }
 
 .btn {
     position: relative;
     top: 2em;
-    color: #333;
+    color: #338BDE;
     font-family: 'Lato', sans-serif;
     font-size: 0.9em;
-    border-radius: 2em;
+    background-color: #daeef2;
+    border-radius: 10px;
     padding: 0.8em 1.5em;
-    border: 3px solid #333;
     margin: 1em;
     cursor: pointer;
+}
+
+.sub {
+    margin-left: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+.sub .span_1, .sub .span_2 {
+    display: block;
+}
+
+.sub .span_1 {
+    font-weight: 200;
+}
+
+.sub .span_2 {
+    font-weight: 600;
 }
 
 /* Section a */
@@ -60,19 +73,20 @@ a:hover {
 .section-a {
     height: 90vh;
     position: relative;
-    padding: 2em;
 }
 
 .section-a #igem {
-    position: relative;
-    top: 9vh;
-    width: 75vh;
+    position: absolute;
+    top: 18vh;
+    left: 6vw;
+    width: 73vh;
     z-index: 2;
 }
 
 .section-a #type {
-    position: relative;
-    top: 10vh;
+    position: absolute;
+    top: 45vh;
+    left: 6vw;
     font-size: 1em;
     font-weight: 200;
     line-height: 1.2em;
@@ -100,30 +114,25 @@ a:hover {
     width: 60%;
 }
 
-.section-a #ro {
+.section-a #intro {
     position: absolute;
-    left: 80%;
-    top: 80%;
-    transform: translate(-50%, -50%);
-    display: inline;
+    left: 70vw;
+    top: 70vh;
     z-index: 2;
     line-height: 1em;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 200;
-    font-family: 'IBM Plex Mono', monospace;
 }
 
-.section-a #curve {
+.section-a #tag {
     position: absolute;
     left: 50vw;
-    top: 90vh;
+    top: 85vh;
     transform: translateX(-50%);
-    display: inline;
-    z-index: 3;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.4m;
-    font-weight: 100;
-    font-style: italic;
+    z-index: 2;
+    font-size: 0.8em;
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Section b */
@@ -132,14 +141,24 @@ a:hover {
     z-index: 1; 
     top: 105vh;
     position: absolute;
+    background-color: #A0D7EB;
+    width: 100vw;
     padding: 2em;
 }
 
+.section-b .sub {
+    color: #fff;
+}
+
 .section-b #intro {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     font-size: 0.9em;
     color: #333;
-    width: 80vw;
+    width: 70vw;
+    margin-left: 4em;
+    margin-top: 1em;
+    top: 1em;
 }
 
 .section-b .img {
@@ -149,6 +168,18 @@ a:hover {
     top:8em;
     right: 4em;
     z-index: 1;
+}
+
+.section-b #background {
+    position: absolute;
+    width: 4em;
+    right: 10vw;
+    z-index: 2;
+    top: 70vh;
+}
+
+.section-b .btn {
+    margin-left: 4em;
 }
 
 /* Section c */
@@ -162,8 +193,9 @@ a:hover {
 
 .section-c .svg {
     position: relative;
-    top: 2em;
+    top: 5vh;
     width: 65vw;
+    left: 2em;
 }
 
 .section-c .svg #P1, .section-c .svg #P2, .section-c .svg #P3 {
@@ -176,7 +208,8 @@ a:hover {
 
 .credit {
     position: relative;
-    top: 4em;
+    top: 3em;
+    left: 3em;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.5em;
     font-style: italic;
@@ -194,12 +227,16 @@ a:hover {
 
 .section-d {
     z-index: 1; 
-    top: 290vh;
+    top: 300vh;
     position: absolute;
     padding: 2em;
 }
 
 /* FOOTER */
+#footer {
+    display: block;
+}
+
 .fa {
     padding: 0.5em;
     font-size: 1em;
@@ -208,6 +245,7 @@ a:hover {
     border-radius: 50%;
     position: absolute;
     top:350vh;
+    margin-left: 1em;
 }
   
 .fa:hover {
