@@ -59,7 +59,7 @@
               // create a `stage` object
             var stage = new NGL.Stage("viewport", { backgroundColor: "white" });
             // load a PDB structure and consume the returned `Promise`
-            stage.loadFile("assets/Others/protein.pdb", { defaultRepresentation: true }).then(function (o) {
+            stage.loadFile("assets/Others/protein.pdb").then(function (o) {
               // add a "cartoon" representation to the structure component
               // component.addRepresentation("cartoon");
               // provide a "good" view of the structure
