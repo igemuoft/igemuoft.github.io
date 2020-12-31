@@ -58,6 +58,10 @@
             document.addEventListener("DOMContentLoaded", function () {
               // create a `stage` object
             var stage = new NGL.Stage("viewport", { backgroundColor: "white" });
+            // Handle window resizing
+            window.addEventListener( "resize", function( event ){
+                stage.handleResize();
+            }, false );
             // load a PDB structure and consume the returned `Promise`
             stage.loadFile("assets/Others/protein.pdb").then(function (o) {
               // add a "cartoon" representation to the structure component
@@ -69,7 +73,7 @@
             });
             });
           </script>
-          <div id="viewport" style="width:600px; height:600px; position:relative; left:500px; top:-200px;"></div>
+          <div id="viewport" style="width:50%; height:100%; position:relative; left:50%; top:-20%;"></div>
 
         <div id="intro">Rotate or Zoom to View 3d Structure </div>
         <div id="tag"> Web Lab's Best Design PETase with Plastic Ligand </div>
