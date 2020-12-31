@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-	
-	<link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
     <title>iGEM Toronto</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -25,7 +25,7 @@
 </head>
 <body>
     <!-- NAVBAR-->
-	<nav class="navbar navbar-expand-lg fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand py-1"><img class="logo" src="assets/Others/logo.png"></a>
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
               <li class="nav-item"><a class="nav-link py-1" href="contact.html">Contact Us</a></li>
             </ul>
           </div>
-        </div> 	
+        </div>  
       </nav>
 
     <section class="section-a">
@@ -49,11 +49,27 @@
         </div>
 
         <div id="type">
-            <span id="text" class="txt-type" data-wait="2000" data-words='["Synthetic Biology","Ethics","Industrial Applications","Social Responsibilities","Engineering"]'></span>
+            <span id="text" class="txt-type" data-wait="2000" data-words='["Synthetic Biology","Cleaning our Planet","Industrial Recycling","Protein Engineering","Community Engagement"]'></span>
             <span class="cursor"></span>
         </div>
 
-        <img src="assets/Others/petase.gif" alt="" class="petase">
+        <script src="https://unpkg.com/ngl@0.10.4/dist/ngl.js"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // create a `stage` object
+            var stage = new NGL.Stage("viewport");
+            // load a PDB structure and consume the returned `Promise`
+            stage.loadFile("assets/Others/protein.pdb").then(function (component) {
+              // add a "cartoon" representation to the structure component
+              component.addRepresentation("cartoon");
+              // provide a "good" view of the structure
+              component.autoView();
+            });
+            });
+          </script>
+          <div id="viewport" style="width:400px; height:400px;"></div>
+
+        <!-- <img src="assets/Others/petase.gif" alt="" class="petase"> -->
 
         <svg id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 524.11 99.72"><path fill="transparent" d="M551.5,980.5c27,20.81,126.74,92.35,271,87,133-4.94,222.27-72.24,250-95" transform="translate(-549.98 -970.57)"/>
         <text>
@@ -65,50 +81,50 @@
         
         <div id="ro">Rotate Me</div>
     
-            <script defer>         	
-					class TypeWriter {
-						constructor(txtElement, words, wait = 2000) {
-						this.txtElement = txtElement;
-						this.words = words;
-						this.txt = '';
-						this.wordIndex = 0;
-						this.wait = parseInt(wait, 10); 
-						this.type(); 
-						this.isDeleting = false; 
-					}
-					type() {
-						const current = this.wordIndex % this.words.length;
-						const fullTxt = this.words[current];
-						if (this.isDeleting) {
-							this.txt = fullTxt.substring(0, this.txt.length - 1);
-						}
-						else {
-							this.txt = fullTxt.substring(0, this.txt.length + 1);
-						}
-						this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-						let typeSpeed = 200;
-						if(this.isDeleting) {
-							typeSpeed /= 2;
-						}
-						if(!this.isDeleting && this.txt === fullTxt) {
-						typeSpeed = this.wait;
-						this.isDeleting = true;
-						} else if(this.isDeleting && this.txt === '') {
-						this.isDeleting = false;
-						this.wordIndex++;
-						typeSpeed = 400;
-						}
-						setTimeout(() => this.type(), typeSpeed);
-					}
-					}           
-					document.addEventListener('DOMContentLoaded', init); 
-					function init() {
-						const txtElement = document.querySelector('.txt-type');
-						const words = JSON.parse(txtElement.getAttribute('data-words'));
-						const wait = txtElement.getAttribute('data-wait');
-						new TypeWriter(txtElement, words, wait);
-					}
-			</script>
+            <script defer>          
+                    class TypeWriter {
+                        constructor(txtElement, words, wait = 2000) {
+                        this.txtElement = txtElement;
+                        this.words = words;
+                        this.txt = '';
+                        this.wordIndex = 0;
+                        this.wait = parseInt(wait, 10); 
+                        this.type(); 
+                        this.isDeleting = false; 
+                    }
+                    type() {
+                        const current = this.wordIndex % this.words.length;
+                        const fullTxt = this.words[current];
+                        if (this.isDeleting) {
+                            this.txt = fullTxt.substring(0, this.txt.length - 1);
+                        }
+                        else {
+                            this.txt = fullTxt.substring(0, this.txt.length + 1);
+                        }
+                        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+                        let typeSpeed = 200;
+                        if(this.isDeleting) {
+                            typeSpeed /= 2;
+                        }
+                        if(!this.isDeleting && this.txt === fullTxt) {
+                        typeSpeed = this.wait;
+                        this.isDeleting = true;
+                        } else if(this.isDeleting && this.txt === '') {
+                        this.isDeleting = false;
+                        this.wordIndex++;
+                        typeSpeed = 400;
+                        }
+                        setTimeout(() => this.type(), typeSpeed);
+                    }
+                    }           
+                    document.addEventListener('DOMContentLoaded', init); 
+                    function init() {
+                        const txtElement = document.querySelector('.txt-type');
+                        const words = JSON.parse(txtElement.getAttribute('data-words'));
+                        const wait = txtElement.getAttribute('data-wait');
+                        new TypeWriter(txtElement, words, wait);
+                    }
+            </script>
 
     </section>
 
