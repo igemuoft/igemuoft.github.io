@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Font Awesome -->
+	<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
     <title>iGEM Toronto</title>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,6 +24,7 @@
         gtag('js', new Date());
         gtag('config', 'G-REY7HTPRTP');
     </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
     <!-- NAVBAR-->
@@ -168,8 +171,63 @@
     </section>
 
     <section class="section-d">
-        <div class="sub"> <span class="span_1">Our</span> <span class="span_2">Sponsors</span>
+		<div class="container font-weight-bold">
+			<h2 class="text-center font-weight-bold"> Our - Sponsers</h2>
+			<section class="customer-logos slider">
+				<div class="slide"><img src="/assets/sponsors/1200px-Shell_logo.png" alt="Shell"></div>
+				<div class="slide"><img src="/assets/sponsors/159883691967515995-2.png" alt="GenScript"></div>
+				<div class="slide"><img src="/assets/sponsors/159883691967515995-3.png" alt="Medicine by Design"></div>
+				<div class="slide"><img src="/assets/sponsors/159883691967515995-5.png" alt="CSB"></div>
+				<div class="slide"><img src="/assets/sponsors/159883691967515995-6.png" alt="HMB UofT"></div>
+				<div class="slide"><img src="/assets/sponsors/159883691967515995.png" alt="CAGEF"></div>
+				<div class="slide"><img src="/assets/sponsors/IBBME-UT-Signature-RGB-P655-PC.png" alt="IBBME Uoft"></div>
+				<div class="slide"><img src="/assets/sponsors/logo-1240px.jpg" alt="BioZone"></div>
+				<div class="slide"><img src="/assets/sponsors/skule-alumni.png" alt="Skule Alumni"></div>
+				<div class="slide"><img src="/assets/sponsors/Skule.jpg" alt="Skule"></div>
+				<div class="slide"><img src="/assets/sponsors/UC.png" alt="UC"></div>
+				<div class="slide"><img src="/assets/sponsors/UofT.png" alt="UofT"></div>
+				<div class="slide"><img src="/assets/sponsors/UofT_Eng.png" alt="UofT Eng"></div>
+				<div class="slide"><img src="/assets/sponsors/UofT_Med.png" alt="UofT Med"></div>
+				<div class="slide"><img src="/assets/sponsors/wjj4km3L.jpg" alt="EEB"></div>
+			</section>		 
+		</div>
+		
+		<p class="copy text-center font-weight-bold">All Rights Reserved &copy, iGEM Toronto</p>
+		
+		<script>
+			
+			$(document).ready(function(){
+                    $('.customer-logos').slick({
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 1200,
+                        arrows: false,
+                        dots: false,
+                        pauseOnHover: false,
+                        responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                    });
+                });
+			
+		</script>
+			
     </section>
+
+    <background class='background'>
+        <div id='bg_1'>
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2558.45 1410.99"><style>.cls-54{fill:#de7247;}.cls-56{fill:#e8bf27;}.cls-57{fill:#daeef2;}</style><path class="cls-43" d="M14,0H258a0,0,0,0,1,0,0V28a0,0,0,0,1,0,0H14A14,14,0,0,1,0,14v0A14,14,0,0,1,14,0Z"/><rect class="cls-54" x="257.46" width="258.02" height="28"/><path class="cls-56" d="M515.48,0h244a14,14,0,0,1,14,14v0a14,14,0,0,1-14,14h-244a0,0,0,0,1,0,0V0a0,0,0,0,1,0,0Z"/><path class="cls-57" d="M2526.51,780.36,786.71,62.27a50.66,50.66,0,0,0-19.36-3.85L53.4,58A50.83,50.83,0,0,0,2.54,108.9L3,659.68a50.85,50.85,0,0,0,31.44,47l1719,709.52a50.76,50.76,0,0,0,19.42,3.84l733.87-.39a50.83,50.83,0,0,0,50.81-50.79l.41-541.43A50.83,50.83,0,0,0,2526.51,780.36Zm-979.36-271c-41.67-31.73-116.46-19.94-124,2.74-3.85,11.58,8.52,30.06,23.43,36,21.88,8.8,40.49-12.78,55.41-4.27,14.21,8.1,21.13,37.43,9.78,52.71-16.08,21.66-53.46-5.7-109.85,13.51-38.23,13-43.3,33.19-74.09,32.33-32.52-.91-50.72-24.06-60-17.41-10,7.14.66,41.33,20.41,78.57,60.41,113.94,161.81,138.3,155.33,186.55-2.1,15.64-18.87,27.42-52.41,51-69.72,48.95-118.71,42.46-130.09,77.17-9.91,30.27,18.26,62.91,13.78,65.06-4.26,2.05-33.75-25.44-39.88-63-7.37-45.1,27.07-55.07,27.57-108.82.42-44.61-24.6-56-14.45-95.62,7.92-30.93,24.09-33.57,24.58-55.69.93-41.73-56.3-49.87-78.37-104.16-19.91-49-1.83-119.44,38.51-147.85,21-14.79,49.55-19.2,49.1-32.77-.27-8.1-10.67-14.16-19.8-19.33-40.29-22.84-72.85-11.39-79-24.29-6.53-13.7,12.81-45.94,41.31-54.36,48.32-14.27,77.24,53.47,173.18,85.53,66.75,22.3,77.61-2.2,167.66,19.57,59.19,14.3,155,49.19,152.85,78.06-1.92,25.17-78.78,51.63-120,25.69C1567.88,567.25,1579.76,534.19,1547.15,509.36Zm796,396.8c-5.53,23.66-42.79,43-56.6,35.51-8-4.34-4-15.38-14.21-32-13.35-21.78-39.81-35-46.71-29.69-6.74,5.16,11,23.45,3.55,45.43-5.15,15.3-20.68,27.05-35.76,31.09-19.81,5.32-31.17-4.72-38.88,2.5-9.2,8.61,4.3,25.41.36,45.53-5.56,28.39-38.63,26.65-55.6,51.07-38,54.76,42.26,187.1,52.07,203,18.52,30,34.61,48.06,28.07,68.34-7.86,24.36-45.22,42.25-71.46,33.49-27-9-22.53-39.76-55.45-56.24-29.19-14.61-53.59-.87-60.36-13-6.91-12.43,11.16-40.07,36.25-53.57,37.43-20.15,79.61-3,82.43-12s-43.29-17.61-63-53.5c-14.15-25.83-.6-40.31-3.6-105.94-1.77-38.85-3.35-73.35-19.84-79.85-23.21-9.14-55,45.39-75.77,36.13-23.26-10.41-3.51-88.2-28-97.06-1.18-.42-4.45-1.41-17.08,3-13.18,4.65-34.14,14.38-55.29,36.09-51,33.24-84.82,66.72-106.73,92-30.31,35-52.28,70.92-90.09,72.14-8.19.27-25.48.83-36.49-10.06-37.19-36.75,57.56-144.33,17.47-196.46-18.45-24-46.66-12.27-65.35-40.94-17.49-26.84-13.87-71.29,13.53-98.39,24-23.72,61.85-29.87,89-19.7,22.62,8.48,24,23.16,64.24,43.48,23.94,12.09,35.66,13.06,44.74,9.17S1796.37,802,1794.55,794c-1.91-8.39-13.7-8.43-30.7-19.61-22.31-14.66-17.7-24.92-32-30.78-24.77-10.12-45.88,17.42-66.87,5.26-7.63-4.42-14.26-13.52-12.85-20.8.27-1.41,1.47-6,14.43-13.2a101.86,101.86,0,0,1,19.88-8.33s2.93-.89,5.8-1.59c20.74-5.09,67.68,4.69,75.69-7.42,6.58-9.95-17-28.72-9.74-42.11,3.83-7.05,14.42-9.32,26.26-9.58,47-1,93.36,31.39,111.38,40.09,65.26,31.55,97.57,14.71,172,27.54C2215.89,739,2355.68,852.82,2343.2,906.16Z" transform="translate(0.5 -9)"/></svg>
+        </div>
+    </background>
 
     <footer id="footer" class="container-fluid text-center">
         <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
