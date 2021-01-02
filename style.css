@@ -292,9 +292,11 @@ a:hover {
     }
 
     .section-a #protein #viewport {
-        width:60vw; 
-        height:60vw; 
-        top: 2vh;
+        width:50vw; 
+        height:50vw; 
+        top: 40vh;
+        left: 40vw;
+        transform: translate(-50%, -50%)
     }
 
 }
@@ -311,15 +313,24 @@ a:hover {
         width: 65%;
     }
 
+    .section-a #igem {
+        position: relative;
+        top: 16vh;
+        left: 7vw;
+        width: 80vh;
+    }
+
     .section-a #protein {
         position: absolute;
-        top: 30vh;
+        top: 40vh;
     }
 
     .section-a #protein #viewport {
-        width:60vw; 
-        height:60vw; 
-        top: 2vh;
+        width:40vw; 
+        height:40vw; 
+        top: 40vh;
+        left: 40vw;
+        transform: translate(-50%, -50%)
     }
 
     .section-b {
