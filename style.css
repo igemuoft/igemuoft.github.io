@@ -61,7 +61,7 @@ a:hover {
     z-index: 1; 
     position: relative;
     width: 100vw;
-    height: 120vh;
+    height: 140vh;
 }
 
 .section-a #igem {
@@ -110,7 +110,7 @@ a:hover {
 
 .section-a #protein #intro {
     position: relative;
-    margin: auto;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.6em;
     font-weight: 200;
@@ -130,6 +130,8 @@ a:hover {
     font-size: 0.6em;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
+    top: 1em;
+    text-align: center;
 }
 
 /* Section b */
@@ -286,9 +288,8 @@ a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    .section-a #background {
-        top:0em;
-        width: 65%;
+    .section-a #igem {
+        width: 70vh;
     }
 
     .section-a #protein #viewport {
@@ -308,6 +309,12 @@ a:hover {
         grid-template-columns: 1fr 1fr;
     }
 
+    .sub {
+        left: 10vw;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2em;
+    }
+
     .section-a #background {
         top:0em;
         width: 65%;
@@ -322,15 +329,15 @@ a:hover {
 
     .section-a #protein {
         position: absolute;
-        top: 40vh;
+        top: 80vh;
+        left: 50vw;
+        display: block;
+        transform: translate(-50%, -50%);
     }
 
     .section-a #protein #viewport {
         width:40vw; 
         height:40vw; 
-        top: 40vh;
-        left: 40vw;
-        transform: translate(-50%, -50%)
     }
 
     .section-b {
@@ -351,4 +358,3 @@ a:hover {
     }
 
 }
-
