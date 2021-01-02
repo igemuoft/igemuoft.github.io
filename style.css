@@ -232,17 +232,17 @@ a:hover {
 
 .slick-slide img {
     width: 4em;
+    display: block;
+    filter: grayscale(100%);
 }
 
-.slick-slider
-{
+.slick-slider {
     position: relative;
     display: block;
     box-sizing: border-box;
 }
 
-.slick-list
-{
+.slick-list {
     position: relative;
     display: block;
     overflow: hidden;
@@ -250,24 +250,18 @@ a:hover {
     padding: 0;
 }
 
-.slick-track
-{
+.slick-track {
     position: relative;
     top: 0;
     left: 0;
     display: block;
 }
 
-.slick-slide
-{
+.slick-slide {
     display: none;
     float: left;
     height: 100%;
     min-height: 1px;
-}
-.slick-slide img
-{
-    display: block;
 }
 
 .slick-initialized .slick-slide
@@ -316,6 +310,11 @@ a:hover {
     .section-a #background {
         top:0em;
         width: 65%;
+    }
+
+    .section-a #protein {
+        position: absolute;
+        top: 30vh;
     }
 
     .section-a #protein #viewport {
