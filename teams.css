@@ -49,17 +49,30 @@ html, body {
 	font-weight: 400;
 }
 
-/* Wet Lab*/
-#team1 {
-	background-color: #d7eff7;
-}
-
-img {
-	height: 30%;
-	border-radius: 50%;
-	padding-bottom: 2rem;
+/* Teams */
+.container-fluid .no-padding {
+	padding-top: 10em;
 }
 
 h2 {
-	padding: 5rem 2rem 2rem;
+	padding-bottom: 2em;
+}
+
+.col-sm-3 {
+	  padding-left: 2em;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.name {
+	padding-top: 1em;
+	font-size: 1.25em;
+}
+
+.position {
+	font-style: italic;
+	font-size: 1em;
+	padding-bottom: 1em;
 }
