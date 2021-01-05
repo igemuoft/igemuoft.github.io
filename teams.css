@@ -1,23 +1,41 @@
-html, body {
-	height: 100%;
-	width: 100%;
+body {
+	box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
 	scroll-behavior: smooth;
-	font-family: 'Lato', sans-serif;
 }
 
 /* Navbar */
 .navbar {
-	background-color: #add8e6;
-	font-size: 1.2em;
-	border: none;
+	background-color: #FFFFFF;
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    height: 2.5em;
+    z-index: 3;
+    box-shadow: #F0F5F9 0.1em 0.1em 0.3em;
+    font-size: 2em;
 }
 
-.navbar-brand, .nav-link {
-	color: white;
+.logo {
+    height: 1.8em;
+    margin: 1em;
+}
+
+.nav-link {
+	letter-spacing: 0.05em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7em;
+    color: #808080;
+    margin-left: 0.8em;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-	color: black;
+	color: #19415A;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    transition: 0.5s;
 }
 
 .navbar-toggler-icon {
@@ -32,7 +50,7 @@ html, body {
 #home {
 	background-color: white;
 	display: table;
-	height: 50%;
+	height: 100%;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -42,6 +60,7 @@ html, body {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
+	padding-top: 150px;
 }
 
 .landing-text h1 {
@@ -55,13 +74,13 @@ html, body {
 }
 
 h2 {
+	padding-top: 4em;
 	padding-bottom: 2em;
 }
 
 .col-sm-3 {
 	padding-left: 2em;
-	display: grid;
-    	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	padding-bottom: 1.5em;
 }
 
 .profile-pic {
@@ -77,4 +96,18 @@ h2 {
 	font-style: italic;
 	font-size: 1em;
 	padding-bottom: 1em;
+}
+
+/* Footer */
+.footer .fa {
+    cursor: pointer;
+    color: #9E9E9E;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+}
+
+.footer #text {
+    cursor: none;
+    font-size: 1.25em;
+    color: #9E9E9E;
 }
