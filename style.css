@@ -69,14 +69,14 @@ a:hover {
     z-index: 1; 
     position: relative;
     width: 100vw;
-    height: 140vh;
+    height: 125vh;
 }
 
 .section-a #igem {
     position: relative;
     top: 16vh;
     left: 7vw;
-    width: 60vh;
+    width: 50vh;
     z-index: 2;
 }
 
@@ -95,6 +95,7 @@ a:hover {
     font-size: 0.7em;
     font-weight: 200;
     font-family: 'IBM Plex Mono', monospace;
+    color: #333345;
     display: inline;
     z-index: 2;
 }
@@ -111,7 +112,7 @@ a:hover {
 
 .section-a #protein {
     position: absolute;
-    top: 50vh;
+    top: 55vh;
     width: 100vw;
     padding: 1em;
 }
@@ -122,6 +123,7 @@ a:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.6em;
     font-weight: 200;
+    color: #333345;
 }
 
 .section-a #protein #viewport {
@@ -140,6 +142,7 @@ a:hover {
     font-family: 'Montserrat', sans-serif;
     top: 1em;
     text-align: center;
+    color: #333345;
 }
 
 /* Section b */
@@ -160,8 +163,8 @@ a:hover {
 .section-b #intro {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 0.7em;
-    color: #333;
+    font-size: 0.6em;
+    color: #333345;
     margin-top: 2em;
 }
 
@@ -178,12 +181,16 @@ a:hover {
     top: 1em;
     color: #338BDE;
     font-family: 'Lato', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.6em;
     background-color: #daeef2;
     border-radius: 10px;
     padding: 0.8em 1.3em;
     margin: 1em;
     cursor: pointer;
+}
+
+.btn:hover {
+    color: #333345;
 }
 
 /* Section c */
@@ -199,32 +206,48 @@ a:hover {
 .section-c #project {
     position: relative;
     top: 5vh;
-    width: 80vw;
+    width: 70vw;
 }
 
 .section-c #project #P1, .section-c #project #P2, .section-c #project #P3 {
     cursor: pointer;
+    -webkit-animation: float 3.5s infinite;
+    -moz-animation: float 3.5s infinite;
+    animation: float 3.5s infinite;
 }
 
-.section-c #project #click {
-    font-size: 0.6em;
+@-webkit-keyframes float {
+    0% {top: -0.6em;}
+    50% {bottom: 0.6em;}
+    100% {top: -0.6em;}
+}
+
+@-moz-keyframes float {
+    0% {top: -0.6em;}
+    50% {bottom: 0.6em;}
+    100% {top: -0.6em;}
+}
+
+@keyframes float {
+    0% {top: -0.6em;}
+    50% {bottom: 0.6em;}
+    100% {top: -0.6em;}
+}
+
+.section-c #click {
+    font-size: 0.5em;
+    font-family: 'Lato', sans-serif;
+    padding: 2em;
 }
 
 .credit {
     position: relative;
-    top: 3em;
+    top: 6em;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.5em;
+    font-size: 0.3em;
     font-style: italic;
 }
 
-.placeholder {
-    display: inline;
-    position: relative;
-    bottom: 40vh;
-    left: 70vw;
-    color: #DAEEF2;
-}
 
 /* Section d */
 
@@ -232,7 +255,7 @@ a:hover {
     z-index: 1; 
     top: 10vh;
     position: relative;
-    width: 100vw;
+    width: 80vw;
     padding: 2em;
 }
 
@@ -241,7 +264,7 @@ a:hover {
 }
 
 .slick-slide img {
-    width: 4em;
+    width: 3em;
     display: block;
 }
 
@@ -278,14 +301,26 @@ a:hover {
     display: block;
 }
 
+#mc_embed_signup {
+    display: block;
+    margin: auto;
+    padding: 0em;
+    font-size: 0.6em;
+    width:100%;}
+
+.footer {
+    margin-top: 2em;
+}
+
 .footer .fa {
     cursor: pointer;
     color: #9E9E9E;
+    width: 0.5em;
 }
 
 .footer #text {
     cursor: none;
-    font-size: 0.6em;
+    font-size: 0.5em;
     color: #9E9E9E;
 }
 
@@ -300,12 +335,20 @@ a:hover {
         width: 70vh;
     }
 
+    .section-a #protein { 
+        top: 95vh;
+        left: 50vw;
+        transform: translate(-50%, -50%)
+    }
+
     .section-a #protein #viewport {
         width:50vw; 
         height:50vw; 
-        top: 40vh;
-        left: 40vw;
-        transform: translate(-50%, -50%)
+    }
+
+    .slick-slide img {
+        width: 4em;
+        display: block;
     }
 
 }
@@ -335,10 +378,14 @@ a:hover {
         width: 80vh;
     }
 
+    .section-a #type {
+        font-size: 1.4em;
+    }
+
     .section-a #protein {
         position: absolute;
         top: 80vh;
-        left: 50vw;
+        left: 70vw;
         display: block;
         transform: translate(-50%, -50%);
     }
@@ -352,17 +399,50 @@ a:hover {
         padding: 6em;
     }
 
+    .section-b #intro {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        font-size: 0.8em;
+    }
+
     .section-c {
         padding: 6em;
     }
 
+    .section-c #click {
+        font-size: 0.7em;
+        padding: 2em;
+    }
+    
+    .credit {
+        top: 4em;
+        font-size: 0.6em;
+        padding: 2em;
+    }
+
     .section-d {
+        top: 3vh;
         padding: 6em;
+    }
+
+    .slick-slide img {
+        width: 4em;
+        display: block;
     }
 
     .footer {
         margin: 1em;
         margin-top: 2em;
+    }
+
+    .footer .fa {
+        width: 0.8em;
+    }
+    
+    .footer #text {
+        font-size: 0.6em;
     }
 
 }
