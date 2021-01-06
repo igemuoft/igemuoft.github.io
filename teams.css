@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -60,7 +60,7 @@ body {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 8em;
+	padding-top: 150px;
 }
 
 .landing-text h1 {
@@ -78,14 +78,8 @@ h2 {
 	padding-bottom: 2em;
 }
 
-.row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 4em;
-}
-
 .col-sm-3 {
-	padding-left: 3em;
+	padding-left: 2em;
 	padding-bottom: 1.5em;
 }
 
