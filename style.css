@@ -315,7 +315,7 @@ a:hover {
 .footer .fa {
     cursor: pointer;
     color: #9E9E9E;
-    width: 0.5em;
+    font-size: 1.2em;
 }
 
 .footer #text {
