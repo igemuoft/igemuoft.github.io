@@ -324,6 +324,39 @@ a:hover {
     color: #9E9E9E;
 }
 
+.fa-facebook:hover {
+    color: #3B5998;
+    transition: 0.5s;
+}
+
+.fa-twitter:hover {
+    color: #55ACEE;
+    transition: 0.5s;
+}
+
+.fa-github:hover {
+    color: #333;
+    transition: 0.5s;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+    transition: 0.5s;
+}
+
+.fa-linkedin:hover {
+    color: #0e76a8;
+    transition: 0.5s;
+}
+
+.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+
 @media (min-width: 700px) {
     
     .grid {
