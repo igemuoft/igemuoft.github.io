@@ -23,7 +23,7 @@ body {
 }
 
 a {
-    letter-spacing: 0.05em;
+    letter-spacing: 0.3px;
     font-family: 'Lato', sans-serif;
     font-size: 0.7em;
     color: #808080;
@@ -255,7 +255,7 @@ a:hover {
     z-index: 1; 
     top: 10vh;
     position: relative;
-    width: 80vw;
+    width: 100vw;
     padding: 2em;
 }
 
