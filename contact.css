@@ -35,6 +35,7 @@ a {
 
 a:hover {
     color: #19415A;
+    background-color: #F2F2F2;
     border-radius: 10px;
     transition: 0.5s;
 }
