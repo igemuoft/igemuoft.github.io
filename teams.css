@@ -83,6 +83,24 @@ h2 {
 .col-sm-3 {
 	padding-left: 2em;
 	padding-bottom: 1.5em;
+    position: relative;
+}
+
+.col-sm-3 div {
+    position: absolute;
+    background: #333;
+    color: #CCCCCC;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.col-sm-3:hover {
+    cursor: pointer;
+}
+
+.col-sm-3:hover div {
+    visibility: visible;
+    opacity: 0.7;
 }
 
 .profile-pic {
