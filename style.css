@@ -177,6 +177,14 @@ a:hover {
     margin: auto;
 }
 
+.plastic {
+    /* filter: opacity(60%); */
+    position: absolute;
+    top: 12vh;
+    left: 55vw;
+    width: 15vw;
+}
+
 .btn {
     position: relative;
     display: block;
@@ -193,6 +201,25 @@ a:hover {
 }
 
 .btn:hover {
+    color: #333345;
+}
+
+.btn_1 {
+    position: relative;
+    display: inline;
+    margin: auto;
+    top: 1em;
+    color: #338BDE;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    background-color: #daeef2;
+    border-radius: 10px;
+    padding: 0.8em 1.3em;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.btn_1:hover {
     color: #333345;
 }
 
@@ -263,11 +290,11 @@ a:hover {
 }
 
 .slick-slide {
-    margin: 2em 2em;
+    margin: 0.3em 0.3em;
 }
 
 .slick-slide img {
-    width: 3em;
+    width: 6em;
     display: block;
 }
 
@@ -382,6 +409,12 @@ a:hover {
         height:50vw; 
     }
 
+    .plastic {
+        top: 10vh;
+        left: 40vw;
+        width: 12vw;
+    }
+
     .slick-slide img {
         width: 4em;
         display: block;
@@ -437,6 +470,12 @@ a:hover {
 
     .section-b #intro {
         font-size: 0.7em;
+    }
+
+    .plastic {
+        top: 20vh;
+        left: 50vw;
+        width: 15vw;
     }
 
     .btn {
