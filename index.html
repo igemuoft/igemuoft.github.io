@@ -175,12 +175,12 @@
             var tl = new TimelineMax({onUpdate:updatePercentage});
             const controller = new ScrollMagic.Controller();
 
-            tl.from('.crab', 0.6, {y:10, opacity: 0});
-            tl.to('.crab', 2, {y:-10, opacity: 0});
-            tl.from('.sub', 2.6, {x:-1000, opacity: 50});
-            tl.from('.plastic', 2.3, {x:-1000, opacity: 50});
-            tl.from('p', 2.6, {x:800, opacity: 50});
-	    tl.from('.btn', 2.7, {y:20, opacity: 50});
+            tl.from('.crab', 0.3, {y:10, opacity: 0});
+            tl.to('.crab', 4, {y:-10, opacity: 0});
+            tl.from('.sub', 4.6, {x:-1000, opacity: 50});
+            tl.from('.plastic', 4.3, {x:-1000, opacity: 50});
+            tl.from('p', 4.6, {x:800, opacity: 50});
+	    tl.from('.btn', 4.7, {y:20, opacity: 50});
 
             const scene = new ScrollMagic.Scene({
                 triggerElement: ".section-b",
