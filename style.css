@@ -304,6 +304,8 @@ body {
 
 #mc_embed_signup {
     display: block;
+    position: relative;
+    top: 8em;
     margin: auto;
     padding: 1em;
     font-size: 0.6em;
@@ -313,7 +315,7 @@ body {
     position: relative;
     display: inline;
     margin: auto;
-    top: 1em;
+    top: 0.8em;
     color: #338BDE;
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
