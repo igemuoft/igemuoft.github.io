@@ -320,7 +320,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
     background-color: #daeef2;
-    border-radius: 15px 40px;
+    border-radius: 50%;
     padding: 0.8em 1.3em;
     margin: 1em;
     cursor: pointer;
