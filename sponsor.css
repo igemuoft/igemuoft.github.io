@@ -107,6 +107,7 @@ body {
 
 .footer #text {
     cursor: none;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.5em;
     color: #9E9E9E;
 }
