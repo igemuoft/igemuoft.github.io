@@ -55,13 +55,14 @@ a:hover {
 .footer .fa {
     cursor: pointer;
     color: #9E9E9E;
-    font-size: 1.2em;
+    font-size: 23px;
 }
 
 .footer #text {
     cursor: none;
     font-size: 0.5em;
     color: #9E9E9E;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .fa-facebook:hover {
