@@ -9,15 +9,21 @@ body {
     overflow-x: hidden;
 }
 
+
 /* NAVBAR */
+
 .navbar {
     background-color: #FFFFFF;
     position: fixed;
-    top: 0; 
-    width: 100%; 
+    top: 0;
+    width: 100%;
     height: 2.5em;
     z-index: 3;
     box-shadow: #F0F5F9 0.1em 0.1em 0.3em;
+}
+
+.navbar-collapse {
+    background-color: #FFFFFF;
 }
 
 .logo {
@@ -41,12 +47,12 @@ body {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .navbar-toggler {
-  border-color: gray;
-} 
+    border-color: gray;
+}
 
 .sub {
     left: 10vw;
@@ -54,7 +60,8 @@ body {
     font-size: 1.2em;
 }
 
-.sub .span_1, .sub .span_2 {
+.sub .span_1,
+.sub .span_2 {
     display: block;
 }
 
@@ -66,10 +73,11 @@ body {
     font-weight: 600;
 }
 
+
 /* Section a */
 
 .section-a {
-    z-index: 1; 
+    z-index: 1;
     position: relative;
     width: 100vw;
     height: 125vh;
@@ -85,7 +93,7 @@ body {
 
 .section-a #background {
     position: absolute;
-    top:0em;
+    top: 0em;
     left: 5vw;
     width: 60%;
     z-index: -1;
@@ -105,12 +113,13 @@ body {
 
 .cursor {
     border-right: .07em solid;
-	animation: caret 1s steps(1) infinite;
+    animation: caret 1s steps(1) infinite;
 }
+
 @keyframes caret {
-	50% {
-	  border-color: transparent;
-	}
+    50% {
+        border-color: transparent;
+    }
 }
 
 .section-a #protein {
@@ -133,8 +142,8 @@ body {
     position: relative;
     display: block;
     margin: auto;
-    width:70vw; 
-    height:70vw; 
+    width: 70vw;
+    height: 70vw;
     top: 2vh;
 }
 
@@ -148,10 +157,11 @@ body {
     color: #333345;
 }
 
+
 /* Section b */
 
 .section-b {
-    z-index: 1; 
+    z-index: 1;
     top: 10vh;
     position: relative;
     background-color: #A0D7EB;
@@ -210,10 +220,11 @@ body {
     color: #333345;
 }
 
+
 /* Section c */
 
 .section-c {
-    z-index: 1; 
+    z-index: 1;
     top: 10vh;
     position: relative;
     width: 100vw;
@@ -226,7 +237,9 @@ body {
     width: 70vw;
 }
 
-.section-c #project #P1, .section-c #project #P2, .section-c #project #P3 {
+.section-c #project #P1,
+.section-c #project #P2,
+.section-c #project #P3 {
     cursor: pointer;
 }
 
@@ -248,7 +261,7 @@ body {
 /* Section d */
 
 .section-d {
-    z-index: 1; 
+    z-index: 1;
     top: 10vh;
     position: relative;
     width: 100vw;
@@ -297,8 +310,7 @@ body {
     min-height: 1px;
 }
 
-.slick-initialized .slick-slide
-{
+.slick-initialized .slick-slide {
     display: block;
 }
 
@@ -309,25 +321,29 @@ body {
     margin: auto;
     padding: 1em;
     font-size: 0.6em;
-    width:100%;}
+    width: 100%;
+}
 
 .btn_1 {
-    position: relative;
-    display: inline;
-    margin: auto;
-    top: 0.8em;
-    color: #338BDE;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.1em;
-    background-color: #daeef2;
-    border-radius: 50%;
-    padding: 0.8em 1.3em;
-    margin: 1em;
+    color: #ffffff;
+    font-family: 'Lato';
+    font-size: 5px;
+    /* font-size: 1.1em; */
+    background-color: #17425A;
+    border-top-right-radius: 2pt;
+    border-bottom-right-radius: 2pt;
+    margin-left: -7px;
+    height: 33px;
+    width: 125px;
+    /* padding: 0.8em 1.3em; */
+    /* margin: 1em; */
     cursor: pointer;
+    float: right;
+    border: none !important;
 }
 
 .btn_1:hover {
-    color: #333345;
+    background-color: rgba(23, 66, 90, 0.8);
 }
 
 .footer {
@@ -374,76 +390,63 @@ body {
 
 .fa-instagram:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-	-webkit-background-clip: text;
-	background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.5s;
 }
 
 @media (min-width: 700px) {
-    
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
     .section-a #igem {
         width: 70vh;
     }
-
-    .section-a #protein { 
+    .section-a #protein {
         top: 95vh;
         left: 50vw;
         transform: translate(-50%, -50%)
     }
-
     .section-a #protein #viewport {
-        width:50vw; 
-        height:50vw; 
+        width: 50vw;
+        height: 50vw;
     }
-
     .plastic {
         top: 10vh;
         left: 40vw;
         width: 12vw;
     }
-
     .slick-slide img {
         width: 4em;
         display: block;
     }
-
 }
 
-@media (min-width: 1000px){
-
+@media (min-width: 1000px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
     .sub {
         left: 10vw;
         font-family: 'Montserrat', sans-serif;
         font-size: 2em;
     }
-
     .section-a #background {
-        top:0em;
+        top: 0em;
         width: 65%;
     }
-
     .section-a #igem {
         position: relative;
         top: 16vh;
         left: 7vw;
         width: 80vh;
     }
-
     .section-a #type {
         font-size: 1.4em;
     }
-
     .section-a #protein {
         position: absolute;
         top: 80vh;
@@ -451,66 +454,52 @@ body {
         display: block;
         transform: translate(-50%, -50%);
     }
-
     .section-a #protein #viewport {
-        width:40vw; 
-        height:40vw; 
+        width: 40vw;
+        height: 40vw;
     }
-
     .section-b {
         padding: 6em;
     }
-
     .section-b #intro {
         font-size: 0.7em;
     }
-
     .plastic {
         top: 20vh;
         left: 50vw;
         width: 15vw;
     }
-
     .btn {
         font-size: 0.8em;
     }
-
     .section-c {
         padding: 6em;
     }
-
     .section-c #click {
         font-size: 0.7em;
         padding: 2em;
     }
-    
     .credit {
         top: 4em;
         font-size: 0.6em;
         padding: 2em;
     }
-
     .section-d {
         top: 3vh;
         padding: 6em;
     }
-
     .slick-slide img {
         width: 4em;
         display: block;
     }
-
     .footer {
         margin: 1em;
         margin-top: 2em;
     }
-
     .footer .fa {
         width: 0.8em;
     }
-    
     .footer #text {
         font-size: 0.6em;
     }
-
 }
