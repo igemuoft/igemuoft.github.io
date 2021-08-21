@@ -1,0 +1,52 @@
+<div class="footer">
+    <p class="copyright">© 2021 iGEM Toronto
+        <br> ALL RIGHTS RESERVED.
+    </p>
+    <div class="my-form">
+        <form class="example-form" [formGroup]="myForm">
+            <mat-form-field class="example-full-width" appearance="standard">
+                <mat-label>Enter email here for newsletters</mat-label>
+                <input formControlName="myEmail" type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com ">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <br>
+        <div class="footer">
+            <a href="https://www.instagram.com/igemtoronto/?hl=en"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/iGEMToronto"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/igem_toronto?lang=en"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/igem-toronto/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/igemuoft"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+
+
+
+            <a href="https://www.youtube.com/channel/UCCXZ3suwmZDqIUxVCPb2ZAg/featured"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+
+            <a href="https://www.behance.net/igemtoronto"><i class="fa fa-behance" aria-hidden="true"></i></a>
+
+            <!-- <a href="#">
+                <img src="../../assets/social-media/be.svg" alt="be">
+            </a>
+            <a href="#">
+                <img src="../../assets/social-media/twitter.svg" alt="be">
+            </a>
+            <a href="#">
+                <img src="../../assets/social-media/tiktok.svg" alt="be">
+            </a>
+            <a href="#">
+                <img src="../../assets/social-media/fb.svg" alt="be">
+            </a>
+            <a href="#">
+                <img src="../../assets/social-media/youtube.svg" alt="be">
+            </a>
+            <a href="#">
+                <img src="../../assets/social-media/linkedin.svg" alt="be">
+            </a> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+p {
+    color: #484F50;
+    font-size: 25px;
+    font-family: Verdana;
+}
+
+a {
+    margin-right: 30px;
+}
+
+.footer {
+    margin: 30px 50px;
+    display: flex;
+}
+
+.my-form {
+    margin-left: 45%;
+}
+
+.mat-form-field {
+    width: 500px !important;
+    font-size: 25px;
+}
+
+.social-media {
+    margin-top: -20px;
+}
+
+.copyright {
+    margin-top: 30px;
+}
+
+.footer .fa {
+    cursor: pointer;
+    color: #484F50;
+    font-size: 30px;
+}
+
+.fa-facebook:hover {
+    color: #3B5998;
+    transition: 0.5s;
+}
+
+.fa-twitter:hover {
+    color: #55ACEE;
+    transition: 0.5s;
+}
+
+.fa-github:hover {
+    color: #333;
+    transition: 0.5s;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+    transition: 0.5s;
+}
+
+.fa-linkedin:hover {
+    color: #0e76a8;
+    transition: 0.5s;
+}
+
+.fa-behance:hover {
+    color: #1769ff;
+    transition: 0.5s;
+}
+
+.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}

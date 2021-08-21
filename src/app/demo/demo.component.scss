@@ -1,0 +1,111 @@
+.top {
+    margin: 150px 100px;
+}
+
+.intro-title {
+    font-family: Verdana;
+    font-size: 90px;
+    color: #17425A;
+}
+
+.title-bold {
+    font-weight: bold;
+    color: #17425A;
+}
+
+mark {
+    display: inline-block;
+    height: 0.35em;
+    line-height: 0.05;
+    background-color: #66E0FA;
+    color: #17425A !important;
+}
+
+.purple {
+    background-color: #C8B0E3;
+}
+
+.para {
+    color: #17425A;
+    font-size: 40px;
+    font-family: Avenir;
+}
+
+.right {
+    display: inline-block;
+    width: 70%;
+}
+
+.title {
+    font-size: 60px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #17425A;
+}
+
+.margin-30 {
+    margin-bottom: 30px;
+}
+
+.margin-50 {
+    margin-bottom: 50px;
+}
+
+.margin-100 {
+    margin-bottom: 100px;
+}
+
+.top-50 {
+    margin-top: 50px;
+}
+
+.description {
+    font-size: 30px;
+    font-family: Avenir;
+    color: #17425A;
+    display: inline-block;
+}
+
+.photo {
+    width: 230px;
+    float: right;
+    position: relative;
+    margin-right: 100px;
+    margin-bottom: -50px;
+    margin-top: 50px;
+}
+
+.second-page {
+    text-align: center;
+}
+
+.text {
+    color: #17425A;
+    font-size: 40px;
+    font-family: Avenir;
+}
+
+.exception {
+    text-align: left !important;
+}
+
+.b0 {
+    padding: 40px 40px;
+}
+
+button {
+    background-color: #7F89E3;
+    margin-left: 100px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: Avenir;
+    border: none;
+    border-radius: 10px;
+}
+
+.arrow {
+    height: 45px;
+    margin-left: 20px;
+}

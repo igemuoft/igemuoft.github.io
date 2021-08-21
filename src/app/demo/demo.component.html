@@ -1,0 +1,33 @@
+<div class="second-page">
+    <img src="../../assets/about/about.svg" alt="about_img">
+    <div class="margin-100"></div>
+
+    <div class="text">
+        We envision a circular plastics economy where the cost of recycled plastics is lower than producing virgin plastic. Further, we hope to valorize plastic waste and transform our trash into a critical sustainable resource. Our goal is to construct a highly
+        thermostable and catalytically active enzyme for plastic waste recycling.
+    </div>
+
+
+
+
+</div>
+<div *ngFor="let item of aboutList2" class="exception">
+    <div class="top-50"></div>
+    <div class="right">
+        <span class="description">{{item.description}}</span>
+        <br>
+        <div class="margin-30"></div>
+
+
+    </div>
+    <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+
+    <div class="margin-50">
+    </div>
+
+
+</div>
+<button mat-button class="b0">
+    View demo
+    <img src="../../assets/main/arrow_white.svg" alt="img" class="arrow">
+  </button>
