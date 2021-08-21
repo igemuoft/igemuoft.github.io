@@ -1,0 +1,97 @@
+[{
+        "id": 1,
+        "year": 2020,
+        "description": "Enzyme Engineering for PET-Based Textile Degradation",
+        "url": ""
+    },
+    {
+        "id": 2,
+        "year": 2019,
+        "description": "Accelerating Industrial Plastic Degradation With PETase",
+        "url": "../../assets/projects/medals_gold.svg"
+    },
+    {
+        "id": 3,
+        "year": 2018,
+        "description": "Flotation, Separation, Bioremediation",
+        "url": "../../assets/projects/medals_silver.svg"
+    },
+    {
+        "id": 4,
+        "year": 2017,
+        "description": "Light Activated Gene Expression",
+        "url": "../../assets/projects/medals_bronze.svg"
+    },
+    {
+        "id": 5,
+        "year": 2016,
+        "description": "Gold Biosensing",
+        "url": "../../assets/projects/medals_bronze.svg"
+    },
+    {
+        "id": 6,
+        "year": 2015,
+        "description": "Consortia Flux",
+        "url": "../../assets/projects/medals_silver.svg"
+    },
+    {
+        "id": 7,
+        "year": 2014,
+        "description": "Plasmid Loss Genetic Safeguard for the Biocontainment of Synthetic Organisms",
+        "url": "../../assets/projects/medals_bronze.svg"
+    },
+    {
+        "id": 8,
+        "year": 2013,
+        "description": "Modulating Biofilm Response",
+        "url": "../../assets/projects/medals_gold.svg"
+    },
+    {
+        "id": 9,
+        "year": 2012,
+        "description": "Genetically Engineering Super-Plants",
+        "url": ""
+    },
+    {
+        "id": 10,
+        "year": 2011,
+        "description": "Magnetasense",
+        "url": ""
+    },
+    {
+        "id": 11,
+        "year": 2010,
+        "description": "Enhanced Catechol Degradation via Metabolic Channeling in E. coli.",
+        "url": ""
+    },
+    {
+        "id": 12,
+        "year": 2009,
+        "description": "Encapsulator",
+        "url": "../../assets/projects/medals_bronze.svg"
+    },
+    {
+        "id": 13,
+        "year": 2008,
+        "description": "- transition year -",
+        "url": ""
+    },
+    {
+        "id": 14,
+        "year": 2007,
+        "description": "E.coli Neural Network(Toronto BlueGenes)",
+        "url": "../../assets/projects/medals_silver.svg"
+    },
+    {
+        "id": 15,
+        "year": 2006,
+        "description": "Blue Water",
+        "url": ""
+    },
+    {
+        "id": 16,
+        "year": 2005,
+        "description": "“Cell-see-us” Thermometer",
+        "url": ""
+    }
+]
