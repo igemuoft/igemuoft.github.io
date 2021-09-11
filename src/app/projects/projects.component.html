@@ -1,0 +1,72 @@
+<div class="top">
+    <div class="break-30"></div>
+    <span class="intro-title"> Our</span>
+    <br />
+    <span class="intro-title title-bold"> <mark class="purple">Projects </mark></span>
+    <br />
+    <div>
+        <p class="para">
+            Since our establishment in 2007, iGEM Toronto has proudly represented the University of Toronto at the undergraduate level of this research competition. The outstanding commitment and dedication of members from previous years has led to the awarding of
+            2 Gold Medals, 3 Silver Medals, and 4 Bronze Medals for our projects.
+        </p>
+        <a class="view-demo">
+            View 2021 project demo
+            <img src="../../assets/main/arrow_blue.svg" alt="img" class="arrow">
+        </a>
+
+    </div>
+
+    <div class="flex-container">
+
+        <div *ngFor="let item of projectList" class="card">
+            <a (click)="projectDetail(item.id)" class="detail-a">
+                <div class="thecontainer">
+                    <div class="right">
+                        <span class="title">{{item.year}}</span>
+                    </div>
+                    <img class="photo" *ngIf="item.url" src={{item.url}} alt="medal_img">
+                    <p class="description">{{item.description}}</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<app-footer></app-footer>
+<!-- <div class="top">
+    <div class="break-30"></div>
+    <span class="intro-title"> Our</span>
+    <br />
+    <span class="intro-title title-bold"> <mark class="purple">Projects </mark></span>
+    <br />
+    <div>
+        <p class="para">
+            Since our establishment in 2007, iGEM Toronto has proudly represented the University of Toronto at the undergraduate level of this research competition. The outstanding commitment and dedication of members from previous years has led to the awarding of
+            2 Gold Medals, 3 Silver Medals, and 4 Bronze Medals for our projects.
+        </p>
+        <a class="view-demo">
+            View 2021 project demo
+            <img src="../../assets/main/arrow_blue.svg" alt="img" class="arrow">
+        </a>
+
+    </div>
+
+    <div class="flex-container">
+
+        <div *ngFor="let item of projectList" class="card">
+            <a (click)="projectDetail(item.id)" class="detail-a">
+                <div class="container">
+                    <div class="right">
+                        <span class="title">{{item.year}}</span>
+                    </div>
+                    <img class="photo" *ngIf="item.url" src={{item.url}} alt="medal_img">
+                    <p class="description">{{item.description}}</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<app-footer></app-footer> -->

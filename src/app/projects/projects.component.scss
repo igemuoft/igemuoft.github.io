@@ -1,0 +1,143 @@
+.top {
+    margin: 150px 100px;
+}
+
+.intro-title {
+    font-family: Verdana;
+    font-size: 100px;
+    color: #17425A;
+}
+
+.title-bold {
+    font-weight: bold;
+    color: #17425A;
+}
+
+mark {
+    display: inline-block;
+    height: 0.35em;
+    line-height: 0.05;
+    background-color: #66E0FA;
+    color: #17425A !important;
+}
+
+.purple {
+    background-color: #C8B0E3;
+}
+
+.para {
+    color: #17425A;
+    font-size: 40px;
+    font-family: Avenir;
+}
+
+.view-demo {
+    color: #19415A !important;
+    font-size: 50px;
+    font-family: Avenir;
+    font-weight: 800;
+}
+
+.arrow {
+    height: 28px;
+    margin-left: 40px;
+    transform: scale(2);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #FAFAFC;
+    width: 380px;
+    height: 380px;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+
+.thecontainer {
+    margin: 30px 30px;
+}
+
+.photo {
+    width: 150px;
+    float: right;
+    position: relative;
+    margin-top: -25px;
+}
+
+.break-120 {
+    margin-bottom: 100px;
+}
+
+.title {
+    color: #17425A;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.right {
+    display: inline-block;
+}
+
+.description {
+    color: #19415A;
+    font-size: 34px;
+    font-family: Avenir;
+}
+
+.detail-a {
+    display: inline-block !important;
+    position: relative;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .margin-side {
+        margin: 0 15px;
+    }
+    .intro-title {
+        font-size: 40px !important;
+    }
+    .para {
+        font-size: 20px !important;
+    }
+    .break-30 {
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 20px !important;
+    }
+    .container {
+        margin: 10px 10px;
+    }
+    .title{
+        font-size:20px !important
+    }
+    .links{
+        font-size: 25px !important
+    }
+    .arrow{
+        height: 15px !important;
+    margin-left: 20px;
+    }
+
+    .top {
+        margin: 100px 15px;
+    }
+    .view-demo{
+        font-size: 20px !important
+    }
+    .card {
+        width: 550px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .description{
+        margin: 10px 10px
+    }
+}

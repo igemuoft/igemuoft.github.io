@@ -1,0 +1,38 @@
+[{
+        "id": 1,
+        "title": "Wet Lab",
+        "description": "Experts of protein purification and troubleshooting, these members bring our biological vision into reality.",
+        "url": "../../assets/teams/img/character-sheet-wetlab.png",
+        "routePath": "/team-members#wet-lab"
+    },
+    {
+        "id": 2,
+        "title": "Dry Lab",
+        "description": "Learners of machine learning and debugging, these members propose novel enzyme designs with the help of supercomputers.",
+        "url": "../../assets/teams/img/character-sheet-drylab.png",
+        "routePath": "/team-members#dry-lab"
+
+    },
+    {
+        "id": 3,
+        "title": "Business and Ethics",
+        "description": "Excellent communicators, these members engage with industry and the local community with our project while curbing any negative societal impact of our engineered microbes.",
+        "url": "../../assets/teams/img/character-sheet-business-ethics.png",
+        "routePath": "/team-members#business-and-ethics"
+    },
+    {
+        "id": 4,
+        "title": "Web and Graphics",
+        "description": "Boundless artists, these members visualize and render scientific ideas as graphic, video and website to communicate the impact of our research to the wider community.",
+        "url": "../../assets/teams/img/character-sheet-web-graphics.png",
+        "routePath": "/team-members#web-and-graphics"
+
+    },
+    {
+        "id": 5,
+        "title": "Executives",
+        "description": "Experienced project managers and leaders, these members set the direction and strategy for the team’s research projects, providing guidance to the team leads. They also secure resources and funding to run the team’s research projects.",
+        "url": "../../assets/teams/img/character-sheet-exec.png",
+        "routePath": "/team-members#executives"
+    }
+]

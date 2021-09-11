@@ -1,9 +1,11 @@
 <div class="footer">
     <p class="copyright">© 2021 iGEM Toronto
-        <br> ALL RIGHTS RESERVED.
+        <br> 
+        <span class="noshow">ALL RIGHTS RESERVED.</span>
+       
     </p>
     <div class="my-form">
-        <form class="example-form" [formGroup]="myForm">
+        <form class="example-form" [formGroup]="myForm" action="https://skule.us5.list-manage.com/subscribe/post?u=f43800f031a5e2f4cf5a663b6&amp;id=723c538af6" method="post">
             <mat-form-field class="example-full-width" appearance="standard">
                 <mat-label>Enter email here for newsletters</mat-label>
                 <input formControlName="myEmail" type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com ">
@@ -14,39 +16,16 @@
                     Email is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
+            <input type="image" value="SUBSCRIBE" name="submit" src="../../assets/main/arrow_blue.svg" class="arrow">
         </form>
-        <br>
-        <div class="footer">
-            <a href="https://www.instagram.com/igemtoronto/?hl=en"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/iGEMToronto"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/igem_toronto?lang=en"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/company/igem-toronto/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-            <a href="https://github.com/igemuoft"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-
-
-
-            <a href="https://www.youtube.com/channel/UCCXZ3suwmZDqIUxVCPb2ZAg/featured"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-
-            <a href="https://www.behance.net/igemtoronto"><i class="fa fa-behance" aria-hidden="true"></i></a>
-
-            <!-- <a href="#">
-                <img src="../../assets/social-media/be.svg" alt="be">
-            </a>
-            <a href="#">
-                <img src="../../assets/social-media/twitter.svg" alt="be">
-            </a>
-            <a href="#">
-                <img src="../../assets/social-media/tiktok.svg" alt="be">
-            </a>
-            <a href="#">
-                <img src="../../assets/social-media/fb.svg" alt="be">
-            </a>
-            <a href="#">
-                <img src="../../assets/social-media/youtube.svg" alt="be">
-            </a>
-            <a href="#">
-                <img src="../../assets/social-media/linkedin.svg" alt="be">
-            </a> -->
+        <div class="myfooter">
+            <a href="https://www.behance.net/igemtoronto" target="_blank"><i class="fa fa-behance" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/igem_toronto?lang=en" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/iGEMToronto" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCCXZ3suwmZDqIUxVCPb2ZAg/featured" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/igemtoronto/?hl=en" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/igem-toronto/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/igemuoft" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>

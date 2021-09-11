@@ -1,0 +1,31 @@
+<div *ngIf="member">
+
+    <p class="text">
+        <img src={{member.url}} alt="img" class="profile">
+        <span class="bold">Name: </span>
+        <span class="light">{{member.name}}</span>
+        <br>
+        <span class="bold">Position: </span>
+        <span class="light">{{member.position}}</span>
+        <br>
+        <span class="bold">Program: </span>
+        <span class="light">{{member.program}}</span>
+        <br>
+        <span class="bold">Fun fact: </span>
+        <span class="light">{{member.fun_fact}}</span>
+    </p>
+    <div class="social-media">
+        <a href={{member.social_media}} *ngIf="hasBehance">
+            <img src="../../assets/social-media/be.svg" alt="be">
+        </a>
+        <a href={{member.social_media}} *ngIf="hasLinkedIn">
+            <img src="../../assets/social-media/linkedin.svg" alt="be">
+        </a>
+        <a href={{member.social_media}} *ngIf="hasGithub">
+            <img src="../../assets/social-media/github.png" alt="github">
+        </a>
+        <a href={{member.social_media}} *ngIf="hasInstagram">
+            <img src="../../assets/social-media/ins.svg" alt="github">
+        </a>
+    </div>
+</div>

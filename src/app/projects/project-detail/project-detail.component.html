@@ -1,0 +1,59 @@
+<div class="content" *ngIf="project">
+    <div class="title">
+        {{project.description}}
+    </div>
+    <div class="margin-20"></div>
+    <div [ngClass]="{'inclinepapa' : project.url}" class="para">
+        {{project.detail}}
+    </div>
+
+    <img *ngIf="project.url" src={{project.url}} alt="medal" class="medal">
+
+    <div class="margin-10"></div>
+    <div class="para">
+        <div *ngIf="project.supervisors">
+            <mark class="purple">  Supervisors:</mark>
+            <br> <span>{{project.supervisors}}</span>
+        </div>
+
+        <div *ngIf="project.advisors">
+            <mark class="purple">Advisors:</mark>
+            <br>
+            <span>
+            {{project.advisors}}
+            </span>
+        </div>
+
+
+        <mark class="purple"> Undergraduates</mark> {{project.undergraduates_total}}
+        <div *ngIf="project.undergraduates">
+            {{project.undergraduates}}
+        </div>
+
+        <div *ngIf="project.presidents">
+            <mark>Presidents: </mark> {{project.presidents}}
+        </div>
+
+        <div *ngIf="project.wet_lab">
+
+            <mark> Wet lab:</mark> {{project.wet_lab}}
+        </div>
+
+        <div *ngIf="project.dry_lab">
+
+            <mark>Dry Lab:</mark> {{project.dry_lab}}
+        </div>
+
+        <div *ngIf="project.policy_and_practices">
+
+            <mark>Policy and Practices</mark> {{project.policy_and_practices}}
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="wiki" *ngIf="project">
+    <a *ngIf="project.wiki" href="{{project.wiki}}" target="_blank">link to wiki</a>
+</div>

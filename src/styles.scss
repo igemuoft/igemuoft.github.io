@@ -5,6 +5,36 @@ body {
     margin: 0;
 }
 
+html {
+    font-size: calc(1em + 1vw)
+}
+
 .mat-dialog-container {
     border-radius: 20px !important;
+}
+
+.slick-wrapper {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #19415A !important;
+}
+
+body .slick-prev,
+body .slick-next {
+    height: 80px !important;
+    width: 70px !important;
+    z-index: 9;
+}
+
+.slick-slider {
+    div {
+        &:focus {
+            outline: 2px;
+            color: aqua;
+        }
+    }
 }

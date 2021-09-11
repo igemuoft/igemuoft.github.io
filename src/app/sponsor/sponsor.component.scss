@@ -1,0 +1,167 @@
+.content {
+    margin: 150px 100px;
+}
+
+.intro-title {
+    font-family: Verdana;
+    font-size: 90px;
+    color: #17425A;
+}
+
+.title-bold {
+    font-weight: bold;
+    color: #17425A;
+}
+
+.title {
+    border-bottom: 8px #66E0FA solid;
+    color: #17425A;
+}
+
+mark {
+    display: inline-block;
+    height: 0.35em;
+    line-height: 0.05;
+    background-color: #66E0FA;
+    color: #17425A !important;
+}
+
+.purple {
+    background-color: #C8B0E3;
+}
+
+.margin-75 {
+    margin-bottom: 75px;
+}
+
+.the-container {
+    position: relative;
+    width: 33.3%;
+}
+
+.centered-text {
+    position: absolute;
+    top: 30%;
+    font-size: 35px;
+    font-family: Avenir;
+    color: #17425A
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.para {
+    font-family: Avenir;
+    font-size: 32px;
+    color: #17425A;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-family: Verdana;
+    font-size: 60px;
+    font-weight: bold;
+    color: #17425A;
+    border-bottom: 8px #66E0FA solid !important;
+}
+
+.para2 {
+    font-family: Avenir;
+    font-size: 35px;
+    color: #17425A;
+}
+
+.margin-35 {
+    margin-bottom: 35px;
+}
+
+.blast {
+    background-color: #19415A !important;
+    border-radius: 10px;
+    padding: 35px 60px;
+}
+
+button {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: Avenir;
+}
+
+.second {
+    margin-left: 20%;
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        margin: 75px 15px;
+    }
+    .intro-title {
+        font-size: 40px !important;
+    }
+    .para,.para2 {
+        font-size: 20px !important;
+    }
+    .break-30 {
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 20px !important;
+    }
+    .container {
+        margin: 10px 10px;
+    }
+    .title{
+        font-size:30px !important
+    }
+    .subtitle{
+        font-size: 25px !important
+    }
+    .links{
+        font-size: 25px !important
+    }
+    .arrow{
+        height: 15px !important;
+    margin-left: 20px;
+    }
+
+    .top {
+        margin: 100px 15px;
+    }
+    .view-demo{
+        font-size: 20px !important
+    }
+    .card {
+        width: 550px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .description{
+        margin: 10px 10px
+    }
+    .the-container {
+
+        width: 100%;
+    }
+    .centered-text {
+        top: 30%;
+        left: 20%;
+        font-size: 15px;
+        font-family: Avenir;
+        color: #17425A
+    }
+    img{
+        height: 70px
+    }
+    button{
+        font-size: 15px
+    }
+    .blast {
+
+        padding: 13px 30px;
+        margin-bottom: 10px
+    }
+}

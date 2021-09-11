@@ -1,0 +1,532 @@
+.body {
+    margin: 120px 0px;
+}
+
+.margin-side {
+    margin: 0px 100px;
+}
+
+.title-bold {
+    font-weight: bold;
+    color: #17425A;
+}
+
+.title-color-blue {
+    color: #17425A;
+}
+
+.title {
+    font-family: Verdana;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.title-2 {
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+    text-decoration-thickness: 20%;
+    text-decoration-color: #66E0FA;
+}
+
+mark {
+    display: inline-block;
+    height: 0.35em;
+    line-height: 0.05;
+    background-color: #66E0FA;
+    color: #17425A !important;
+}
+
+.purple {
+    background-color: #C8B0E3;
+}
+
+.toronto {
+    color: #ffffff;
+    text-shadow: -2px 2px 0 #17425A, 2px 2px 0 #17425A, 2px -2px 0 #17425A, -2px -2px 0 #17425A;
+    margin-top: -80px;
+}
+
+
+
+.toronto::before {
+    content: "\a";
+    white-space: pre;
+}
+
+.svg1 {
+    float: right;
+    margin-top: -200px;
+    width: 720px;
+}
+
+.margin-right {
+    margin-right: 100px;
+}
+
+button {
+    background-color: #7F89E3;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 50px;
+    font-family: Avenir;
+    border: none;
+    border-radius: 10px;
+}
+
+.b0 {
+    padding: 40px 40px;
+}
+
+.view-project {
+    margin-bottom: 40px;
+}
+
+.blast {
+    background-color: #19415A !important;
+    font-weight: 100;
+    border-radius: 10px;
+    padding: 45px 70px;
+}
+
+.arrow {
+    transform: scale(2);
+}
+
+#we {
+    color: #7F89E3;
+    font-weight: 500;
+}
+
+#type {
+    position: relative;
+    top: 0.3em;
+    left: 2vw;
+    font-size: 4em;
+    font-weight: 500;
+    font-family: Verdana;
+    color: #17425A;
+    display: inline;
+    z-index: 2;
+}
+
+.cursor {
+    border-right: .07em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.wall {
+    font-size: 60px !important;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 10px
+}
+
+
+
+.hashtags {
+    font-size: 40px;
+    font-family: Avenir;
+    color: #49A9C3;
+}
+
+.inspired {
+    font-size: 30px;
+    font-family: Avenir;
+    color: #277184;
+    margin-left: 200px;
+}
+
+.under {
+    margin-top: 70px;
+    position: absolute;
+}
+
+
+.intro {
+    background-color: #F1F1F3;
+    margin-top: 300px;
+    color: #17425A;
+}
+
+.intro-title {
+    font-family: Verdana;
+    font-size: 100px;
+    color: #17425A;
+}
+
+.our-sponsor {
+    background-color: #F1F1F3;
+    width: 100%;
+    color: #17425A;
+}
+
+img.my-pic {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: auto 80px;
+    // border-left: 3px solid grey;
+}
+
+.my-pic {
+    margin: 0 40px;
+    max-width: 300px;
+    // margin-left: 30px;
+}
+
+.para {
+    font-size: 40px;
+    font-family: Avenir;
+    margin: 50px 100px;
+}
+
+.part2 {
+    margin-top: 50px;
+}
+
+.vision {
+    font-family: Verdana;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.greenline {
+    border-left: 10px solid #66E0FA;
+    margin-top: 70px;
+}
+
+.para2 {
+    font-family: Avenir;
+    font-size: 40px;
+    width: 50%;
+    padding-left: 80px;
+    display: inline-block;
+    margin-top: -10px;
+    margin-bottom: -10px
+}
+
+
+
+.para3 {
+    font-family: Avenir;
+    font-size: 40px;
+    display: block;
+    margin-top: 70px;
+}
+
+.bottle {
+    float: right;
+    margin-top: -140px;
+    margin-bottom: -100px;
+    width: 35%
+}
+
+img.bottle {
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+.b1,
+.b2,
+b3 {
+    display: inline-block;
+    font-family: Avenir;
+    padding: 35px 90px !important;
+}
+
+.b-whatever {
+    font-family: Avenir;
+    padding: 55px 70px !important;
+    margin-top: -50px;
+}
+
+.b2 {
+    margin-left: 250px;
+}
+
+.break-150 {
+    height: 150px;
+}
+
+.break-70 {
+    height: 70px;
+}
+
+.break-30 {
+    height: 30px;
+}
+
+.gold-wining-design {
+    background-color: #ffffff;
+    color: #17425A;
+}
+
+.svg2 {
+    margin-left: 280px;
+    margin-top: 100px;
+}
+
+.year {
+    font-size: 30px;
+    font-family: Avenir;
+    width: 33.3%;
+    text-align: center;
+}
+
+.protein {
+    width: 75%;
+}
+
+.announce {
+    font-family: Verdana;
+    font-size: 60px;
+}
+
+.thx {
+    font-family: Avenir;
+    font-size: 40px;
+    color: #17425A;
+}
+
+.arrow-right {
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow1 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-right: -48px;
+    margin-left: 20px;
+}
+
+.arrow {
+    height: 25px;
+    margin-left: 40px;
+}
+
+.sponser {
+    width: 22%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.spon {
+    background-color: white;
+    text-align: center;
+}
+
+.interest {
+    font-family: Verdana;
+    font-size: 60px;
+    color: #17425A;
+}
+
+.break-45 {
+    margin-bottom: 45px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-pic {
+    margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .toronto::before {
+        content: none;
+        white-space: pre;
+    }
+    .svg1 {
+        width: auto;
+        margin-top: 300px
+    }
+    .replace {
+        display: none;
+    }
+    .margin-side {
+        margin: 0 15px;
+    }
+    .intro-title {
+        font-size: 40px !important;
+    }
+    .vision{
+        font-size: 40px !important;
+    }
+    .para {
+        font-size: 20px !important;
+        margin: 10px 15px;
+    }
+    .para2 {
+        font-size: 20px !important;
+        margin: 0px 0px;
+        width: 100%;
+        padding-left: 0px
+    }
+    .thx {
+
+        font-size: 20px;
+    }
+    .para3 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .noshow{
+        display: none;
+    }
+    .b1,
+.b2,
+ {
+    display: block;
+    padding: 25px 30px !important;
+
+}
+.blast {
+    font-weight: 100;
+    padding: 25px 35px;
+}
+.b1,.b2 {
+    margin: 10px auto;
+}
+    .break-30 {
+        margin-bottom: 0px;
+    }
+    .break-150{
+        height: 20px;
+    }
+    .description {
+        font-size: 20px !important;
+    }
+    .body {
+        margin: 50px 0px;
+    }
+    .title {
+        font-size:40px !important
+    }
+    .links{
+        font-size: 25px !important
+    }
+    .break-70 {
+        height: 20px;
+    }
+    .top {
+        margin: 100px 15px;
+    }
+    .view-demo{
+        font-size: 20px !important
+    }
+    .card {
+        width: 550px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .description{
+        margin: 10px 10px
+    }
+
+    .year {
+        font-size: 20px;
+        width: 100%;
+    }
+    .right{
+        width: 100%
+    }
+    .b-whatever {
+        padding: 25px 30px !important;
+        margin-top: -50px;
+        margin: auto;
+    }
+    .photo{
+        display: none
+    }
+    .link{
+        display: none
+    }
+    .smallscreen{
+        display: block;
+    }
+
+    .green-bg{
+        background-color:#66E0FA !important; 
+    }
+    .mybut{
+        text-align: center
+    }
+    .wall {
+        font-size: 30px !important;
+        margin-top: -300px;
+        margin-left: 0;
+    }
+    .interest {
+
+        font-size: 30px;
+
+    }
+    .under {
+        display: none;
+    }
+    .para2 {
+        width: 100%;
+    }
+    .greenline {
+        border-left: none;
+        margin-top: 10px;
+    }
+    .margin-side {
+        margin: 0px 25px;
+    }
+    .margin-right {
+        margin-right: 0px;
+    }
+    button {
+margin: auto 1 !important;
+        font-size: 20px;
+    
+    }
+    .arrow {
+        height: 12px;
+        margin-left: 18px;
+    }
+    .b0{
+        padding: 20px 20px;
+    }
+    .bottle {
+        float: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 300px !important
+    }
+}
+

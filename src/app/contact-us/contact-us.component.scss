@@ -1,0 +1,54 @@
+.body {
+    margin-top: 150px;
+    margin: 150px 400px;
+    text-align: center;
+}
+
+.come {
+    font-size: 40px;
+    font-family: Avenir;
+    font-weight: 400;
+    color: #17425A;
+}
+
+.mat-form-field {
+    width: 500px !important;
+    font-size: 25px;
+}
+
+.omg::before {
+    background-image: url('../../assets/main/home.svg');
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
+}
+
+.omg {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume {
+    font-family: Avenir;
+    font-size: 40px;
+    font-weight: 700;
+    color: #19415A;
+}
+
+.b1 {
+    margin-top: 40px;
+    font-family: Avenir;
+    padding: 35px 90px !important;
+    font-size: 40px;
+    background-color: #19415A;
+    color: #ffffff;
+    border-radius: 17px;
+}

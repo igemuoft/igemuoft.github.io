@@ -7,6 +7,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { TeamMemberComponent } from './teams/team-member/team-member.component';
 import { DemoComponent } from './demo/demo.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:'demo',
     component: DemoComponent
+  },
+  {
+    path:'sponsor',
+    component: SponsorComponent
   }
 ];
 

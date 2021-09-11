@@ -1,0 +1,161 @@
+.contents {
+    margin: 180px 0px;
+}
+
+.margin-side {
+    margin: 0 100px
+}
+
+.right {
+    display: inline-block;
+    width: 70%;
+}
+
+.title {
+    font-size: 80px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #17425A;
+}
+
+.margin-30 {
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 30px;
+    font-family: Avenir;
+    color: #17425A;
+    display: inline-block;
+}
+
+.photo {
+    width: 220px;
+    float: right;
+    position: relative;
+    margin-right: 150px;
+    margin-top: -300px;
+}
+
+.link {
+    color: #17425A;
+    font-weight: 500;
+    font-family: Avenir;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+a.link:hover {
+    cursor: pointer;
+}
+
+.margin-100 {
+    margin-bottom: 100px;
+}
+
+.arrow {
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: -10px;
+}
+
+.grey-bg {
+    background-color: #FAFAFC;
+}
+
+.each {
+    padding-top: 50px;
+}
+
+.down {
+    padding-bottom: 50px;
+}
+
+.blast {
+    background-color: #19415A !important;
+    font-weight: 100;
+    border-radius: 10px;
+    padding: 45px 70px;
+}
+
+button {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 40px;
+    font-family: Avenir;
+    border: none;
+    margin-top: 50px;
+}
+
+.smallscreen{
+    display: none
+}
+
+@media screen and (max-width: 800px) {
+    
+    .margin-side {
+        margin: 0 15px;
+    }
+    .intro-title {
+        font-size: 40px !important;
+    }
+    .para {
+        font-size: 20px !important;
+    }
+    .break-30 {
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 20px !important;
+    }
+    .contents {
+        margin: 50px 0px;
+    }
+    .title{
+        font-size:30px !important
+    }
+    .links{
+        font-size: 25px !important
+    }
+
+    .top {
+        margin: 100px 15px;
+    }
+    .view-demo{
+        font-size: 20px !important
+    }
+    .card {
+        width: 550px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .description{
+        margin: 10px 10px
+    }
+
+    .right{
+        width: 100%
+    }
+    .photo{
+        display: none
+    }
+    .link{
+        display: none
+    }
+    .smallscreen{
+        display: block;
+    }
+    button.smallscreen{
+        background-color:#7F89E3;
+        font-size: 20px;
+        padding: 20px 90px;
+        margin: auto;
+    }
+    .green-bg{
+        background-color:#66E0FA !important; 
+    }
+    .mybut{
+        text-align: center
+    }
+}

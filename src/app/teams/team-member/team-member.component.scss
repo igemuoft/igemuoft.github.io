@@ -1,0 +1,113 @@
+.body {
+    margin: 180px 150px;
+}
+
+.title {
+    font-family: Verdana;
+    font-size: 100px;
+    color: #17425A;
+}
+
+.name {
+    font-family: Avenir;
+    font-size: 40px;
+    color: #17425A;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // width: 100%;
+}
+
+.photo {
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.member {
+    width: 25%;
+    text-align: center;
+    margin-bottom: -70px
+}
+
+.break-80 {
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .body {
+        margin: 50px 15px;
+    }
+    .intro-title {
+        font-size: 40px !important;
+    }
+    .para {
+        font-size: 20px !important;
+    }
+    .break-30 {
+        margin-bottom: 10px;
+    }
+    .description {
+        font-size: 20px !important;
+    }
+    .contents {
+        margin: 50px 0px;
+    }
+    .title{
+        font-size:30px !important
+    }
+    .links{
+        font-size: 25px !important
+    }
+
+    .top {
+        margin: 100px 15px;
+    }
+    .view-demo{
+        font-size: 20px !important
+    }
+    .card {
+        width: 550px;
+        height: 250px;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .description{
+        margin: 10px 10px
+    }
+
+    .right{
+        width: 100%
+    }
+    .link{
+        display: none
+    }
+    .smallscreen{
+        display: block;
+    }
+    button.smallscreen{
+        background-color:#7F89E3;
+        font-size: 20px;
+        padding: 20px 90px;
+        margin: auto
+    }
+    .green-bg{
+        background-color:#66E0FA !important; 
+    }
+    .mybut{
+        text-align: center
+    }
+    .member {
+        width: 100%;
+        text-align: center
+    }
+    .name{
+        font-size: 20px !important;
+        margin: auto;
+    }
+}

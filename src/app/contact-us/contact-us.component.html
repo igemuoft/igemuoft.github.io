@@ -1,0 +1,40 @@
+<div class="body">
+    <div class="come">
+        Interested in our work?
+        <br> Want to collaborate or contribute?
+        <br> Let’s talk!
+    </div>
+    <div class="omg">
+        <form class="example-form" [formGroup]="myForm">
+            <mat-form-field appearance="standard">
+                <mat-label>Name</mat-label>
+                <input formControlName="myName" matInput placeholder="Ex. Tim Smith">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="standard">
+                <mat-label>Email</mat-label>
+                <input formControlName="myEmail" type="email" matInput placeholder="Ex. pat@example.com ">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="standard">
+                <mat-label>Subject</mat-label>
+                <input formControlName="mySubject" matInput placeholder="Ex. Bio Science">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="standard">
+                <mat-label>Message</mat-label>
+                <input formControlName="myMessage" matInput placeholder="Ex. Funfact: I love coding">
+            </mat-form-field>
+
+        </form>
+    </div>
+    <div class="resume">
+        + Upload attachment
+    </div>
+    <div>
+        <button mat-button class="b1">
+            Send email
+        </button>
+    </div>
+</div>
+<app-footer></app-footer>

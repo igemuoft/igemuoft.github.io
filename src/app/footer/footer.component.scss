@@ -5,12 +5,14 @@ p {
 }
 
 a {
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .footer {
-    margin: 30px 50px;
+    margin-top: 0px;
+    margin-left: 0px;
     display: flex;
+    margin-bottom: 10px;
 }
 
 .my-form {
@@ -22,47 +24,44 @@ a {
     font-size: 25px;
 }
 
-.social-media {
-    margin-top: -20px;
-}
-
 .copyright {
-    margin-top: 30px;
+    margin-top: 70px;
+    margin-left: 10px;
 }
 
-.footer .fa {
+.myfooter .fa {
     cursor: pointer;
     color: #484F50;
     font-size: 30px;
 }
 
 .fa-facebook:hover {
-    color: #3B5998;
+    color: #3B5998 !important;
     transition: 0.5s;
 }
 
 .fa-twitter:hover {
-    color: #55ACEE;
+    color: #55ACEE !important;
     transition: 0.5s;
 }
 
 .fa-github:hover {
-    color: #333;
+    color: #333 !important;
     transition: 0.5s;
 }
 
 .fa-youtube:hover {
-    color: #FF0000;
+    color: #FF0000 !important;
     transition: 0.5s;
 }
 
 .fa-linkedin:hover {
-    color: #0e76a8;
+    color: #0e76a8 !important;
     transition: 0.5s;
 }
 
 .fa-behance:hover {
-    color: #1769ff;
+    color: #1769ff !important;
     transition: 0.5s;
 }
 
@@ -72,4 +71,35 @@ a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.5s;
+}
+
+.arrow {
+    height: 40px;
+    margin-left: -70px;
+    margin-bottom: -10px;
+}
+
+@media screen and (max-width: 800px) {
+    .myfooter{
+        display: none;
+    }
+    .noshow{
+        display: none;
+    }
+    p {
+        font-size: 10px;
+    }
+    .mat-form-field {
+        width: 200px !important;
+        font-size: 13px;
+    }
+    .arrow {
+        height: 10px;
+        margin-left: -70px;
+        margin-bottom: -10px;
+    }
+    .my-form {
+        margin-left: 0px;
+        position: float
+    }
 }

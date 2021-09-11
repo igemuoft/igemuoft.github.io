@@ -1,0 +1,40 @@
+<div class="contents">
+    <div *ngFor="let item of teamList">
+        <div [ngClass]="{'grey-bg' : item.id%2 ==0}">
+            <div class="each"></div>
+            <div>
+                <div>
+                    <div class="right">
+                        <div class="margin-side">
+                            <span class="title">{{item.title}}</span>
+                            <br>
+                            <div class="margin-30"></div>
+                            <span class="description">{{item.description}}</span>
+                            <br>
+                            <div class="margin-30"></div>
+                            <a class="link" href={{item.newLink}}>
+                    See members
+                    <img src="../../assets/main/arrow_blue.svg" alt="img" class="arrow">
+                </a>
+                <div class="mybut">
+                    <a href={{item.newLink}}>   <button class="smallscreen" [ngClass]="{'green-bg' : item.id%2 ==0}">See members</button></a>
+                  
+                </div>
+               
+                        </div>
+                    </div>
+                </div>
+                <img class="photo" *ngIf="item" src={{item.url}} alt="team_img">
+            </div>
+            <div class="down"></div>
+        </div>
+    </div>
+    <div class="margin-side">
+        <button mat-button class="blast">
+            Join our team
+        </button>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

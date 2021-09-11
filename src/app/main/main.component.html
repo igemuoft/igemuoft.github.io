@@ -1,0 +1,187 @@
+<div class="body">
+
+
+    <div class="item margin-side">
+        <div class="break-30"></div>
+        <span class="igem title title-color-blue title-bold "> iGEM </span>
+
+        <span class="toronto title title-bold"> TORONTO </span>
+        <img class="svg1 margin-right" src="assets/main/home.svg">
+
+    </div>
+
+
+    <div class="margin-side">
+        <button mat-button class="b0 view-project">
+    View project
+    <img src="../../assets/main/arrow_white.svg" alt="img" class="arrow">
+  </button>
+        <br>
+        <div id="type" class="wall">
+            <span id="we">We </span>
+            <span id="autotype" class="txt-type"></span>
+            <span class="cursor"></span>
+        </div>
+    </div>
+
+    <div class="under margin-side">
+        <span class="hashtags">#research&nbsp;&nbsp;&nbsp;&nbsp;#biotech&nbsp;&nbsp;&nbsp;&nbsp;#machineLearning</span>
+        <span class="inspired">
+      *Graphic inspired by orizon.co
+    </span>
+    </div>
+
+    <div class="intro">
+        <div class="break-150"></div>
+        <span class="intro-title margin-side"> Who </span>
+        <br />
+        <span class="intro-title title-bold margin-side"> <mark>Are We</mark> </span>
+        <div class="break-30"></div>
+        <p class="para">
+            We are a student-led undergraduate synthetic biology research group based in the University of Toronto. Every year we design and execute a research project and compete with teams from across the world at the iGEM Giant Jamboree.
+        </p>
+        <div class="break-30"></div>
+        <div class="break-30"></div>
+        <div class="part2 margin-side">
+            <span class="vision"> Our vision: </span>
+
+            <div class="greenline">
+                <p class="para2">
+                    “For the past two years we’ve been designing enzymes for plastic degradation using machine learning. We envision a circular plastics economy where the cost of recycled plastics is lower than producing virgin plastic. Further, we hope to valorize plastic
+                    waste and transform our trash into a critical sustainable resource.”
+                </p>
+                <img class="bottle" src="../../assets/main/bottle_home.svg" alt="bottle">
+            </div>
+
+            <div class="break-30"></div>
+            <p class="para3">
+                Over 100 talented students from the University of Toronto have already contributed to making our goal possible. In the process, we foster interdisciplinary collaboration and a goal-driven research mindset in our members. With guidance of faculty and PhD
+                students from the University of Toronto, MIT, and Stanford, our three Subteams are dedicated to making this vision a reality. You can support our research by joining us or sponsoring us!
+            </p>
+
+            <div class="break-70"></div>
+
+            <button class="b1">Join the Team</button>
+
+            <button class="b2">Sponsor the Team</button>
+
+            <div class="break-70"></div>
+        </div>
+    </div>
+
+    <div class="gold-wining-design ">
+        <div class="break-150"></div>
+        <span class="intro-title margin-side"> Award-winning </span>
+        <br />
+        <span class="intro-title title-bold margin-side"> <mark class="purple">Design </mark></span>
+        <br />
+        <div class="break-35">
+        </div>
+
+        <div class="flex-container">
+            <div class="year">
+                <img class="protein" src="assets/main/protein_1.svg">
+                <br>
+                <span class="l1">
+        2019
+        </span>
+                <br>
+                <span class="l2"> Initial proof of concept</span>
+
+            </div>
+            <div class="year">
+                <img class="protein" src="assets/main/protein_2.svg">
+                <br>
+                <span class="l1">
+        2020
+    </span>
+                <br>
+                <span class="l2">Validation with molecular simulations</span>
+            </div>
+
+
+            <div class="year">
+                <img class="protein" src="assets/main/protein_3.svg">
+                <br>
+                <span class="l1">
+        2021
+    </span>
+                <br>
+                <span class="l2">Scalable bio-recycling solution</span>
+            </div>
+
+        </div>
+
+
+        <div class="break-70"></div>
+        <div class="announce margin-side">
+            <span class="noshow">We proudly announce that</span>
+            
+            <p class="para3">
+                Our 2019/2020 project won gold 🏅 and was nominated as the best project in the undergraduate manufacturing track. In 2021 we will continue the pursuit towards a highly stable while active enzyme for plastic waste recycling. We will disseminate our results
+                at the Giant Jamboree in Paris and as a preprint for submission to NeurIPS workshops. You can now experiment with our machine learning model on this website and view our interactive protein model.
+            </p>
+        </div>
+        <div class="break-70"></div>
+        <button mat-button class="b-whatever margin-side" routerLink="/demo">
+        View demo
+        <img src="../../assets/main/arrow_white.svg" alt="img" class="arrow">
+      </button>
+
+    </div>
+    <div class="break-70"></div>
+    <div class="our-sponsor">
+        <br />
+
+        <br />
+        <span class="intro-title margin-side"> Our </span>
+        <br />
+        <span class="intro-title title-bold margin-side"> <mark>Sponsors</mark> </span>
+
+        <div class="break-70">
+        </div>
+        <div class="margin-side">
+
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" autoplay>
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                    <div class="box">
+                        <img *ngIf="slide" src={{slide.img}} alt="hj" max-height="200px" class="my-pic">
+
+                    </div>
+
+                </div>
+            </ngx-slick-carousel>
+        </div>
+        <div class="break-70"></div>
+        <div class="margin-side flex-container">
+            <div class="thx margin-side">Thanks for making our research possible!</div>
+            <div>
+                <button class="b-whatever" mat-button routerLink="/sponsor">
+                    Sponsor us
+                    <img src="../../assets/main/arrow_white.svg" alt="img" class="arrow">
+                  </button>
+            </div>
+        </div>
+        <div class="break-70 "></div>
+
+
+
+    </div>
+
+    <div class="spon">
+        <div>
+            <div class="break-70 "></div>
+            <div class="break-30 "></div>
+            <span class="interest">
+            Interested in our work?
+        </span>
+            <br>
+            <div class="break-30 "></div>
+            <button routerLink="/contact-us" mat-button class="blast">
+            Let's talk!
+        </button>
+            <div class="break-70 "></div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+<div class="body">
+    <div id="wet-lab" class="title">Wet Lab</div>
+    <div class="break-80"></div>
+    <div class="flex-container">
+        <div *ngFor="let item of wetLabList" class="member">
+            <a (click)="getMemberDetail(1,item.id)">
+                <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+                <br>
+                <span class="name">{{item.name}}</span>
+            </a>
+        </div>
+    </div>
+    <div id="dry-lab" class="title">Dry Lab</div>
+    <div class="break-80"></div>
+    <div class="flex-container">
+        <div *ngFor="let item of drylabList" class="member">
+            <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+            <br>
+            <span class="name">{{item.name}}</span>
+        </div>
+    </div>
+    <div id="business-and-ethics" class="title">Business and Ethics</div>
+    <div class="break-80"></div>
+    <div class="flex-container">
+        <div *ngFor="let item of businessAndEthicsList" class="member">
+            <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+            <br>
+            <span class="name">{{item.name}}</span>
+        </div>
+    </div>
+    <div id="web-and-graphics" class="title">Web and Graphics</div>
+    <div class="break-80"></div>
+    <div class="flex-container">
+        <div *ngFor="let item of webAndGraphicsList" class="member">
+            <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+            <br>
+            <span class="name">{{item.name}}</span>
+        </div>
+    </div>
+    <div id="executives" class="title">Executives</div>
+    <div class="break-80"></div>
+    <div class="flex-container">
+        <div *ngFor="let item of executivesList" class="member">
+            <img class="photo" *ngIf="item.url" src={{item.url}} alt="team_img">
+            <br>
+            <span class="name">{{item.name}}</span>
+        </div>
+    </div>
+</div>
