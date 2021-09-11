@@ -1,0 +1,39 @@
+[{
+        "id": 4,
+        "position": "Lead",
+        "name": "Sarit Radak",
+        "url": "../../assets/teams/img/wet-lab/Sarit_Radak.jpeg",
+        "fun_fact": "I write for The Varsity, UofT's newspaper",
+        "program": "Molecular Genetics",
+        "social_media": ["https://www.instagram.com/saritradak/"]
+    },
+    {
+        "id": 1,
+        "position": "Member",
+        "name": "Michelle Wu",
+        "url": "../../assets/teams/img/wet-lab/Michelle_Wu.jpg",
+        "fun_fact": "I'm from Alberta and love hiking in the mountains there.",
+        "program": "Engineering Science",
+        "social_media": ["www.linkedin.com/in/michelle-wu-85384b1b8"]
+
+    },
+    {
+        "id": 2,
+        "position": "Member",
+        "name": "Miya Tseng-West",
+        "url": "../../assets/teams/img/wet-lab/Miya_Tseng-West.JPG",
+        "fun_fact": "I like microbes and I have a cat ",
+        "program": "Microbiology, 4th year",
+        "social_media": ["https://www.instagram.com/happythedog48/"]
+    },
+    {
+        "id": 3,
+        "position": "Member",
+        "name": "Ruochen Liu",
+        "url": "../../assets/teams/img/wet-lab/Ruochen_Liu.jpg",
+        "fun_fact": "I like swimming and play chess.",
+        "program": "Undecided",
+        "social_media": ["https://www.instagram.com/rohanliu/"]
+    }
+
+]

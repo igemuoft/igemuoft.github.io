@@ -1,0 +1,49 @@
+[{
+        "id": 5,
+        "position": "Lead",
+        "name": "Alston Lo",
+        "url": "../../assets/teams/img/unknown.png",
+        "fun_fact": "I like painting landscapes digitally",
+        "program": "Computer Science Specialist",
+        "social_media": ["https://github.com/alstonlo"]
+    },
+    {
+        "id": 1,
+        "position": "Member",
+        "name": "Helena Jovic",
+        "url": "../../assets/teams/img/dry-lab/Helena_Jovic.jpeg",
+        "fun_fact": "I love my classical guitar, I just need to get better at it!",
+        "program": "Bioinformatics and Computational Biology Specialist, Business German Minor, Stats Minor",
+        "social_media": ["www.linkedin.com/in/helenajovic", "https://www.instagram.com/helenajjovic/"]
+
+    },
+    {
+        "id": 2,
+        "position": "Member",
+        "name": "Isaiah Hazelwood",
+        "url": "../../assets/teams/img/dry-lab/Isaiah_Hazelwood.jpeg",
+        "fun_fact": "I own too many board games, but that won't stop me from getting more.",
+        "program": "Bioinformatics and Computational Biology Specialist, Computer Science Minor",
+        "social_media": ["https://www.instagram.com/isaiah.hazelwood/"]
+    },
+    {
+        "id": 3,
+        "position": "Member",
+        "name": "Tianyu Lu",
+        "url": "../../assets/teams/img/dry-lab/Tianyu_Lu.jpg",
+        "fun_fact": "I like public transport",
+        "program": "Bioinformatics & Computational Biology",
+        "social_media": ["https://tianyu-lu.github.io/"]
+    },
+    {
+        "id": 4,
+        "position": "Member",
+        "name": "Yinqi Huang",
+        "url": "../../assets/teams/img/dry-lab/Yinqi_Huang.jpeg",
+        "fun_fact": "I've watched Forrest Gump over 20 times for an experiment.",
+        "program": "Psychology",
+        "social_media": ["https://github.com/yinqihuang", "https://www.behance.net/yinqihuang", "https://www.linkedin.com/in/yinqi-huang/"]
+
+    }
+
+]

@@ -1,0 +1,32 @@
+[{
+        "id": 1,
+        "title": "Wet Lab",
+        "description": "The theory has been learned, the project prepared, and protocols planned, but bringing it all to fruition will present many unexpected challenges. These expert amateur scientists work collaboratively with the dry lab team to successfully construct a plasmid, characterize biobricks, troubleshoot, and produce a viable proof of concept. ",
+        "url": "../../assets/teams/img/character-sheet-wetlab.png"
+    },
+    {
+        "id": 2,
+        "title": "Dry Lab",
+        "description": "This team of Python loving bioinformatics and computer science enthusiasts aims to create software solutions that work conjointly with the wet lab project. Additionally, through advanced computational modelling, they simulate what can and can’t be done, in order to keep the crazies from the lab bench in check.",
+        "url": "../../assets/teams/img/character-sheet-drylab.png"
+
+    },
+    {
+        "id": 3,
+        "title": "Business and Ethics",
+        "description": "What’s the purpose of doing anything if we don’t share our work with the community? This team of future entrepreneurs and community leaders will guide the isolated dry lab and wet lab into engaging with businesses and the local community. These members have a moral compass that prevents dry lab and wet lab from destroying the world with drag and drop synthetic biology.",
+        "url": "../../assets/teams/img/character-sheet-business-ethics.png"
+    },
+    {
+        "id": 4,
+        "title": "Web and Graphics",
+        "description": "This team comprised of skilled web designers, videographers, graphic designers that work with the core research teams and the social media department to showcase iGEM Toronto’s research in accessible and informative ways. These scientific communication skills are especially vital for the wider iGEM competition, where the Web and Graphics team designs an informative website that can effectively summarize the data and results from the summer.",
+        "url": "../../assets/teams/img/character-sheet-web-graphics.png"
+    },
+    {
+        "id": 5,
+        "title": "Executives",
+        "description": "This team is responsible for performing the academic and administrative tasks to ensure our researchers and designers have access to the lab and other appropriate resources for the project’s success. The Exec team acts as a liaison between BioZone, provides feedback to the team leads about the directionality of thisproject and timelines, and seeks out different local and wider-ranged opportunities to showcase iGEM Toronto’s work.",
+        "url": "../../assets/teams/img/character-sheet-exec.png"
+    }
+]

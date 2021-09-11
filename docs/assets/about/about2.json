@@ -1,0 +1,19 @@
+[{
+        "id": 1,
+        "title": "about2",
+        "description": "PET plastic can only be mechanically recycled six time before losing their initial value and purity Enzymes can recycle PET plastic infinitely many times",
+        "url": ""
+    },
+    {
+        "id": 2,
+        "title": "about2",
+        "description": "Impurities contaminate the mechanically recycled PET plastic making it impossible to recycle Enzymes ignore impurities and only produce valuable end-products",
+        "url": ""
+    },
+    {
+        "id": 3,
+        "title": "about2",
+        "description": "Enzyme promiscuity holds the promise of degrading other types of plastics, not just PET",
+        "url": ""
+    }
+]

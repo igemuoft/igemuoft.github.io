@@ -1,0 +1,40 @@
+[{
+        "id": 1,
+        "position": "Co-president",
+        "name": "Joseph Bellissimo",
+        "url": "../../assets/teams/img/executives/Joseph_Bellissimo.jpeg",
+        "fun_fact": "I like spicy food!",
+        "program": "Pathobiology and Global Health",
+        "social_media": ""
+    },
+
+    {
+        "id": 2,
+        "position": "Co-president",
+        "name": "Tianyu Lu",
+        "url": "../../assets/teams/img/dry-lab/Tianyu_Lu.jpg",
+        "fun_fact": "I like public transport",
+        "program": "Bioinformatics & Computational Biology",
+        "social_media": "https://tianyu-lu.github.io/"
+    },
+    {
+        "id": 3,
+        "position": "Sponsorship and Outreach Coordinator",
+        "name": "Christina Wong",
+        "url": "../../assets/teams/img/executives/Christina_Wong.png",
+        "fun_fact": "I like spicy food!",
+        "program": "Pathobiology and Global Health",
+        "social_media": ""
+    },
+    {
+        "id": 4,
+        "position": "Director of Internal Communications",
+        "name": "Danielle Serra",
+        "url": "../../assets/teams/img/executives/Danielle_Serra.jpeg",
+        "fun_fact": "I love hiking and eating pineapples!",
+        "program": "Biomedical Engineering, MASc",
+        "social_media": "https://www.linkedin.com/in/danielle1999/"
+    }
+
+
+]

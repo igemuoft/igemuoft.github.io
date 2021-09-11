@@ -1,0 +1,49 @@
+[{
+        "id": 1,
+        "position": "Lead, UI/UX",
+        "name": "Yinqi Huang",
+        "url": "../../assets/teams/img/web-and-graphics/Yinqi_Huang.jpeg",
+        "fun_fact": "I've watched Forrest Gump over 20 times for an experiment.",
+        "program": "Psychology",
+        "social_media": ["https://github.com/yinqihuang", "https://www.behance.net/yinqihuang", "https://www.linkedin.com/in/yinqi-huang/"]
+
+    },
+    {
+        "id": 5,
+        "position": "Videographer",
+        "name": "Adam Lam",
+        "url": "../../assets/teams/img/web-and-graphics/Adam_Lam.jpeg",
+        "fun_fact": "Sometimes, I listen to hours-long podcast discussions solely about Apple hardware, software, and user interface design at 3x speed.",
+        "program": "Materials Science",
+        "social_media": ["https://www.linkedin.com/in/adam-a-lam/"]
+    },
+    {
+        "id": 4,
+        "position": "Graphic designer",
+        "name": "Carrie Jia",
+        "url": "../../assets/teams/img/web-and-graphics/Carrie_Jia.jpeg",
+        "fun_fact": "I'm broke",
+        "program": "Environmental Biology",
+        "social_media": ["https://www.instagram.com/turnipgodd/"]
+    },
+
+    {
+        "id": 3,
+        "position": "Graphic designer",
+        "name": "Natalie Chan",
+        "url": "../../assets/teams/img/web-and-graphics/Natalie_Chan.jpeg",
+        "fun_fact": "I love eating scrambled eggs! ",
+        "program": "Computer Engineering",
+        "social_media": ["https://www.behance.net/natapoke", "https://www.instagram.com/natapoke", "https://www.linkedin.com/in/natalie-chan-786598202"]
+    },
+
+    {
+        "id": 2,
+        "position": "Front-end developer",
+        "name": "Yvonne Sun",
+        "url": "../../assets/teams/img/web-and-graphics/Yvonne_Sun.jpeg",
+        "fun_fact": "I love yoga and I can do handstand!",
+        "program": "Industrial Engineering",
+        "social_media": ["www.linkedin.com/in/yvonne-sun-491574161"]
+    }
+]

@@ -1,0 +1,47 @@
+[{
+        "id": 5,
+        "position": "Lead",
+        "name": "Darsh Jain",
+        "url": "../../assets/teams/img/business-and-ethics/Darsh_Jain.JPG",
+        "fun_fact": "I can eat three cheese gnocchi for breakfast, lunch and dinner",
+        "program": "Chemical Engineering",
+        "social_media": ["https://www.instagram.com/darsh_jain1/", "https://www.linkedin.com/in/darsh-jain-a30010161/"]
+    },
+    {
+        "id": 1,
+        "position": "Member",
+        "name": "Helena Jovic",
+        "url": "../../assets/teams/img/business-and-ethics/Helena_Jovic.jpeg",
+        "fun_fact": "I have double jointed elbows! ",
+        "program": "Bioinformatics and Computational Biology Specialist, Business German Minor, Stats Minor",
+        "social_media": ["https://www.instagram.com/helenajjovic/", "www.linkedin.com/in/helenajovic"]
+    },
+    {
+        "id": 4,
+        "position": "Member",
+        "name": "Isabel Lim",
+        "url": "../../assets/teams/img/business-and-ethics/Isabel_Lim.jpeg",
+        "fun_fact": "I love to kickbox! ",
+        "program": "Specialist in health and disease, major in cell and molecular bio",
+        "social_media": ["https://www.instagram.com/isabel.limnx/", "https://www.linkedin.com/in/isabel-nie-xin-lim/"]
+    },
+
+    {
+        "id": 3,
+        "position": "Member",
+        "name": "Jasmeet Ghuman",
+        "url": "../../assets/teams/img/business-and-ethics/Jasmeet_Ghuman.jpg",
+        "fun_fact": "No fun fact",
+        "program": "Chemical Engineering",
+        "social_media": ["https://www.linkedin.com/in/jasmeet-ghuman-4364031a6/"]
+    },
+    {
+        "id": 2,
+        "position": "Member",
+        "name": "Niyati Maheshwari",
+        "url": "../../assets/teams/img/business-and-ethics/Niyati_Maheshwari.jpeg",
+        "fun_fact": "I love to go on long drives!",
+        "program": "Bachelors of Business Administration",
+        "social_media": ["https://www.linkedin.com/in/niyatimahe/"]
+    }
+]
